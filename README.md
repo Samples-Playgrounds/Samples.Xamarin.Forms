@@ -1,4 +1,4 @@
-Samples.Xamarin.Forms
-=====================
+quickui-beta
+============
 
-Samples.Xamarin.Forms
+QuickUI Beta User Demo Apps

@@ -1,0 +1,6 @@
+[submodule "xamarin-forms-samples-by-xamarin"]
+	path = xamarin-forms-samples-by-xamarin
+	url = https://github.com/moljac/xamarin-forms-samples-by-xamarin.git
+[submodule "xamarin-forms-samples-by-conceptdev"]
+	path = xamarin-forms-samples-by-conceptdev
+	url = https://github.com/moljac/xamarin-forms-samples-by-conceptdev.git

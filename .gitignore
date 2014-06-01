@@ -172,3 +172,14 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+
+#=====================================================================================
+# HolisticWare
+**/*.DS_Store
+.git.bitbucket/
+.git.github/
+
+**/Components/
+**/Packages/
+#=====================================================================================
