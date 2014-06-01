@@ -1,0 +1,16 @@
+
+#view{
+background-color: #efefef;
+}
+
+button{
+border: 1px solid red;
+background-image:-linear-gradient(lightgreen,green);
+}
+
+
+textfield{
+  filter:frosting;
+   background:rgba(196,233,251,0.8)
+}
+

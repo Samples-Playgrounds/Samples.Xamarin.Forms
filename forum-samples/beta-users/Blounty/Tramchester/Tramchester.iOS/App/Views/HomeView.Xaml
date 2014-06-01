@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage BackgroundColor="#FFFF00"
+    xmlns="http://xamarin.com/quickui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Tramchester.App.Views.HomeView"
+    Title="Tramchester">
+    <ContentPage.Content>
+       <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding = "10,10,10,10">
+       	<Label Text="Welcome to Tramchester, a quick and easy way to plan your travel in Manchester by tram."/>
+       	<Button BackgroundColor="White" Text="Find Nearest Trams" Command="{Binding ShowRoutePlannerCommand}"/>
+       </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

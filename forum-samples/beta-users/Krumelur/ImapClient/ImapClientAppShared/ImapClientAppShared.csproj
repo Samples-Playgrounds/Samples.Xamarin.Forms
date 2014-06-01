@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3AA7728-0D5C-45BE-8A2F-704993011FE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ImapClientAppShared</RootNamespace>
+    <AssemblyName>ImapClientShared</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="Xamarin.QuickUI.Core.Android">
+      <HintPath>App\QuickUIAssemblies\Xamarin.QuickUI.Core.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Platform.Android">
+      <HintPath>App\QuickUIAssemblies\Xamarin.QuickUI.Platform.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App\ImapClientApp.cs" />
+    <Compile Include="App\Pages\LoginPage.cs" />
+    <Compile Include="Xplat\DelegateCommand.cs" />
+    <Compile Include="Xplat\PropertyChangedBase.cs" />
+    <Compile Include="Xplat\ServiceContainer.cs" />
+    <Compile Include="Xplat\ViewModelBase.cs" />
+    <Compile Include="Xplat\ViewModelError.cs" />
+    <Compile Include="Imap\Auth\ByteBuilder.cs" />
+    <Compile Include="Imap\Auth\FilterStream.cs" />
+    <Compile Include="Imap\Auth\Handshake.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Extensions.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Flags.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Helpers.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\MD4.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\MessageType.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\OSVersion.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Responses.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\SecurityBuffer.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Type1Message.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Type2Message.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Ntlm\Type3Message.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslCramMd5.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslDigestMd5.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslNtlm.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslNtlmv2.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslOAuth.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslOAuth2.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslPlain.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslScramSha1.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\SaslSrp.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\ClientMessage1.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\ClientMessage2.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\Extensions.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\Helper.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\Mpi.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\OctetSequence.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\ServerMessage1.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\ServerMessage2.cs" />
+    <Compile Include="Imap\Auth\Sasl\Mechanism\Srp\Utf8String.cs" />
+    <Compile Include="Imap\Auth\Sasl\SaslException.cs" />
+    <Compile Include="Imap\Auth\Sasl\SaslFactory.cs" />
+    <Compile Include="Imap\Auth\Sasl\SaslMechanism.cs" />
+    <Compile Include="Imap\AuthMethod.cs" />
+    <Compile Include="Imap\Bodystructure\Bodypart.cs" />
+    <Compile Include="Imap\Bodystructure\Bodystructure.cs" />
+    <Compile Include="Imap\Bodystructure\ContentDisposition.cs" />
+    <Compile Include="Imap\Bodystructure\ContentTransferEncoding.cs" />
+    <Compile Include="Imap\Bodystructure\ContentType.cs" />
+    <Compile Include="Imap\Bodystructure\Reader.cs" />
+    <Compile Include="Imap\Exceptions.cs" />
+    <Compile Include="Imap\FetchOptions.cs" />
+    <Compile Include="Imap\IdleEvents.cs" />
+    <Compile Include="Imap\IImapClient.cs" />
+    <Compile Include="Imap\ImapClient.cs" />
+    <Compile Include="Imap\MailboxFlags.cs" />
+    <Compile Include="Imap\MailboxInfo.cs" />
+    <Compile Include="Imap\MailboxQuota.cs" />
+    <Compile Include="Imap\MailboxStatus.cs" />
+    <Compile Include="Imap\MailMessage.cs" />
+    <Compile Include="Imap\MessageBuilder.cs" />
+    <Compile Include="Imap\MessageFlags.cs" />
+    <Compile Include="Imap\MIMEPart.cs" />
+    <Compile Include="Imap\SafeQueue.cs" />
+    <Compile Include="Imap\SearchCondition.cs" />
+    <Compile Include="Imap\Util.cs" />
+    <Compile Include="App\Services\IImapService.cs" />
+    <Compile Include="App\Services\GmailImapService.cs" />
+    <Compile Include="App\Pages\InboxContentsPage.cs" />
+    <Compile Include="App\ViewModels\LoginViewModel.cs" />
+    <Compile Include="App\ViewModels\InboxContentViewModel.cs" />
+    <Compile Include="App\Services\MockupImapService.cs" />
+    <Compile Include="App\Pages\MailDetailsPage.cs" />
+    <Compile Include="App\ViewModels\MailDetailsViewModel.cs" />
+    <Compile Include="App\Extensions.cs" />
+    <Compile Include="App\Pages\ExportAccountPage.cs" />
+    <Compile Include="App\ViewModels\ExportAccountViewModel.cs" />
+    <Compile Include="App\Services\IQrService.cs" />
+    <Compile Include="App\Services\MockupQrService.cs" />
+    <Compile Include="App\Pages\TestPage.cs" />
+    <Compile Include="App\Helpers\FilePathToImageSourceConverter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="App\ViewModels\" />
+    <Folder Include="App\Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imap\Examples.md" />
+    <None Include="Imap\Examples.xml" />
+    <None Include="Imap\License.md" />
+    <None Include="Imap\Readme.md" />
+    <None Include="Resources\drawable\sampleqrcode.png" />
+    <None Include="App\QuickUIAssemblies\Xamarin.QuickUI.Core.Android.dll" />
+    <None Include="App\QuickUIAssemblies\Xamarin.QuickUI.Platform.Android.dll" />
+    <None Include="App\QuickUIAssemblies\_WhatIsThis.txt" />
+  </ItemGroup>
+</Project>

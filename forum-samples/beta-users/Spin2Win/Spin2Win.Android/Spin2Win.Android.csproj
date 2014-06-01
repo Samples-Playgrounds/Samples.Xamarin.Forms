@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC453E5F-542E-48B7-9A9D-BCA8073DED0E}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spin2Win.Android</RootNamespace>
+    <AssemblyName>Spin2Win.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkSkip />
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GooglePlayServicesLib">
+      <HintPath>..\Components\googleplayservices-13.0\lib\android\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Support.v13" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.QuickUI.Core.Android">
+      <HintPath>..\packages\Xamarin.QuickUI.Core.Android.1.0.263\lib\MonoAndroid40\Xamarin.QuickUI.Core.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Platform.Android">
+      <HintPath>..\packages\Xamarin.QuickUI.Platform.Android.1.0.263\lib\MonoAndroid40\Xamarin.QuickUI.Platform.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Spin2Win\Pages\BackgroundImageContainer.cs">
+      <Link>Pages\BackgroundImageContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Pages\DataService.cs">
+      <Link>Pages\DataService.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Pages\HiddenUsersPage.cs">
+      <Link>Pages\HiddenUsersPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Pages\LoginPage.cs">
+      <Link>Pages\LoginPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Pages\Person.cs">
+      <Link>Pages\Person.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Pages\SlotsPage.cs">
+      <Link>Pages\SlotsPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Pages\YouWonPage.cs">
+      <Link>Pages\YouWonPage.cs</Link>
+    </Compile>
+    <Compile Include="..\Spin2Win\Spin2WinApp.cs">
+      <Link>Spin2WinApp.cs</Link>
+    </Compile>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\blackmonkey.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\branch.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\chimp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\crazyface.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\monkeystuff.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\orange.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pinkface.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tshirt.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\blackmonkey.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\branch.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\chimp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\crazyface.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\monkeystuff.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pinkface.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tshirt.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\blackmonkey.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\branch.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\chimp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\crazyface.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\monkeystuff.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\pinkface.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tshirt.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\blackmonkey.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\branch.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chimp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\crazyface.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\monkeystuff.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pinkface.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tshirt.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gradient.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hexagon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xamarin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gradient.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hexagon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\xamarin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gradient.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hexagon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\xamarin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gradient.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hexagon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\xamarin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\blurredbackground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gradienttop.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logoxamarin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\qrcode.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\youwinbackground.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\blurredbackground.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gradienttop.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logoxamarin.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\qrcode.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\youwinbackground.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\blurredbackground.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gradienttop.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logoxamarin.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\qrcode.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\youwinbackground.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\blurredbackground.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gradienttop.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logoxamarin.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\qrcode.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\youwinbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservices">
+      <Visible>False</Visible>
+      <Version>13.0</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

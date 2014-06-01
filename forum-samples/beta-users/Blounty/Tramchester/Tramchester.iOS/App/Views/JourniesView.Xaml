@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage BackgroundColor="#FFFF00"
+    xmlns="http://xamarin.com/quickui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Tramchester.App.Views.JourniesView"
+    Title="Journies">
+    <ContentPage.Content>
+    	<ListView ItemSource="{Binding Journies}">
+    		<ListView.ItemTemplate>
+    			<DataTemplate>
+    				<TextCell Text="{Binding Summary}"  Detail="{Binding DurationDepartureSummary}" Style="Vertical"/>
+    			</DataTemplate>
+    		</ListView.ItemTemplate>
+    	</ListView>
+    </ContentPage.Content>
+</ContentPage>

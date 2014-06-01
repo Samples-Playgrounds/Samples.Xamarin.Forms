@@ -1,0 +1,3 @@
+The shared project is a library that's just supposed to build. It is not referenced from anywhere.
+All the files in here are used in the iOS and Android project via file linking.
+However to make this lib build and catch build errors, I include the Android DLLs of QuickUI and reference them.

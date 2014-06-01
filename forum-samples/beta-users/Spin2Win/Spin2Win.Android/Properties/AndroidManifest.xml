@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="Xamarin.Spin2WinApp" android:versionCode="1" android:versionName="Init">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+	<application android:label="Spin2WinApp" android:icon="@drawable/icon">
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	</application>
+</manifest>

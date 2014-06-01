@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage BackgroundColor="#FFFF00"
+    xmlns="http://xamarin.com/quickui"
+	xmlns:controls="clr-namespace:Tramchester.App.Controls;assembly=TramchesteriOS"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Tramchester.App.Views.RoutePlannerView"
+    Title="Route Planner">
+    <ContentPage.Content>
+     	<StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding = "10,10,10,10">
+    		<controls:TramstopPicker LabelText="From" Tramstop="{Binding Path=FromTramstop, Mode=TwoWay}" ShowTramstopCommand="{Binding GetFromTramstopsCommand}" />
+    		<controls:TramstopPicker LabelText="To" Tramstop="{Binding Path=ToTramstop, Mode=TwoWay}" ShowTramstopCommand="{Binding GetToTramstopsCommand}" />
+    		<TimePicker Time="{Binding Path=RouteTime, Mode=TwoWay}" />
+    		<Button Text="Find Routes" BackgroundColor="White" Command="{Binding GetJourniesCommand}"/>
+    	</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

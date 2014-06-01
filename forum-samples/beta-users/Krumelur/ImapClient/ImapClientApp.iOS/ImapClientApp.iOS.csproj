@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F192884-F2A7-4318-AAF6-A1F552A63DCC}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ImapClientApp_iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <AssemblyName>ImapClientAppiOS</AssemblyName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <AssemblyName>ImapClientAppiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>QUIWeek1iOS</AssemblyName>
+    <IpaPackageName>
+    </IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>QUIWeek1iOS</AssemblyName>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>ImapClientAppiOS</AssemblyName>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <AssemblyName>QUIWeek1iOS</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="ZXing.Net.Mobile">
+      <HintPath>..\Components\zxing.net.mobile-1.4.0\lib\ios\ZXing.Net.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.monotouch">
+      <HintPath>..\Components\zxing.net.mobile-1.4.0\lib\ios\zxing.monotouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Core.iOS">
+      <HintPath>..\Components\quickui-1.0\lib\ios\Xamarin.QuickUI.Core.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.QuickUI.Platform.iOS">
+      <HintPath>..\Components\quickui-1.0\lib\ios\Xamarin.QuickUI.Platform.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Xplat\" />
+    <Folder Include="Imap\" />
+    <Folder Include="Imap\Auth\" />
+    <Folder Include="Imap\Bodystructure\" />
+    <Folder Include="Imap\Auth\Sasl\" />
+    <Folder Include="Imap\Auth\Sasl\Mechanism\" />
+    <Folder Include="Imap\Auth\Sasl\Mechanism\Ntlm\" />
+    <Folder Include="Imap\Auth\Sasl\Mechanism\Srp\" />
+    <Folder Include="App\" />
+    <Folder Include="App\Pages\" />
+    <Folder Include="App\Services\" />
+    <Folder Include="App\ViewModels\" />
+    <Folder Include="App\Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="..\ImapClientAppShared\Imap\Examples.md">
+      <Link>Imap\Examples.md</Link>
+    </None>
+    <None Include="..\ImapClientAppShared\Imap\Examples.xml">
+      <Link>Imap\Examples.xml</Link>
+    </None>
+    <None Include="..\ImapClientAppShared\Imap\License.md">
+      <Link>Imap\License.md</Link>
+    </None>
+    <None Include="..\ImapClientAppShared\Imap\Readme.md">
+      <Link>Imap\Readme.md</Link>
+    </None>
+    <None Include="styles_demo.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="..\ImapClientAppShared\App\ImapClientApp.cs">
+      <Link>App\ImapClientApp.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Pages\LoginPage.cs">
+      <Link>App\Pages\LoginPage.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\AuthMethod.cs">
+      <Link>Imap\AuthMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Exceptions.cs">
+      <Link>Imap\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\FetchOptions.cs">
+      <Link>Imap\FetchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\IdleEvents.cs">
+      <Link>Imap\IdleEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\IImapClient.cs">
+      <Link>Imap\IImapClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\ImapClient.cs">
+      <Link>Imap\ImapClient.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MailboxFlags.cs">
+      <Link>Imap\MailboxFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MailboxInfo.cs">
+      <Link>Imap\MailboxInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MailboxQuota.cs">
+      <Link>Imap\MailboxQuota.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MailboxStatus.cs">
+      <Link>Imap\MailboxStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MailMessage.cs">
+      <Link>Imap\MailMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MessageBuilder.cs">
+      <Link>Imap\MessageBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MessageFlags.cs">
+      <Link>Imap\MessageFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\MIMEPart.cs">
+      <Link>Imap\MIMEPart.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\SafeQueue.cs">
+      <Link>Imap\SafeQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\SearchCondition.cs">
+      <Link>Imap\SearchCondition.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Util.cs">
+      <Link>Imap\Util.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\ByteBuilder.cs">
+      <Link>Imap\Auth\ByteBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\FilterStream.cs">
+      <Link>Imap\Auth\FilterStream.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Handshake.cs">
+      <Link>Imap\Auth\Handshake.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\SaslException.cs">
+      <Link>Imap\Auth\Sasl\SaslException.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\SaslFactory.cs">
+      <Link>Imap\Auth\Sasl\SaslFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\SaslMechanism.cs">
+      <Link>Imap\Auth\Sasl\SaslMechanism.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslCramMd5.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslCramMd5.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslDigestMd5.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslDigestMd5.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslNtlm.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslNtlm.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslNtlmv2.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslNtlmv2.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslOAuth.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslOAuth.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslOAuth2.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslOAuth2.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslPlain.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslPlain.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslScramSha1.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslScramSha1.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\SaslSrp.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\SaslSrp.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Extensions.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Flags.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Flags.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Helpers.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Helpers.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\MD4.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\MD4.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\MessageType.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\MessageType.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\OSVersion.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\OSVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Responses.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Responses.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\SecurityBuffer.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\SecurityBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Type1Message.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Type1Message.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Type2Message.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Type2Message.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Ntlm\Type3Message.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Ntlm\Type3Message.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\ClientMessage1.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\ClientMessage1.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\ClientMessage2.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\ClientMessage2.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\Extensions.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\Helper.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\Helper.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\Mpi.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\Mpi.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\OctetSequence.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\OctetSequence.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\ServerMessage1.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\ServerMessage1.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\ServerMessage2.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\ServerMessage2.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Auth\Sasl\Mechanism\Srp\Utf8String.cs">
+      <Link>Imap\Auth\Sasl\Mechanism\Srp\Utf8String.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Bodystructure\Bodypart.cs">
+      <Link>Imap\Bodystructure\Bodypart.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Bodystructure\Bodystructure.cs">
+      <Link>Imap\Bodystructure\Bodystructure.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Bodystructure\ContentDisposition.cs">
+      <Link>Imap\Bodystructure\ContentDisposition.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Bodystructure\ContentTransferEncoding.cs">
+      <Link>Imap\Bodystructure\ContentTransferEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Bodystructure\ContentType.cs">
+      <Link>Imap\Bodystructure\ContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Imap\Bodystructure\Reader.cs">
+      <Link>Imap\Bodystructure\Reader.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Xplat\ViewModelError.cs">
+      <Link>Xplat\ViewModelError.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Xplat\ViewModelBase.cs">
+      <Link>Xplat\ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Xplat\ServiceContainer.cs">
+      <Link>Xplat\ServiceContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Xplat\PropertyChangedBase.cs">
+      <Link>Xplat\PropertyChangedBase.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\Xplat\DelegateCommand.cs">
+      <Link>Xplat\DelegateCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Services\IImapService.cs">
+      <Link>App\Services\IImapService.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Services\GmailImapService.cs">
+      <Link>App\Services\GmailImapService.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Pages\InboxContentsPage.cs">
+      <Link>App\Pages\InboxContentsPage.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\ViewModels\LoginViewModel.cs">
+      <Link>App\ViewModels\LoginViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\ViewModels\InboxContentViewModel.cs">
+      <Link>App\ViewModels\InboxContentViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Services\MockupImapService.cs">
+      <Link>App\Services\MockupImapService.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Pages\MailDetailsPage.cs">
+      <Link>App\Pages\MailDetailsPage.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\ViewModels\MailDetailsViewModel.cs">
+      <Link>App\ViewModels\MailDetailsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Extensions.cs">
+      <Link>App\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\ViewModels\ExportAccountViewModel.cs">
+      <Link>App\ViewModels\ExportAccountViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Pages\ExportAccountPage.cs">
+      <Link>App\Pages\ExportAccountPage.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Services\MockupQrService.cs">
+      <Link>App\Services\MockupQrService.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Services\IQrService.cs">
+      <Link>App\Services\IQrService.cs</Link>
+    </Compile>
+    <Compile Include="App\Services\ZXingQrService.cs" />
+    <Compile Include="..\ImapClientAppShared\App\Pages\TestPage.cs">
+      <Link>App\Pages\TestPage.cs</Link>
+    </Compile>
+    <Compile Include="..\ImapClientAppShared\App\Helpers\FilePathToImageSourceConverter.cs">
+      <Link>App\Helpers\FilePathToImageSourceConverter.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="zxing.net.mobile">
+      <Version>1.4.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="quickui">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\ImapClientAppShared\Resources\drawable\placeholder.jpg">
+      <Link>Resources\drawable\placeholder.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\ImapClientAppShared\Resources\drawable\sampleqrcode.png">
+      <Link>Resources\drawable\sampleqrcode.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\styles.css" />
+  </ItemGroup>
+</Project>
