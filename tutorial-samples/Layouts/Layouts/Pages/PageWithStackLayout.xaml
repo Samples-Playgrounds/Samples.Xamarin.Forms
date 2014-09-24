@@ -3,9 +3,12 @@
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="Layouts.Pages.PageWithStackLayout">
 
-	<StackLayout
-		Orientation=""
-		>
-		
-	</StackLayout>
+	<ContentPage.Content >
+		<StackLayout Orientation="Vertical">
+			<Label Text="Browser Control" />
+            <WebView Source="http://xamarin.com"  WidthRequest="400" HeightRequest="800"  />
+        </StackLayout>
+    </ContentPage.Content>
+
+
 </ContentPage>

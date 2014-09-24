@@ -2,5 +2,77 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="Layouts.Pages.PageWithGrid">
-	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+
+	<Grid		
+		>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			
+			<Button
+				Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"
+				Text="Button"
+				/>
+			<Button
+				Grid.Row="0" Grid.Column="2"
+				Text="Button"
+				/>
+			<Button
+				Grid.Row="1" Grid.Column="2"
+				Text="Button"
+				/>
+
+			<Button
+				Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
+				Text="Button"
+				/>
+
+			<Button
+				Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+				Text="Button"
+				/>
+
+
+			<Button
+				Grid.Row="4" Grid.Column="0"
+				Text="Button"
+				/>
+
+			<Button
+				Grid.Row="4" Grid.Column="1"
+				Text="Button"
+				/>
+
+			<Button
+				Grid.Row="4" Grid.Column="2"
+				Text="Button"
+				/>
+
+			<Button
+				Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+				Text="Button"
+				>
+			</Button>
+			<Button
+				Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"
+				Text="Button"
+				>
+			</Button>
+		</Grid>
+
+
+
 </ContentPage>

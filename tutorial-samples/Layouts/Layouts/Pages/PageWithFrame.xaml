@@ -4,7 +4,7 @@
 					   x:Class="Layouts.Pages.PageWithFrame">
 
 	<Frame
-		BackgroundColor="Green" Padding="100"
+		BackgroundColor="Green" Padding="100" 
 		>
 		<Label>
 			<Label.Text>

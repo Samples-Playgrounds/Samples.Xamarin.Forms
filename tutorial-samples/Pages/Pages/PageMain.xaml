@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Pages.PageMain">
+	<ContentPage.Content>
+
+	<ScrollView>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+				
+
+			<Button
+				Grid.Row="0" Grid.Column="0"
+				Text="ContentPage"
+				x:Name="button"
+				Clicked="button_Clicked"
+				>			
+			</Button>
+			<Label
+				Grid.Row="0" Grid.Column="1"
+				>			
+				<Label.Text>
+
+				A ContentPagedisplays a single View, often a container such as a StackLayout or a ScrollView.
+
+				</Label.Text>
+			</Label>
+
+			<Button
+				Grid.Row="1" Grid.Column="0"
+				Text="NavigationPage"
+				x:Name="button"
+				Clicked="button_Clicked"
+				>			
+			</Button>
+			<Label
+				Grid.Row="1" Grid.Column="1"
+				>			
+				<Label.Text>
+				A Page that manages the navigation and user-experience of a stack of other pages.
+				</Label.Text>
+			</Label>
+
+			<Button
+				Grid.Row="2" Grid.Column="0"
+				Text="TabbedPage"
+				x:Name="button"
+				Clicked="button_Clicked"
+				>			
+			</Button>
+			<Label
+				Grid.Row="2" Grid.Column="1"
+				>			
+				<Label.Text>
+				A Page that allows navigation between children pages, using tabs.
+				</Label.Text>
+			</Label>
+
+			<Button
+				Grid.Row="3" Grid.Column="0"
+				Text="CarouselPage"
+				x:Name="button"
+				Clicked="button_Clicked"
+				>			
+			</Button>
+			<Label
+				Grid.Row="3" Grid.Column="1"
+				>			
+				<Label.Text>
+				A Page allowing swipe gestures between subpages, like a gallery.
+				</Label.Text>
+			</Label>
+
+
+			<Button
+				Grid.Row="4" Grid.Column="0"
+				Text="MasterDetailPage"
+				x:Name="button"
+				Clicked="button_Clicked"
+				>			
+			</Button>
+			<Label
+				Grid.Row="4" Grid.Column="1"
+				>			
+				<Label.Text>
+
+				A Page that manages two panes of information.
+
+				</Label.Text>
+			</Label>
+
+		</Grid>
+	</ScrollView>
+
+	</ContentPage.Content>
+</ContentPage>
