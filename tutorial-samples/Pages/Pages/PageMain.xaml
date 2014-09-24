@@ -23,8 +23,8 @@
 			<Button
 				Grid.Row="0" Grid.Column="0"
 				Text="ContentPage"
-				x:Name="button"
-				Clicked="button_Clicked"
+				x:Name="buttonContentPage"
+				Clicked="buttonContentPage_Clicked"
 				>			
 			</Button>
 			<Label
@@ -40,8 +40,8 @@
 			<Button
 				Grid.Row="1" Grid.Column="0"
 				Text="NavigationPage"
-				x:Name="button"
-				Clicked="button_Clicked"
+				x:Name="buttonNavigationPage"
+				Clicked="buttonNavigationPage_Clicked"
 				>			
 			</Button>
 			<Label
@@ -55,8 +55,8 @@
 			<Button
 				Grid.Row="2" Grid.Column="0"
 				Text="TabbedPage"
-				x:Name="button"
-				Clicked="button_Clicked"
+				x:Name="buttonTabbedPage"
+				Clicked="buttonTabbedPage_Clicked"
 				>			
 			</Button>
 			<Label
@@ -70,8 +70,8 @@
 			<Button
 				Grid.Row="3" Grid.Column="0"
 				Text="CarouselPage"
-				x:Name="button"
-				Clicked="button_Clicked"
+				x:Name="buttonCarouselPage"
+				Clicked="buttonCarouselPage_Clicked"
 				>			
 			</Button>
 			<Label
@@ -86,8 +86,8 @@
 			<Button
 				Grid.Row="4" Grid.Column="0"
 				Text="MasterDetailPage"
-				x:Name="button"
-				Clicked="button_Clicked"
+				x:Name="buttonMasterDetailPage"
+				Clicked="buttonMasterDetailPage_Clicked"
 				>			
 			</Button>
 			<Label

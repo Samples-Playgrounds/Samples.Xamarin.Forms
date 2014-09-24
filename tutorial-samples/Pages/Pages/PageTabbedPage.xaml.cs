@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
 namespace Pages
 {
-	public class App
+	public partial class PageTabbedPage
 	{
-		public static Page GetMainPage()
+		public PageTabbedPage()
 		{
-			return new PageMain();
+			InitializeComponent();
 		}
 	}
 }

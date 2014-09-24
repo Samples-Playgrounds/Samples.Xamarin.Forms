@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace Pages
 {
-	public class App
+	public partial class PageContentPage
 	{
-		public static Page GetMainPage()
+		public PageContentPage()
 		{
-			return new PageMain();
+			InitializeComponent();
 		}
 	}
 }

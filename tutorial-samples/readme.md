@@ -12,7 +12,9 @@ In Xamarin.Forms all Views/Controls derive from Xamarin.Forms.View.
 1.	Controls/Views samples
 	simple samples in XAML and code for
 2.	Layouts
+	[]()
 3.	Pages
+	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/controls/pages/](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/controls/pages/)
 4.	Platform Specific stuff
 	1.	Platform class
 	2.	Dependency Service
@@ -35,7 +37,10 @@ In Xamarin.Forms all Views/Controls derive from Xamarin.Forms.View.
 *	XAML for Xamarin.Forms by Charles Petzold, including new Xaml samples
 	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/)
 *	added more Xaml to the Xamarin.Forms samples on GitHub.
-
+*	Introducton		
+	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/#Using_XAML_to_Create_and_Customize_A_List](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/#Using_XAML_to_Create_and_Customize_A_List)
+*	Xamarin Forms Labs		
+	[https://github.com/XForms/Xamarin-Forms-Labs](https://github.com/XForms/Xamarin-Forms-Labs)
 
 
 ## Some tricks

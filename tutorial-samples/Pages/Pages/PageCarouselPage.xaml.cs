@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace Pages
 {
-	public class App
+	public partial class PageCarouselPage
 	{
-		public static Page GetMainPage()
+		public PageCarouselPage()
 		{
-			return new PageMain();
+			InitializeComponent();
 		}
 	}
 }
