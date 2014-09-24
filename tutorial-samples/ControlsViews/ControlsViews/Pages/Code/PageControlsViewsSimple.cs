@@ -1,27 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 using Xamarin.Forms;
 
-namespace ControlsViews
+namespace ControlsViews.Pages.Code
 {
-	public partial class PageControlsViewsSimpleInCode : ContentPage
+	public class PageControlsViewsSimple : ContentPage
 	{
-		public PageControlsViewsSimpleInCode()
+		public PageControlsViewsSimple ()
 		{
-
-			Content = Grid();
-
 			// HACk: mc++ Accomodate iPhone status bar.
 			Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 10);
 
+			Content = Grid();
+
+
 			return;
 		}
-
 
 		private Grid Grid()
 		{
@@ -127,5 +121,7 @@ namespace ControlsViews
 
 			return grid;
 		}
+
 	}
 }
+

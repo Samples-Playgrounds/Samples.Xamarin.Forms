@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlsViews
+namespace Layouts.Pages
 {
-	public partial class PageControlsViewsSimpleInXaml
+	public partial class PageWithFrame
 	{
-		public PageControlsViewsSimpleInXaml()
+		public PageWithFrame()
 		{
 			InitializeComponent();
 		}

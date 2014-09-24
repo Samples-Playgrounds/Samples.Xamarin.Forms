@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ControlsViews.Pages;
+
 namespace ControlsViews
 {
 	public partial class PageMain
@@ -12,23 +14,28 @@ namespace ControlsViews
 		{
 			InitializeComponent();
 
-			this.buttonConotrolsInCode.Clicked += buttonConotrolsInCode_Clicked;
+
+			//...................................................
+			// Defined in XAML
+			//buttonConotrolsInCode.buttonSamplesInCode_Clicked
+			//...................................................
+
+			this.buttonSamplesInCode.Clicked += buttonSamplesInCode_Clicked;
 
 			return;
 		}
 
-		private void buttonConotrolsInCode_Clicked(object sender, EventArgs e)
+		private void buttonSamplesInXaml_Clicked(object sender, EventArgs e)
 		{
-			this.Navigation.PushModalAsync(new PageControlsViewsSimpleInCode());
-
+			this.Navigation.PushModalAsync(new PageControlsViewsInXaml());
+		
 			return;
 		}
 
-		private void buttonConotrolsInXaml_Clicked(object sender, EventArgs e)
+		private void buttonSamplesInCode_Clicked(object sender, EventArgs e)
 		{
-			this.Navigation.PushModalAsync(new PageControlsViewsSimpleInXaml());
-
-
+			this.Navigation.PushModalAsync(new PageControlsViewsInCode());
+		
 			return;
 		}
 	}

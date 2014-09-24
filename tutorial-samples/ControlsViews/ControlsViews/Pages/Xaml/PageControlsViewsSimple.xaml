@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-					   x:Class="ControlsViews.PageControlsViewsSimpleInXaml">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ControlsViews.Pages.Xaml.PageControlsViewsSimple">
+	<ContentPage.Content>
 
 	<Grid>
 		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
@@ -21,26 +21,41 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
-			<Label
+			<Button
 				Grid.Row="0" Grid.Column="0"
+				Text="Back/Pop Modal"
+				x:Name="buttonBackPopModal"
+				Clicked="buttonBackPopModal_Clicked"
+				>
+			</Button>
+
+
+
+
+
+			<Label
+				Grid.Row="1" Grid.Column="0"
 				Font="Large" 			
 				Text="Data:"
 				HorizontalOptions="Center"
 				VerticalOptions="CenterAndExpand"
 				/>
 			<Entry
-				Grid.Row="0" Grid.Column="1"
+				Grid.Row="1" Grid.Column="1"
 				Text="..."
 				/>
 			<Button
-				Grid.Row="0" Grid.Column="2"
+				Grid.Row="1" Grid.Column="2"
 				Text="Send"
 				/>
 
+
+
+
 			<Editor
-				Grid.Row="1" Grid.Column="0"  
+				Grid.Row="2" Grid.Column="0"  
 				Grid.RowSpan = "2" Grid.ColumnSpan="3" 
-				Text="... multiline text"
+				Text="... multiline text ..."
 			>
 			</Editor>>
 
@@ -61,6 +76,9 @@
 				VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
 				>
 			</ActivityIndicator>
+
+
+
 
 				
 			<Picker 
@@ -136,5 +154,5 @@
 		
 	</Grid>
 
+	</ContentPage.Content>
 </ContentPage>
-

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ControlsViews.Pages.PageControlsViewsInXaml">
+	<ContentPage.Content>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"> </RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<!--
+			// HACK: needed for iOS which has no back button 
+			-->
+			<Button
+				Grid.Row="0" Grid.Column="0"
+				Text="Back/Pop Modal"
+				x:Name="buttonBackPopModal"
+				Clicked="buttonBackPopModal_Clicked"
+				>
+			</Button>
+
+			<Button
+				Grid.Row="1" Grid.Column="0"
+				Text="Controls/Views Simple (Common)"
+				x:Name="buttonControlsViewsSimple"
+				Clicked="buttonControlsViewsSimple_Clicked"
+				>
+			</Button>
+
+
+			<Button
+				Grid.Row="2" Grid.Column="0"
+				Text="ListView"
+				x:Name="buttonListView"
+				Clicked="buttonListView_Clicked"
+				>
+			</Button>
+			<Button
+				Grid.Row="3" Grid.Column="0"
+				Text="ListView"
+				x:Name="buttonListViewCells"
+				Clicked="buttonListViewCells_Clicked"
+				>
+			</Button>
+			<Button
+				Grid.Row="4" Grid.Column="0"
+				Text="ListView Custom Cells"
+				x:Name="buttonListViewCellsCustom"
+				Clicked="buttonListViewCellsCustom_Clicked"
+				>
+			</Button>
+
+
+
+		</Grid>
+
+	</ContentPage.Content>
+</ContentPage>

@@ -35,7 +35,37 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Pages\ContentViewAsReusableUserControl.xaml.cs">
+      <DependentUpon>ContentViewAsReusableUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithAbsoluteLayout.xaml.cs">
+      <DependentUpon>PageWithAbsoluteLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithContentView.xaml.cs">
+      <DependentUpon>PageWithContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithContentViewAsUserControl.xaml.cs">
+      <DependentUpon>PageWithContentViewAsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithFrame.xaml.cs">
+      <DependentUpon>PageWithFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithGrid.xaml.cs">
+      <DependentUpon>PageWithGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithRelativeLayout.xaml.cs">
+      <DependentUpon>PageWithRelativeLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithScrollView.xaml.cs">
+      <DependentUpon>PageWithScrollView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWithStackLayout.xaml.cs">
+      <DependentUpon>PageWithStackLayout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PageMain.xaml.cs">
+      <DependentUpon>PageMain.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -62,5 +92,64 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PageMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithContentViewAsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithScrollView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithAbsoluteLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithRelativeLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\PageWithStackLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ContentViewAsReusableUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

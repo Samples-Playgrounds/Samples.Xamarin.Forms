@@ -900,7 +900,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ControlsViews\ControlsViews.Android\ControlsViews.Android.csproj
+		StartupItem = Layouts\Layouts.Android\Layouts.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

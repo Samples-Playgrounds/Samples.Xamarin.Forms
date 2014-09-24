@@ -5,18 +5,32 @@
 
 	<StackLayout>
 		<Button
-			x:Name="buttonConotrolsInXaml"
-			Clicked="buttonConotrolsInXaml_Clicked"
-			Text="Controls/Views simple in XAML"
+			x:Name="buttonSamplesInXaml"
+			Clicked="buttonSamplesInXaml_Clicked"
+			Text="Samples In XAML"
 			>
 
 		</Button>
 		<Button
-			x:Name="buttonConotrolsInCode"
-			Clicked="buttonConotrolsInCode_Clicked"
-			Text="Controls/Views simple in code"
+			x:Name="buttonSamplesInCode"
+			Clicked="buttonSamplesInCode_Clicked"
+			Text="Samples In Code"
 			>
+
 		</Button>
 	</StackLayout>
-	
+
+
+
+	<!--
+	HACK: mc++ OnPlatform - iOS specific Accomodate iPhone status bar.
+	Platform Specific uncomment this part to see the difference!
+	check cs sample PageControlsViewsInCode.cs
+
+	  <ContentPage.Padding>
+	    <OnPlatform x:TypeArguments="Thickness">
+	      <OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>
+	    </OnPlatform>
+	  </ContentPage.Padding>
+  	-->
 </ContentPage>

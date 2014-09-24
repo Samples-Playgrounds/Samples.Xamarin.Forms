@@ -59,6 +59,10 @@ Xamarin.Forms.Xaml.XamlParseException: No embeddedresources found for ControlsVi
 
 
 
+
+
+				"Object type Xamarin.Forms.TextCell cannot be converted to target type: Xamarin.Forms.View"
+
 				/Users/moljac/Projects/Samples/Samples.XamarinForms/Controls/Controls/Controls.csproj:
 				Error: This project references NuGet package(s) that are missing on this computer.
 				Enable NuGet Package Restore to download them.  For more information,
@@ -69,4 +73,59 @@ Xamarin.Forms.Xaml.XamlParseException: No embeddedresources found for ControlsVi
 
 				Replace version in csproj file with one in packages/ folder
 
-				../../packages/Xamarin.Forms.1.2.2.6243/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (Controls)
+				
+				../../packages/Xamarin.Forms.1.2.2.6243/build/portable-
+				win+n
+et45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (Controls)
+### Error
+"Object type Xamarin.Forms.TextCell
+				cannot be converted to target type: Xamarin.Forms.View"
+
+				<TableView>
+				<TableRoot>
+				<TableSection Title="Test">
+				<Text
+				Cell Text="Test"></TextCell>
+			</TableSection>
+				</TableRoot>
+	</TableView>
+todo: Pi
+				cker sample
+
+
+2 Views (Tables notin StackPanel)
+
+				Xamarin.Forms.Xaml.XamlParseException: Position 14:3. Property Content is null or is not IEnumerable
+				at at Xamarin.Forms.Xaml.ListNode.ApplyTo (object,Xamarin.Forms.Xaml.XmlName,bool) <IL 0x00132, 0x0093b>
+				at at Xamarin.Forms.Xaml.INodeExtensio<il 0x00132, 0x0093b>
+					at at Xamarin.Forms.Xaml.INodeExtension.ApplyProperties (Xamarin.Forms.Xaml.IElementNode,object,bool) <il 0x00049, 0x00348>
+						at at Xamarin.Forms.Xaml.RootNode.ApplyProperties (bool) <il 0x00008, 0x0004b>
+							at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,string) <il 0x00069, 0x00263>
+								at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,System.Type) <il 0x0002d, 0x0011b>
+									at at Xamarin.Forms.Xaml.Extensions.LoadFromXaml<controlsviews.pagetableviewinxaml>
+										(ControlsViews.PageTableViewInXaml,System.Type) <0x0002f>
+											at ControlsViews.PageTableViewInXaml.InitializeComponent () [0x0000c] in /Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/obj/Debug/PageTableViewInXaml.xaml.g.cs:22
+											at ControlsViews.PageTableViewInXaml..ctor () [0x00008] in /Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/PageTableViewInXaml.xaml.cs:13
+											at ControlsViews.PageMain.buttonTableViewInXaml_Clicked (object,System.EventArgs) [0x00007] in /Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/PageMain.xaml.cs:36
+											at at Xamarin.Forms.Button.SendClicked () <il 0x00027, 0x000c2>
+												at at Xamarin.Forms.Platform.Android.ButtonRenderer/ButtonClickListener.OnClick (Android.Views.View) <il 0x00015, 0x000a7>
+													at Android.Views.View/IOnClickListenerInvoker.n_OnClick_Landroid_view_View_ (intptr,intptr,intptr) [0x00011] in /Users/builder/data/lanes/1131/2a7b6821/source/monodroid/src/Mono.Android/platforms/android-19/src/generated/Android.Views.View.cs:1840
+													at at (wrapper dynamic-method) object.c02f3264-e236-45c6-a92c-b6e70c81d30f (intptr,intptr,intptr) <il 0x00017, 0x0001f>
+
+
+
+### Data Binding
+
+*	[http://forums.xamarin.com/discussion/18873/can-the-tableview-have-multiple-headers]()http://forums.xamarin.com/discussion/18873/can-the-tableview-have-multiple-headers
+*	[http://forums.xamarin.com/discussion/18475/is-it-possible-to-use-a-tableview-listview-to-function-similar-to-a-gridview](http://forums.xamarin.com/discussion/18475/is-it-possible-to-use-a-tableview-listview-to-function-similar-to-a-gridview)
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+*	[]()
+
