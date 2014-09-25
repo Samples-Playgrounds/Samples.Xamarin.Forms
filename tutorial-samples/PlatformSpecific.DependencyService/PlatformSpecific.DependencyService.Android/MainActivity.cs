@@ -9,6 +9,8 @@ using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
 
+
+
 namespace PlatformSpecific.DependencyService.Droid
 {
 	[Activity(Label = "PlatformSpecific.DependencyService", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

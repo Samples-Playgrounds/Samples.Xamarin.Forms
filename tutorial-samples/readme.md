@@ -63,67 +63,101 @@ In Xamarin.Forms all Views/Controls derive from Xamarin.Forms.View.
 
 ## References
 
-*	Conceptual docs:
+*	Conceptual docs:		
 	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/)
-*	Api docs:
+*	Api docs:		
 	[http://iosapi.xamarin.com/?link=N:Xamarin.Forms](http://iosapi.xamarin.com/?link=N:Xamarin.Forms)
-*	University class:
+*	University class:		
 	[https://university.xamarin.com/classes/intro-to-xamarinforms-xam120](https://university.xamarin.com/classes/intro-to-xamarinforms-xam120)
-*	Prebuilt app:
+*	Prebuilt app:			
 	[https://github.com/xamarin/xamarin-forms-samples/tree/master/MobileCRM](https://github.com/xamarin/xamarin-forms-samples/tree/master/MobileCRM)
-*	Samples repo:
+*	Samples repo:			
 	[https://github.com/xamarin/xamarin-forms-samples](https://github.com/xamarin/xamarin-forms-samples)
-*	XAML for Xamarin.Forms by Charles Petzold, including new Xaml samples
+*	XAML for Xamarin.Forms by Charles Petzold, including new Xaml samples		
 	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/xaml-for-xamarin-forms/)
-*	added more Xaml to the Xamarin.Forms samples on GitHub.
-*	Introducton		
+*	added more Xaml to the Xamarin.Forms samples on GitHub.		
+*	Introducton			
 	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/#Using_XAML_to_Create_and_Customize_A_List](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/#Using_XAML_to_Create_and_Customize_A_List)
-*	Xamarin Forms Labs		
+*	Xamarin Forms Labs			
 	[https://github.com/XForms/Xamarin-Forms-Labs](https://github.com/XForms/Xamarin-Forms-Labs)
 
 
 ## Some tricks
 
-Xamarin.Forms.Xaml.XamlParseException: No embeddedresources found for ControlsViews.PageMain
-  at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,System.Type) <il 0x0002a, 0x00103>
-	at at Xamarin.Forms.Xaml.Extensions.LoadFromXaml<controlsviews.pagemain>
-		(ControlsViews.PageMain,System.Type) <0x0002f>
-			at ControlsViews.PageMain.InitializeComponent () [0x0000c] in /Users/moljac/Projects/Samples/Samples.XamarinForms/ControlsViews/ControlsViews/obj/Debug/PageMain.xaml.g.cs:24
-			at ControlsViews.PageMain..ctor () [0x00008] in /Users/moljac/Projects/Samples/Samples.XamarinForms/ControlsViews/ControlsViews/PageMain.xaml.cs:13
-			at ControlsViews.App.GetMainPage () [0x00001] in /Users/moljac/Projects/Samples/Samples.XamarinForms/ControlsViews/ControlsViews/App.cs:14
-			at ControlsViews.Droid.MainActivity.OnCreate (Android.OS.Bundle) [0x00010] in /Users/moljac/Projects/Samples/Samples.XamarinForms/ControlsViews/ControlsViews.Android/MainActivity.cs:23
-			at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (intptr,intptr,intptr) [0x00011] in /Users/builder/data/lanes/1131/2a7b6821/source/monodroid/src/Mono.Android/platforms/android-19/src/generated/Android.App.Activity.cs:2179
-			at at (wrapper dynamic-method) object.bf3e2470-ec35-4e97-aeb2-ff6fa6870e02 (intptr,intptr,intptr) <il 0x00017, 0x0001f>
+
+### No embeddedresources found for <SomePageInXaml>
+
+#### Problem : Error No embeddedresources found for <SomePageInXaml>
+
+Sample:
+
+	Xamarin.Forms.Xaml.XamlParseException: No embeddedresources found for ControlsViews.PageMain
+	  at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,System.Type) <il 0x0002a, 0x00103>
+		at at Xamarin.Forms.Xaml.Extensions.LoadFromXaml<controlsviews.pagemain>
+			(ControlsViews.PageMain,System.Type) <0x0002f>
+				at ControlsViews.PageMain.InitializeComponent () [0x0000c] in /Samples.XamarinForms/ControlsViews/ControlsViews/obj/Debug/PageMain.xaml.g.cs:24
+				at ControlsViews.PageMain..ctor () [0x00008] in /Samples.XamarinForms/ControlsViews/ControlsViews/PageMain.xaml.cs:13
+				at ControlsViews.App.GetMainPage () [0x00001] in /Samples.XamarinForms/ControlsViews/ControlsViews/App.cs:14
+				at ControlsViews.Droid.MainActivity.OnCreate (Android.OS.Bundle) [0x00010] in /Samples.XamarinForms/ControlsViews/ControlsViews.Android/MainActivity.cs:23
+				at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (intptr,intptr,intptr) [0x00011] in /Users/builder/data/lanes/1131/2a7b6821/source/monodroid/src/Mono.Android/platforms/android-19/src/generated/Android.App.Activity.cs:2179
+				at at (wrapper dynamic-method) object.bf3e2470-ec35-4e97-aeb2-ff6fa6870e02 (intptr,intptr,intptr) <il 0x00017, 0x0001f>
+
+#### Analysis
+
+Locked bin/  obj/ folders. 
+
+#### [Re]Solution
+
+Delete manually or add pre-build MSBuild action in csproj file:
+
+	  <Target Name="RemoveObjAndBin" AfterTargets="Clean">
+	    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+	    <RemoveDir Directories="$(TargetDir)" />
+	  </Target>
+	  <Target Name="BeforeBuild">
+	    <!-- Remove obj folder -->
+	    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+	    <!-- Remove bin folder -->
+	    <RemoveDir Directories="$(BaseOutputPath)" />
+	  </Target>	
+
+Caveat: WinPhone projects might have obj/ folder locked if iOS simulator or Android emulators are running on MacOSX.
 
 
 
+### Error: This project references NuGet package(s) that are missing on this computer.
+
+#### Problem
+
+Error: This project references NuGet package(s) that are missing on this computer.
+
+
+	/Samples.XamarinForms/Controls/Controls/Controls.csproj:
+	Error: This project references NuGet package(s) that are missing on this computer.
+	Enable NuGet Package Restore to download them.  For more information,
+	see http://go.microsoft.com/fwlink/?LinkID=322105.
+	The missing file is ../../packages/Xamarin.Forms.1.0.6186/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets.
+	(Controls)
+
+#### Analysis
+
+Something went wrong with package update/restore. Probably locked folders from Virtual Machine (not sure)
+
+
+#### [Re]Solution
+
+1.	Nuke nuget packages/ folder		
+2.	Replace version (1.0.6186) in csproj file with one in packages/ folder (.1.2.2.6243).		
+
+	../../packages/Xamarin.Forms.1.2.2.6243/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (Controls)
 
 
 
+### "Object type Xamarin.Forms.TextCell cannot be converted to target type: Xamarin.Forms.View"
 
+#### Problem
 
-
-
-
-				"Object type Xamarin.Forms.TextCell cannot be converted to target type: Xamarin.Forms.View"
-
-				/Users/moljac/Projects/Samples/Samples.XamarinForms/Controls/Controls/Controls.csproj:
-				Error: This project references NuGet package(s) that are missing on this computer.
-				Enable NuGet Package Restore to download them.  For more information,
-				see http://go.microsoft.com/fwlink/?LinkID=322105.
-				The missing file is ../../packages/Xamarin.Forms.1.0.6186/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets.
-				(Controls)
-
-
-				Replace version in csproj file with one in packages/ folder
-
-				
-				../../packages/Xamarin.Forms.1.2.2.6243/build/portable-
-				win+n
-et45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (Controls)
-### Error
-"Object type Xamarin.Forms.TextCell
-				cannot be converted to target type: Xamarin.Forms.View"
+Runtime error: "Object type Xamarin.Forms.TextCell cannot be converted to target type: Xamarin.Forms.View"
 
 				<TableView>
 				<TableRoot>
@@ -133,28 +167,43 @@ et45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (Controls)
 			</TableSection>
 				</TableRoot>
 	</TableView>
-todo: Pi
-				cker sample
+				
+
+todo: Picker sample
 
 
-2 Views (Tables notin StackPanel)
+### Property Content is null or is not IEnumerable
 
-				Xamarin.Forms.Xaml.XamlParseException: Position 14:3. Property Content is null or is not IEnumerable
-				at at Xamarin.Forms.Xaml.ListNode.ApplyTo (object,Xamarin.Forms.Xaml.XmlName,bool) <IL 0x00132, 0x0093b>
-				at at Xamarin.Forms.Xaml.INodeExtensio<il 0x00132, 0x0093b>
-					at at Xamarin.Forms.Xaml.INodeExtension.ApplyProperties (Xamarin.Forms.Xaml.IElementNode,object,bool) <il 0x00049, 0x00348>
-						at at Xamarin.Forms.Xaml.RootNode.ApplyProperties (bool) <il 0x00008, 0x0004b>
-							at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,string) <il 0x00069, 0x00263>
-								at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,System.Type) <il 0x0002d, 0x0011b>
-									at at Xamarin.Forms.Xaml.Extensions.LoadFromXaml<controlsviews.pagetableviewinxaml>
-										(ControlsViews.PageTableViewInXaml,System.Type) <0x0002f>
-											at ControlsViews.PageTableViewInXaml.InitializeComponent () [0x0000c] in /Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/obj/Debug/PageTableViewInXaml.xaml.g.cs:22
-											at ControlsViews.PageTableViewInXaml..ctor () [0x00008] in /Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/PageTableViewInXaml.xaml.cs:13
-											at ControlsViews.PageMain.buttonTableViewInXaml_Clicked (object,System.EventArgs) [0x00007] in /Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/PageMain.xaml.cs:36
-											at at Xamarin.Forms.Button.SendClicked () <il 0x00027, 0x000c2>
-												at at Xamarin.Forms.Platform.Android.ButtonRenderer/ButtonClickListener.OnClick (Android.Views.View) <il 0x00015, 0x000a7>
-													at Android.Views.View/IOnClickListenerInvoker.n_OnClick_Landroid_view_View_ (intptr,intptr,intptr) [0x00011] in /Users/builder/data/lanes/1131/2a7b6821/source/monodroid/src/Mono.Android/platforms/android-19/src/generated/Android.Views.View.cs:1840
-													at at (wrapper dynamic-method) object.c02f3264-e236-45c6-a92c-b6e70c81d30f (intptr,intptr,intptr) <il 0x00017, 0x0001f>
+	Xamarin.Forms.Xaml.XamlParseException: Position 14:3. Property Content is null or is not IEnumerable
+	at at Xamarin.Forms.Xaml.ListNode.ApplyTo (object,Xamarin.Forms.Xaml.XmlName,bool) <IL 0x00132, 0x0093b>
+	at at Xamarin.Forms.Xaml.INodeExtensio<il 0x00132, 0x0093b>
+		at at Xamarin.Forms.Xaml.INodeExtension.ApplyProperties (Xamarin.Forms.Xaml.IElementNode,object,bool) <il 0x00049, 0x00348>
+			at at Xamarin.Forms.Xaml.RootNode.ApplyProperties (bool) <il 0x00008, 0x0004b>
+				at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,string) <il 0x00069, 0x00263>
+					at at Xamarin.Forms.Xaml.XamlLoader.Load (Xamarin.Forms.VisualElement,System.Type) <il 0x0002d, 0x0011b>
+						at at Xamarin.Forms.Xaml.Extensions.LoadFromXaml<controlsviews.pagetableviewinxaml>
+							(ControlsViews.PageTableViewInXaml,System.Type) <0x0002f>
+								at ControlsViews.PageTableViewInXaml.InitializeComponent () [0x0000c] in /Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/obj/Debug/PageTableViewInXaml.xaml.g.cs:22
+								at ControlsViews.PageTableViewInXaml..ctor () [0x00008] in /Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/PageTableViewInXaml.xaml.cs:13
+								at ControlsViews.PageMain.buttonTableViewInXaml_Clicked (object,System.EventArgs) [0x00007] in /Samples.Xamarin.Forms/tutorial-samples/ControlsViews/ControlsViews/PageMain.xaml.cs:36
+								at at Xamarin.Forms.Button.SendClicked () <il 0x00027, 0x000c2>
+									at at Xamarin.Forms.Platform.Android.ButtonRenderer/ButtonClickListener.OnClick (Android.Views.View) <il 0x00015, 0x000a7>
+										at Android.Views.View/IOnClickListenerInvoker.n_OnClick_Landroid_view_View_ (intptr,intptr,intptr) [0x00011] in /Users/builder/data/lanes/1131/2a7b6821/source/monodroid/src/Mono.Android/platforms/android-19/src/generated/Android.Views.View.cs:1840
+										at at (wrapper dynamic-method) object.c02f3264-e236-45c6-a92c-b6e70c81d30f (intptr,intptr,intptr) <il 0x00017, 0x0001f>
+
+
+#### Analysis
+
+2 Views (Tables not in StackPanel)
+
+TODO: Sample
+
+
+#### [Re]Solution
+
+Wrap more than 1 View/Control into Layouts
+
+TODO: Sample
 
 
 
@@ -162,14 +211,5 @@ todo: Pi
 
 *	[http://forums.xamarin.com/discussion/18873/can-the-tableview-have-multiple-headers]()http://forums.xamarin.com/discussion/18873/can-the-tableview-have-multiple-headers
 *	[http://forums.xamarin.com/discussion/18475/is-it-possible-to-use-a-tableview-listview-to-function-similar-to-a-gridview](http://forums.xamarin.com/discussion/18475/is-it-possible-to-use-a-tableview-listview-to-function-similar-to-a-gridview)
-*	[]()
-*	[]()
-*	[]()
-*	[]()
-*	[]()
-*	[]()
-*	[]()
-*	[]()
-*	[]()
 *	[]()
 
