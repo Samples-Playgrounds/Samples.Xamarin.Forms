@@ -900,7 +900,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Pages\Pages.Android\Pages.Android.csproj
+		StartupItem = PlatformSpecific.DependencyService\PlatformSpecific.DependencyService.Android\PlatformSpecific.DependencyService.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

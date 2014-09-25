@@ -6,6 +6,45 @@ The term Control is used mostly by Windows/WPF/Silverlight/WindowsPhone devs, wh
 
 In Xamarin.Forms all Views/Controls derive from Xamarin.Forms.View.
 
+## Demo flow
+
+1.	Archiecture / Project Structure
+	1.	New Project: Mobile Apps
+	2.	IDE
+		1.	Visual Studio (if possible)
+		2.	Xamarin Studio
+	3.	PCL
+	4.	Entry Points structure
+2.	UI
+	1.	Views / Controls
+		1.	Device.OnPlatform
+		2.	Visual Studio (if possible)
+		3.	Xamarin Studio
+	2.	Layouts
+		1.	ContentView
+		2.	ContentView as reusable UserControl
+		3.	StackLayout
+		2.	Grid
+		3.	RelativeLayout
+		4.	AbsoluteLayout
+		5. 	
+	3.	Pages
+		1.	ContentPage
+		2.	CarouselPage
+		3.	TabbedPage
+3.	Platform Specific
+	1.	Device class
+		1.	OnPlatform()
+	2.	Dependency Service
+		1.	shared in PCL
+			1.	Interface
+			2.	Location (DependencyService.Get<>)
+		2.	Platform Specific
+			1.	Android
+				1.	Permissions / Entitlements / Capabilities
+				2.	Android.Bluetooth.*
+
+
 
 ## Structure
 
