@@ -103,4 +103,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <AndroidEnvironment Include="android-environment.sh" />
+  </ItemGroup>
 </Project>

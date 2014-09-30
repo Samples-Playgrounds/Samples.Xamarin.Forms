@@ -23,6 +23,7 @@
 
 
 	<!--
+  	-->
 	HACK: mc++ OnPlatform - iOS specific Accomodate iPhone status bar.
 	Platform Specific uncomment this part to see the difference!
 	check cs sample PageControlsViewsInCode.cs
@@ -32,5 +33,4 @@
 	      <OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>
 	    </OnPlatform>
 	  </ContentPage.Padding>
-  	-->
 </ContentPage>

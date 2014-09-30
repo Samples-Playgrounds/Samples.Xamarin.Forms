@@ -3,9 +3,9 @@
 
 ## Universal Apps Ivan Curic
 
-1 digresija i 2 odgovora
+1 Comment + 2 Answers
 
-1.	Digresija
+1.	Comment
 	1. 	metode shareanja koda : 
 			File Linking + partial classes 
 			nije iskljucivo, 
@@ -17,7 +17,14 @@
 		1.	start small, mobile, 
 		2.	everything into UserControls.xaml (reusable)
 		3.	pages for different form factors
-			1. 	phone: 	1 user controls
-			2.	tablet:	few user controls 2-5 on Page/Activity-Layout/UIViewController	
+			1. 	Phone: 	1 user controls
+			2.	Tablet:	few user controls 2-5 on Page/Activity-Layout/UIViewController	
 			3.	Desktop: more 5-10 user controls on Page/Form/Window
+
+## IoT Damir Dobric
+
+1.	2 devices
+	1.	no public IP addresses
+2. 	connected thorugh internet!
+	1. 	service bus
 

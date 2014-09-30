@@ -213,3 +213,18 @@ TODO: Sample
 *	[http://forums.xamarin.com/discussion/18475/is-it-possible-to-use-a-tableview-listview-to-function-similar-to-a-gridview](http://forums.xamarin.com/discussion/18475/is-it-possible-to-use-a-tableview-listview-to-function-similar-to-a-gridview)
 *	[]()
 
+
+
+
+
+
+Error	2	
+Deployment failed because an app with target platform ARM cannot be deployed to Emulator WVGA 512MB. 
+If the target platform is win32/ x86, select an emulator. If the target platform is ARM, select Device.		
+0	0	
+
+
+System.Reflection.TargetInvocationException was unhandled
+Message: An unhandled exception of type 'System.Reflection.TargetInvocationException' occurred in System.Windows.ni.dll
+Additional information: Exception has been thrown by the target of an invocation.
+
