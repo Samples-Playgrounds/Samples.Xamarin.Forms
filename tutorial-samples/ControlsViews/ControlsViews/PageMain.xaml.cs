@@ -20,7 +20,7 @@ namespace ControlsViews
 			//buttonConotrolsInCode.buttonSamplesInCode_Clicked
 			//...................................................
 
-			this.buttonSamplesInCode.Clicked += buttonSamplesInCode_Clicked;
+			//this.buttonSamplesInCode.Clicked += buttonSamplesInCode_Clicked;
 
 			return;
 		}
