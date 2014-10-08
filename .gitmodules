@@ -7,3 +7,9 @@
 [submodule "submodulez/Xamarin.Mobile"]
 	path = submodulez/Xamarin.Mobile
 	url = https://github.com/moljac/Xamarin.Mobile.git
+[submodule "submodulez/Xamarin-Forms-Labs"]
+	path = submodulez/Xamarin-Forms-Labs
+	url = https://github.com/moljac/Xamarin-Forms-Labs.git
+[submodule "submodulez/Xamarin-Forms-Labs-Samples"]
+	path = submodulez/Xamarin-Forms-Labs-Samples
+	url = https://github.com/moljac/Xamarin-Forms-Labs-Samples.git

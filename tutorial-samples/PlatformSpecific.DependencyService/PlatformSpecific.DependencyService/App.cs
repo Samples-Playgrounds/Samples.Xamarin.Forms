@@ -11,7 +11,12 @@ namespace PlatformSpecific.DependencyService
 	{
 		public static Page GetMainPage()
 		{
-			return new PageBluetoothPrinter();
+			return 
+				new 
+					PageMain()
+					// PageBluetoothPrinter()
+					;
+
 		}
 	}
 }
