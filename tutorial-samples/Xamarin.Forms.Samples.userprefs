@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.101:5555" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PlatformSpecific.DependencyService/PlatformSpecific.DependencyService/PageMain.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlatformSpecific.DependencyService/PlatformSpecific.DependencyService/FeaturesCapabilities/Bluetooth/PageBluetoothPrinter.xaml.cs">
     <Files>
-      <File FileName="PlatformSpecific.DependencyService/PlatformSpecific.DependencyService/PageMain.xaml" Line="28" Column="28" />
+      <File FileName="PlatformSpecific.DependencyService/PlatformSpecific.DependencyService/PageMain.xaml" Line="3" Column="3" />
+      <File FileName="PlatformSpecific.DependencyService/PlatformSpecific.DependencyService/FeaturesCapabilities/Bluetooth/PageBluetoothPrinter.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
