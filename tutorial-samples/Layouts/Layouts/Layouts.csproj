@@ -37,6 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="LayoutsAdvanced\PageLayoutsAdvanced.xaml.cs">
+      <DependentUpon>PageLayoutsAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutsAdvanced\Xaml\ContentViewGridSymmetric.xaml.cs">
+      <DependentUpon>ContentViewGridSymmetric.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PageMain.xaml.cs">
       <DependentUpon>PageMain.xaml</DependentUpon>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Layouts\Xaml\PageWithStackLayout.xaml.cs">
       <DependentUpon>PageWithStackLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\PageLayoutsBasics.xaml.cs">
+      <DependentUpon>PageLayoutsBasics.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -125,6 +134,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\PageLayoutsBasics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -138,7 +150,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="LayoutsAdvanced\Code\" />
     <Folder Include="Layouts\Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LayoutsAdvanced\PageLayoutsAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LayoutsAdvanced\Xaml\ContentViewGridSymmetric.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>

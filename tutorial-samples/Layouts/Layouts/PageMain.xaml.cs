@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 
+
+using Layouts.LayoutsAdvanced;
+
 namespace Layouts
 {	
 	public partial class PageMain : ContentPage
@@ -11,62 +14,19 @@ namespace Layouts
 			InitializeComponent ();
 		}
 
-		private void buttonContentView_Clicked(object sender, EventArgs ea)
+		private void buttonLayoutsBasics_Clicked(object sender, EventArgs ea)
 		{
-			this.Navigation.PushModalAsync(new Pages.PageWithContentView());
+			this.Navigation.PushModalAsync(new PageLayoutsBasics());
 
 			return;
 		}
 
-		private void buttonContentViewAsUserControl_Clicked(object sender, EventArgs ea)
+		private void buttonLayoutsAdvanced_Clicked(object sender, EventArgs ea)
 		{
-			this.Navigation.PushModalAsync(new Pages.PageWithContentViewAsUserControl());
+			this.Navigation.PushModalAsync(new PageLayoutsAdvanced());
 
 			return;
 		}
-
-		private void buttonFrame_Clicked(object sender, EventArgs ea)
-		{
-			this.Navigation.PushModalAsync(new Pages.PageWithFrame());
-
-			return;
-		}
-
-		private void buttonScrollView_Clicked(object sender, EventArgs ea)
-		{
-			this.Navigation.PushModalAsync(new Pages.PageWithScrollView());
-
-			return;
-		}
-
-		private void buttonAbsoluteLayout_Clicked(object sender, EventArgs ea)
-		{
-			this.Navigation.PushModalAsync(new Pages.PageWithAbsoluteLayout());
-
-			return;
-		}
-
-		private void buttonGrid_Clicked(object sender, EventArgs ea)
-		{
-			this.Navigation.PushModalAsync(new Pages.PageWithGrid());
-
-			return;
-		}
-
-		private void buttonRelativeLayout_Clicked(object sender, EventArgs ea)
-		{
-			this.Navigation.PushModalAsync(new Pages.PageWithRelativeLayout());
-
-			return;
-		}
-
-		private void buttonStackLayout_Clicked(object sender, EventArgs ea)
-		{
-			this.Navigation.PushModalAsync(new Pages.PageWithStackLayout());
-
-			return;
-		}
-
 	}
 }
 
