@@ -1,8 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.101:5555" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinComponentsTests/XamarinComponentsTests.iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="XamarinComponentsTests/XamarinComponentsTests/App.cs" Line="3" Column="3" />
+      <File FileName="XamarinComponentsTests/XamarinComponentsTests.iOS/AppDelegate.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/XamarinComponentsTests/XamarinComponentsTests/App.cs" line="17" column="1" />
+      <Breakpoint file="/Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/XamarinComponentsTests/XamarinComponentsTests.iOS/AppDelegate.cs" line="34" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

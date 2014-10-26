@@ -1,5 +1,40 @@
 # Xamarin.Forms Samples
 
+Samples and cheat-sheet for working with Xamarin.Forms
+
+*	[http://iosapi.xamarin.com/?link=root:/Xamarin.Forms](http://iosapi.xamarin.com/?link=root:/Xamarin.Forms)
+*	[http://iosapi.xamarin.com/?link=N%3aXamarin.Forms](http://iosapi.xamarin.com/?link=N%3aXamarin.Forms)
+*	[http://iosapi.xamarin.com/?link=N%3aXamarin.Forms.Xaml](http://iosapi.xamarin.com/?link=N%3aXamarin.Forms.Xaml)
+
+4 applications:
+
+1.	ControlsViews	
+	showing basic Views (Controls, Widgest) 		
+	xaml and code
+2.	ControlsViewsMap	
+	*	Map is special form of View	(Control, Widget)	
+	*	located in Xamarin.Forms.Map nuget package		
+	*	[http://iosapi.xamarin.com/?link=N%3aXamarin.Forms.Maps]](http://iosapi.xamarin.com/?link=N%3aXamarin.Forms.Maps)
+3.	Layouts		
+	xaml and code			
+4.	Pages
+	xaml and code			
+		
+
+## Installation
+
+### Xamarin.Forms.Map
+	
+	Get-Project ControlsViewsMap | Install-Package Xamarin.Forms.Maps
+	Get-Project ControlsViewsMap.iOS, ControlsViewsMap.Android,ControlsViewsMap.WinPhone | Install-Package Xamarin.Forms.Maps
+
+
+	Install-Package Xamarin.Forms.Map -Project ControlsViewsMap
+	Install-Package Xamarin.Forms.Map -Project ControlsViewsMap.iOS
+	Install-Package Xamarin.Forms.Map -Project ControlsViewMap.Android
+	Install-Package Xamarin.Forms.Map -Project ControlsViewsMap.WindowsPhone
+	
+		
 Note: Terms Control and View used interchangeable in docs.
 
 The term Control is used mostly by Windows/WPF/Silverlight/WindowsPhone devs, while Views by Android and iOS devs.

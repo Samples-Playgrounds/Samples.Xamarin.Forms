@@ -3,13 +3,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{AD7E8FF3-B032-471F-8F15-D70D36216019}</ProjectGuid>
+    <ProjectGuid>{6B048E7C-6874-409E-9DAF-9FF21A06C0D6}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>XamarinComponentsTests.iOS</RootNamespace>
+    <RootNamespace>ControlsViewsMap.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>FormsTemplateiOS</AssemblyName>
-    <NuGetPackageImportStamp>4e5a4d16</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>793ce6a9</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -82,9 +82,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamarinComponentsTests\XamarinComponentsTests.csproj">
-      <Name>XamarinComponentsTests</Name>
-      <Project>{C17AB34B-7F71-4DA6-8C22-0FE7185FACEA}</Project>
+    <ProjectReference Include="..\ControlsViewsMap\ControlsViewsMap.csproj">
+      <Name>ControlsViewsMap</Name>
+      <Project>{FA2755C4-649F-4691-B2E8-22035C6F5FF2}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -94,57 +94,30 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Syncfusion.SfChart.XForms">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfChart.XForms.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfChart.XForms.iOS">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfChart.XForms.iOS.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfChart.iOS">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfChart.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfGauge.XForms">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfGauge.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfGauge.XForms.iOS">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfGauge.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfGauge.iOS">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfGauge.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfTreeMap.XForms">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfTreeMap.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfTreeMap.XForms.iOS">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfTreeMap.XForms.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfTreeMap.iOS">
-      <HintPath>..\..\Components\SyncfusionEssentialStudio-12.2.0.40-trial\lib\ios\Syncfusion.SfTreeMap.iOS.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Maps.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.iOS">
       <HintPath>..\..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
   </Target>
-  <ItemGroup>
-    <XamarinComponentReference Include="SyncfusionEssentialStudio-trial">
-      <Version>12.2.0.40</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-  </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
 </Project>

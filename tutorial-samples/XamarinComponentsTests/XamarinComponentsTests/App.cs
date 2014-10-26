@@ -72,8 +72,9 @@ namespace XamarinComponentsTests
 			chart.Legend = new ChartLegend() { IsVisible = true };
 
 			this.Content = chart;
-		}
 
+			return;
+		}
 	}
 
 	public class DataModel
