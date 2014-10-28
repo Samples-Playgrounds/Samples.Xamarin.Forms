@@ -25,10 +25,13 @@ Samples and cheat-sheet for working with Xamarin.Forms
 
 ### Xamarin.Forms.Map
 	
-	Get-Project ControlsViewsMap | Install-Package Xamarin.Forms.Maps
-	Get-Project ControlsViewsMap.iOS, ControlsViewsMap.Android,ControlsViewsMap.WinPhone | Install-Package Xamarin.Forms.Maps
+	Get-Project ControlsViewsMap 			| Install-Package Xamarin.Forms.Maps
+	Get-Project ControlsViewsMap.iOS		| Install-Package Xamarin.Forms.Maps
+	Get-Project ControlsViewsMap.Android 	| Install-Package Xamarin.Forms.Maps
+	Get-Project ControlsViewsMap.WinPhone 	| Install-Package Xamarin.Forms.Maps
 
-
+	Get-Project Project1,Project2,Project3	| Install-Package Xamarin.Forms.Maps
+	
 	Install-Package Xamarin.Forms.Map -Project ControlsViewsMap
 	Install-Package Xamarin.Forms.Map -Project ControlsViewsMap.iOS
 	Install-Package Xamarin.Forms.Map -Project ControlsViewMap.Android
