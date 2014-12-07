@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="ServerMonitor.Views.SingleView">
+  <StackLayout>
+    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" >
+    <Label x:Name="TitleLabel" Text="Server Monitor" VerticalOptions="Center" HorizontalOptions="Center" />    
+    </StackLayout>
+    <StackLayout Orientation=" Horizontal" BackgroundColor="Gray" HeightRequest="2"></StackLayout>
+    <StackLayout Orientation=" Horizontal">
+      <StackLayout Orientation="Vertical" WidthRequest="220">
+        <StackLayout Orientation=" Horizontal"  HeightRequest="5"></StackLayout>
+      <StackLayout x:Name="CPULayout" WidthRequest="400" HeightRequest="150"  Orientation="Vertical">
+        <StackLayout x:Name="CPULayoutLabel" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+        <Label x:Name="CPUUtilization" Text="CPU Utilization :" VerticalOptions="Start" HorizontalOptions="Center" />
+          <Label x:Name="CPUUtilizationValue" Text="" VerticalOptions="Start" HorizontalOptions="Center" />
+        </StackLayout>
+      </StackLayout>
+        <StackLayout x:Name="MemoryLayout" WidthRequest="400" HeightRequest="150"  Orientation="Vertical" >
+          <StackLayout x:Name="MemoryLayoutLabel" VerticalOptions="Center" HorizontalOptions="Center"  Orientation="Horizontal">
+            <Label x:Name="MemoryUsage" Text="Memory Usage" VerticalOptions="Start" HorizontalOptions="Center" />
+          <Label x:Name="MemoryUsageValue" Text="" VerticalOptions="Start" HorizontalOptions="Center" />
+        </StackLayout>
+        </StackLayout>        
+        <StackLayout x:Name="MemoryPieLayout" WidthRequest="400" HeightRequest="150"  Orientation="Vertical">
+          <StackLayout VerticalOptions="Center" HorizontalOptions="Center"  Orientation="Horizontal">
+          <Label  x:Name="MemoryUsed" Text="Disk Utilization" VerticalOptions="Start" HorizontalOptions="Center" />
+            <Label  x:Name="MemoryUsedValue" Text="Memory Used" VerticalOptions="Start" HorizontalOptions="Center" />
+          </StackLayout>
+          <StackLayout HeightRequest="10"/>
+        </StackLayout>      
+      </StackLayout>
+      <StackLayout Orientation=" Horizontal" BackgroundColor="Gray" WidthRequest="1"></StackLayout>
+      <StackLayout Orientation=" Horizontal" WidthRequest="25"></StackLayout>
+      <StackLayout Orientation="Vertical">
+        <StackLayout Orientation=" Horizontal"  HeightRequest="5"></StackLayout>
+        <StackLayout x:Name="CPUChartLayout"  HeightRequest="150"  Orientation="Vertical" >
+          <Label x:Name="CPUUtilizationHistory" Text="CPU Utilization History" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HeightRequest="5"/>
+        </StackLayout>
+        <StackLayout x:Name="MemoryChartLayout"  HeightRequest="150"  Orientation="Vertical">
+          <Label  x:Name="MemoryUsageHistory" Text="Memory Usage History" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HeightRequest="5"/>
+        </StackLayout>
+        <StackLayout x:Name="NetworkLayout"  HeightRequest="150"  Orientation="Vertical">
+          <Label  x:Name="DataDownload" Text="Data Download Rate" VerticalOptions="Center" HorizontalOptions="Center" />
+          <StackLayout HeightRequest="5"/>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="Layouts.LayoutsAdvanced.PageLayoutsAdvanced">
+	
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="3*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition> Height=""</RowDefinition>
+		</Grid.RowDefinitions>
+
+			<StackLayout
+				x:Name="columnCommands"
+				Grid.Row="0" Grid.Column="0"
+				Orientation="Vertical"
+				>
+				<Button	
+					Text="Start"
+					>
+				</Button>
+				<Button	
+					Text="Stop"
+					>
+				</Button>
+			</StackLayout>
+
+			<StackLayout
+				x:Name="columnDisplay"
+				Grid.Row="0" Grid.Column="1"
+				Orientation="Vertical"
+				>
+				<Label 
+					Text="00:00:00"
+					>
+				</Label>
+				<Label 
+					Text="...."
+					>
+				</Label>
+			</StackLayout>
+
+
+			<Button
+				x:Name="buttonMirror"
+				Text="Mirror" Clicked="buttonMirror_Clicked"
+				>
+			</Button>
+	</Grid>
+
+</ContentPage>
