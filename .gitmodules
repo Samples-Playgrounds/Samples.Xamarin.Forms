@@ -16,3 +16,6 @@
 [submodule "submodulez/VervetaCRM"]
 	path = submodulez/VervetaCRM
 	url = https://github.com/moljac/VervetaCRM.git
+[submodule "submodulez/kaxaml"]
+	path = submodulez/kaxaml
+	url = https://github.com/moljac/kaxaml.git
