@@ -19,3 +19,6 @@
 [submodule "submodulez/kaxaml"]
 	path = submodulez/kaxaml
 	url = https://github.com/moljac/kaxaml.git
+[submodule "submodulez/HolisticWare.Core.Data.Xml"]
+	path = submodulez/HolisticWare.Core.Data.Xml
+	url = https://github.com/moljac/HolisticWare.Core.Data.Xml.git

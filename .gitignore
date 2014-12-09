@@ -180,6 +180,8 @@ FakesAssemblies/
 .git.bitbucket/
 .git.github/
 
+submodulez/Components-Private/*
+
 **/Components/
 **/Packages/
 #=====================================================================================

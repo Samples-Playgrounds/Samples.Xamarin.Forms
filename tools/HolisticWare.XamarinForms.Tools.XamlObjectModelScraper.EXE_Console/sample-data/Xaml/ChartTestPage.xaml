@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="TestChartApp.ChartTestPage"
+                        xmlns:local="clr-namespace:TestChartApp;assembly=TestChartApp"
+                        xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin"
+             BackgroundColor="White"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TestData x:Key="data" />
+            <local:TestData x:Key="data2" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ig:DataChart x:Name="theChart">
+        <ig:DataChart.Axes>
+            <ig:NumericYAxis x:Name="yAxis" LabelLocation="OutsideRight" />
+            <ig:CategoryXAxis x:Name="xAxis"
+                  ItemsSource="{StaticResource data}"
+                  Label="Label"
+                  />
+        </ig:DataChart.Axes>
+        <ig:DataChart.Series>
+            <ig:AreaSeries x:Name="columnSeries"
+                           ItemsSource="{StaticResource data}"
+                           XAxis="{x:Reference xAxis}"
+                           YAxis="{x:Reference yAxis}"
+                           ValueMemberPath="Value" />
+            <ig:AreaSeries x:Name="columnSeries2"
+                           ItemsSource="{StaticResource data2}"
+                           XAxis="{x:Reference xAxis}"
+                           YAxis="{x:Reference yAxis}"
+                           ValueMemberPath="Value" />
+        </ig:DataChart.Series>
+    </ig:DataChart>
+</ContentPage>

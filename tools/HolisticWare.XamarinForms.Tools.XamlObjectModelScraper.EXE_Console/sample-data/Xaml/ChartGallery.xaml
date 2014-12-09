@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="igChartGallery.ChartGallery"
+             xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin"
+             >
+    
+    <Grid x:Name="mainGrid" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Picker x:Name="seriesPicker" Grid.Row="1" />
+
+        <ig:DataChart x:Name="theChart" Grid.Row="2" 
+                      HorizontalZoomable="true"
+                      VerticalZoomable="true">
+            
+        </ig:DataChart>
+    </Grid>
+</ContentPage>

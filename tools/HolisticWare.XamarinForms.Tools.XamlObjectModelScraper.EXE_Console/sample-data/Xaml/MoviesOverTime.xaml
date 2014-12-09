@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="IgMotionApp.MoviesOverTime"
+    xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin">
+    
+    <Grid x:Name="RootGrid" BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--<Image x:Name="BackgroundImage" Aspect="AspectFill" />-->
+
+        <Grid x:Name="BackgroundGrid" Padding ="0" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <AbsoluteLayout x:Name="LayoutCanvas" BackgroundColor="Transparent">
+
+            <ig:DataChart x:Name="Chart" Grid.Row="1"
+                                      HorizontalZoomable="False"
+                                      VerticalZoomable="False"
+                          PlotAreaBorderBrush="Transparent">
+                <ig:DataChart.Axes>
+                    <ig:CategoryAngleAxis x:Name="angleAxis"
+                                            ItemsSource="{Binding Genres}"
+                                            Interval="1"
+                                            Label="Name"
+                                            MajorStroke="{Binding GridlineBrush}"   
+                                            LabelTextColor="{Binding FontBrush}"
+                                            LabelExtent="30"
+                                            Gap="0">
+
+                    </ig:CategoryAngleAxis>
+                    <ig:NumericRadiusAxis x:Name="radiusAxis"
+                                          LabelExtent="25" Interval="25"
+                                            InnerRadiusExtentScale="0.2"
+                                            RadiusExtentScale="0.68"
+                                            MinimumValue="0"
+                                            MajorStrokeThickness="1"
+                                            MajorStroke="{Binding GridlineBrush}"   
+                                            Stroke="{Binding GridlineBrush}"   
+                                            LabelTextColor="{Binding FontBrush}"
+                                            LabelLocation="InsideBottom"
+                                            MaximumValue="{Binding MaxValue}">
+                    </ig:NumericRadiusAxis>
+                </ig:DataChart.Axes>
+
+                <ig:DataChart.Series>
+                    <ig:RadialPieSeries x:Name="movieGenresOverTime"
+                                            Brush="{Binding SeriesFillBrush}"
+                                            Outline="{Binding SeriesOutlineBrush}"
+                                            ItemsSource="{Binding CurrentYearGenres}"
+                                            AngleAxis="{x:Reference angleAxis}"
+                                            ValueAxis="{x:Reference radiusAxis}"
+                                            ValueMemberPath="Count" Thickness="3"
+                                            TransitionDuration="500" >
+                    </ig:RadialPieSeries>
+                </ig:DataChart.Series>
+            </ig:DataChart>
+
+            <!--<Grid x:Name="YearLabelGrid"  >
+                <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+          
+            </Grid >-->
+            <Label x:Name="YearLabel" Text="{Binding CurrentYear}" 
+                   Font="Verdana,Large" />
+
+
+            
+
+            <!--<Slider x:Name="playSlider" Maximum="2014" Value="1888" Minimum="1888"  
+                     VerticalOptions="Center" />-->
+
+        </AbsoluteLayout>
+
+        <Grid  x:Name="ControlsGrid"  BackgroundColor="Transparent" 
+               VerticalOptions="End"
+               >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <!--<RowDefinition Height="15" />-->
+            </Grid.RowDefinitions>
+
+            <Button x:Name="playButton" Text="PLAY" Grid.Column="0" 
+                    Clicked="playButton_Click" BorderColor="Black" TextColor="Black" />
+            <Button Grid.Column="2" x:Name="gridButton" Text="GRID" 
+                    Clicked="gridButton_Click" BorderColor="Black" TextColor="Black" />
+
+            <Slider x:Name="playSlider" Maximum="2014" Value="1888" Minimum="1888"  
+                    Grid.Column="1" Grid.Row="0" VerticalOptions="Center" />
+
+            <Grid x:Name="playButtonGrid"  Grid.Column="1" Grid.Row="0"
+                       VerticalOptions="Center" 
+                      HorizontalOptions="FillAndExpand" Padding="0" 
+                      RowSpacing="0" ColumnSpacing="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid x:Name="playSliderGrid" VerticalOptions="Center" HeightRequest="10" >
+
+                </Grid >
+
+            </Grid >
+
+
+        </Grid>
+
+        <!--<Grid>
+     
+           
+                <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="35" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="15" />
+                    </Grid.RowDefinitions>
+             
+              
+
+                </Grid>
+ 
+            </Grid>-->
+    </Grid>
+</ContentPage>

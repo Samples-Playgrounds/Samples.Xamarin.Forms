@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ex="clr-namespace:Infragistics.Framework.Xamarin;assembly=Infragistics.Framework.Xamarin"  
+    xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin"
+    xmlns:g="clr-namespace:Infragistics.Xamarin;assembly=Infragistics.Xamarin" 
+  x:Class="IgFinanceApp.Views.StocksDasboardDisplayView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <ex:StringToBooleanConverter x:Key="StringToBooleanConverter"/>
+            <ex:ValueToColorConverter x:Key="ValueToColorConverter"/>
+            <ex:ValueToBalanceConverter x:Key="ValueToBalanceConverter"/>
+
+            
+
+            <OnPlatform x:Key="FontVeryLarge" x:TypeArguments="Font">
+                <OnPlatform.iOS>20</OnPlatform.iOS>
+                <OnPlatform.Android>20</OnPlatform.Android>
+                <OnPlatform.WinPhone>50</OnPlatform.WinPhone>
+            </OnPlatform>
+            <OnPlatform x:Key="FontLarge" x:TypeArguments="Font">
+                <OnPlatform.iOS>15</OnPlatform.iOS>
+                <OnPlatform.Android>15</OnPlatform.Android>
+                <OnPlatform.WinPhone>Bold, 30</OnPlatform.WinPhone>
+            </OnPlatform>
+            <OnPlatform x:Key="FontMedium" x:TypeArguments="Font">
+                <OnPlatform.iOS>12</OnPlatform.iOS>
+                <OnPlatform.Android>12</OnPlatform.Android>
+                <OnPlatform.WinPhone>18</OnPlatform.WinPhone>
+            </OnPlatform>
+            <OnPlatform x:Key="FontSmall" x:TypeArguments="Font">
+                <OnPlatform.iOS>10</OnPlatform.iOS>
+                <OnPlatform.Android>10</OnPlatform.Android>
+                <OnPlatform.WinPhone>14</OnPlatform.WinPhone>
+            </OnPlatform>
+            <OnPlatform x:Key="FontVerySmall" x:TypeArguments="Font">
+                <OnPlatform.iOS>8</OnPlatform.iOS>
+                <OnPlatform.Android>8</OnPlatform.Android>
+                <OnPlatform.WinPhone>10</OnPlatform.WinPhone>
+            </OnPlatform>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    
+    <StackLayout x:Name="RootLayout"  Orientation="Vertical"
+                 HorizontalOptions="Fill" Spacing="0">
+
+        <!-- Stock App logo and Stock search button --> 
+        <StackLayout BackgroundColor="#FF2A2A2A" Orientation="Horizontal"    VerticalOptions="Center"
+                     Padding="10,1,2,3" Spacing="0">
+
+            <Label Text="IG " TextColor="#FF08AAE6" Font="{x:Static ex:AppFonts.LargeBold}" VerticalOptions="Center" HorizontalOptions="Start" />
+            <Label Text="FINANCE STOCKS" TextColor="White" Font="{x:Static ex:AppFonts.LargeBold}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+
+            <StackLayout BackgroundColor="#FF2A2A2A" Orientation="Horizontal"   VerticalOptions="FillAndExpand"
+                     Padding="1" Spacing="0">
+
+                <ex:ImageButton Clicked="OnSearchButtonClicked"  Padding="10,1,10,1" VerticalOptions="FillAndExpand" BackgroundColor="Black" 
+                                   Text="SEARCH" TextColor="#FF878787" Font="{x:Static ex:AppFonts.Medium}"  HorizontalOptions="EndAndExpand" />
+
+            </StackLayout>
+
+        </StackLayout>
+
+        <!-- Stock Details switch buttons  -->
+        <!--<ScrollView Orientation="Horizontal" VerticalOptions="Center"  HorizontalOptions="FillAndExpand">-->
+        <!--</ScrollView>-->
+        <StackLayout x:Name="StocksLayout" Orientation="Horizontal"    Spacing="2"  Padding="2,4,2,0"
+                         BackgroundColor="#FF424142" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+        </StackLayout>
+        <!-- Stock Details Layout -->
+        <StackLayout BackgroundColor="#FF171717"   Orientation="Horizontal"  VerticalOptions="Center"
+                     Padding="10,1,10,1" Spacing="0">
+
+            <Label TextColor="#FF878787" Text="{Binding SelectedStock.Details.Name}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+            <Label TextColor="#FF878787" Text="{Binding SelectedStock.Details.LastUpdate, StringFormat='{0:hh:mm:ss tt}'}" 
+                   Font="{x:Static ex:AppFonts.Small}" VerticalOptions="End" HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+
+        <StackLayout BackgroundColor="#FF171717"  Orientation="Horizontal"   VerticalOptions="Center"
+                     Padding="10,1,10,1" Spacing="0">
+
+            <Label TextColor="White" Text="{Binding SelectedStock.Details.LastTradeAmount, StringFormat='{0:0.00}'}" 
+                   Font="{x:Static ex:AppFonts.Large}" VerticalOptions="Center" HorizontalOptions="Start" />
+
+            <Label TextColor="{Binding SelectedStock.Details.Change, Converter={StaticResource ValueToColorConverter}}" 
+                   Text="{Binding SelectedStock.Details.Change, ConverterParameter='{0:0.00}', Converter={StaticResource ValueToBalanceConverter}}" 
+                   Font="{x:Static ex:AppFonts.Large}" 
+                   VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            <Label TextColor="{Binding SelectedStock.Details.ChangePercent, Converter={StaticResource ValueToColorConverter}}" 
+                   Text="{Binding SelectedStock.Details.ChangePercent, ConverterParameter='{0:0.000} %', Converter={StaticResource ValueToBalanceConverter}}" 
+                   Font="{x:Static ex:AppFonts.Large}" 
+                   VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+
+        </StackLayout>
+        <!--BackgroundColor="#FF2A2A2A"-->
+        <Grid BackgroundColor="#FF171717"    VerticalOptions="Center">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="0.5*" />
+
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0"  Orientation="Vertical"  HorizontalOptions="StartAndExpand" Padding="10,5,5,5" Spacing="2">
+                <Label TextColor="#FF878787" Text="OPEN" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="HIGH" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="LOW" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="VOLUME" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="P/E" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+            </StackLayout>
+
+
+            <StackLayout Grid.Column="1"  Orientation="Vertical"  HorizontalOptions="EndAndExpand" Padding="5" Spacing="2">
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.PreviousClose, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.DailyHigh, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.DailyLow, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.DailyVolume, StringFormat='{0:0,,.00} M'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.PeRatio, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="2"  Orientation="Vertical"  HorizontalOptions="StartAndExpand" Padding="5,5,15,5" Spacing="2">
+                <Label TextColor="#FF878787" Text="MRK CAP" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="52-W HIGH" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="52-W LOW" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="AVG VOLUME" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                <Label TextColor="#FF878787" Text="YIELD" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+
+            </StackLayout>
+
+            <StackLayout Grid.Column="3"  Orientation="Vertical"  HorizontalOptions="EndAndExpand" Padding="5" Spacing="2">
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.MarketCapValue, StringFormat='{0:0,,,.000} B'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.YearlyHigh, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.YearlyLow, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.YearlyVolumeAvg, StringFormat='{0:0,,.00} M'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                <Label TextColor="White" Text="{Binding SelectedStock.Details.EarningsPerShare, StringFormat='{0:F2}'}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+
+        </Grid>
+        <!-- Chart display buttons -->
+        <StackLayout BackgroundColor="#FF424142" VerticalOptions="Start"
+                         Orientation="Horizontal"  Padding="2,4,2,0"
+                        Spacing="2">
+            <ex:ToggleButton x:Name="LineButton"  VerticalOptions="Center" HorizontalOptions="FillAndExpand"  Padding="5" 
+                                 CommandParameter="Line" Command="{Binding ChartDisplayModeCommand}" IsTogglable="False" IsToggled="{Binding ChartDisplayMode.Id,  
+                                ConverterParameter=Line, Converter={StaticResource StringToBooleanConverter}, Mode=OneWay}" />
+            <ex:ToggleButton x:Name="AreaButton"  VerticalOptions="Center" HorizontalOptions="FillAndExpand"  Padding="5" 
+                                 CommandParameter="Area" Command="{Binding ChartDisplayModeCommand}" IsTogglable="False" IsToggled="{Binding ChartDisplayMode.Id,  
+                                ConverterParameter=Area, Converter={StaticResource StringToBooleanConverter}, Mode=OneWay}"  />
+            <ex:ToggleButton x:Name="StepButton"  VerticalOptions="Center" HorizontalOptions="FillAndExpand"  Padding="5" 
+                                 CommandParameter="Step" Command="{Binding ChartDisplayModeCommand}" IsTogglable="False" IsToggled="{Binding ChartDisplayMode.Id,  
+                                ConverterParameter=Step, Converter={StaticResource StringToBooleanConverter}, Mode=OneWay}"   />
+            <ex:ToggleButton x:Name="RangeButton" VerticalOptions="Center" HorizontalOptions="FillAndExpand"  Padding="5" 
+                                 CommandParameter="Range" Command="{Binding ChartDisplayModeCommand}" IsTogglable="False" IsToggled="{Binding ChartDisplayMode.Id,  
+                                ConverterParameter=Range, Converter={StaticResource StringToBooleanConverter}, Mode=OneWay}"  />
+            <ex:ToggleButton x:Name="CandleButton" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="5" 
+                                 CommandParameter="Candle" Command="{Binding ChartDisplayModeCommand}" IsTogglable="False" IsToggled="{Binding ChartDisplayMode.Id,  
+                                ConverterParameter=Candle, Converter={StaticResource StringToBooleanConverter}, Mode=OneWay}"  />
+            <ex:ToggleButton x:Name="OhlcButton" VerticalOptions="Center" HorizontalOptions="FillAndExpand"   Padding="5" 
+                                 CommandParameter="Ohlc" Command="{Binding ChartDisplayModeCommand}" IsTogglable="False" IsToggled="{Binding ChartDisplayMode.Id,  
+                                ConverterParameter=Ohlc, Converter={StaticResource StringToBooleanConverter}, Mode=OneWay}"  />
+        </StackLayout>
+
+        <!-- Stock Chart control -->
+       
+
+       
+    </StackLayout>
+
+</ContentPage>

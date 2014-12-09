@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvvm:BaseView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvvm="clr-namespace:Xamarin.Forms.Labs.Mvvm;assembly=Xamarin.Forms.Labs"
+    x:Class="XF.Labs.MvvmSample.MainPage"
+    Title="{Binding PageName}"
+    >
+    <mvvm:BaseView.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<ListView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"
+				ItemsSource="{Binding Categories}"  SelectedItem="{Binding SelectedCategory, Mode=TwoWay}">
+					<ListView.ItemTemplate>
+						<DataTemplate> 
+							<TextCell Text="{Binding Name}"></TextCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+		</StackLayout>
+	</mvvm:BaseView.Content>
+</mvvm:BaseView>
+

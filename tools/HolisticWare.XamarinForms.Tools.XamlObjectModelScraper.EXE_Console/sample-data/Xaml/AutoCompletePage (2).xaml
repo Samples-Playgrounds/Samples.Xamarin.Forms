@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Xamarin.Forms.Labs.Controls;assembly=Xamarin.Forms.Labs"
+    Title="AutoComplete"
+    x:Class="XF.Labs.Sample.AutoCompletePage">
+    <ContentPage.Resources>
+    <ResourceDictionary>
+	<!--    this isn't working yet-->
+      <DataTemplate x:Key="SugestionItemTemplate">
+			<ViewCell >
+					<ViewCell.View >
+						<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+							<Grid Padding="15,10,10,10" VerticalOptions="FillAndExpand"  >
+								<Label Text="{Binding}" VerticalOptions="Center" HorizontalOptions="Start" />
+							</Grid>
+						</StackLayout>
+					</ViewCell.View>
+				</ViewCell>
+	</DataTemplate>
+    </ResourceDictionary>
+  
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        	<controls:AutoCompleteView 
+				Text="{Binding SearchText, Mode=TwoWay}"
+				SugestionItemDataTemplate="{StaticResource SugestionItemTemplate}"
+				Placeholder="type 'item'"
+				ShowSearch="True"
+				SearchBackgroundColor="Blue"
+				SugestionBackgroundColor="Yellow"
+				SearchCommand="{Binding SearchCommand}"
+				Sugestions="{Binding Items, Mode=TwoWay}"
+				/>
+    </ContentPage.Content>
+</ContentPage>
+

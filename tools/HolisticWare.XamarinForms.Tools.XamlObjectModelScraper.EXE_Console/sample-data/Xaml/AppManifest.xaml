@@ -1,0 +1,10 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="KaxamlSilverlightHost" EntryPointType="KaxamlSilverlightHost.App" RuntimeVersion="5.0.61118.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="KaxamlSilverlightHost" Source="KaxamlSilverlightHost.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism" Source="Microsoft.Practices.Prism.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.Prism.Interactivity" Source="Microsoft.Practices.Prism.Interactivity.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
+    <AssemblyPart x:Name="PixelLab.Common_SL4" Source="PixelLab.Common_SL4.dll" />
+    <AssemblyPart x:Name="PixelLab.SL" Source="PixelLab.SL.dll" />
+  </Deployment.Parts>
+</Deployment>
