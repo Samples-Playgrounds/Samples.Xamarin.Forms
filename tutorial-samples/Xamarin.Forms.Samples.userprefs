@@ -1,4 +1,4 @@
-﻿<Properties>
+﻿<Properties StartupItem="Extras/ControlsViewsExtras/ControlsViewsExtras.iOS/ControlsViewsExtras.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin.Android.4.0.3.API15" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ControlsViewsMap/ControlsViewsMap/App.cs">
     <Files>
