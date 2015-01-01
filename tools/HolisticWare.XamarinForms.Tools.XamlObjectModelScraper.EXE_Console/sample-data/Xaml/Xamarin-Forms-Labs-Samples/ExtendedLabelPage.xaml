@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Xamarin.Forms.Labs.Controls;assembly=Xamarin.Forms.Labs"
+	x:Class="XF.Labs.Sample.ExtendedLabelPage"
+	 Title="Labels"
+	>
+    <ContentPage.Content>
+        <StackLayout x:Name="stkRoot" Padding="0,40,0,0">
+        	<controls:ExtendedLabel Text="This uses a custom font set xaml" 
+        					FontNameAndroid="fonts/Roboto-Light.ttf" 
+        					FontNameIOS="Roboto-Light" 
+        					FontSize="22"
+        					HorizontalOptions="StartAndExpand"
+							 VerticalOptions="Center" ></controls:ExtendedLabel>
+
+			<ListView ItemsSource="{Binding Items}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+						<Grid >
+								<controls:ExtendedLabel Text="{Binding}" 
+        						FontNameAndroid="fonts/Roboto-Light.ttf" 
+        						FontNameIOS="Roboto-Light" 
+        						FontSize="22"
+        						IsUnderline="True"
+        						HorizontalOptions="StartAndExpand"
+								 VerticalOptions="Center" >
+							</controls:ExtendedLabel>
+						</Grid>
+						</ViewCell.View>
+					</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

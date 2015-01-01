@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="IgMotionApp.DetailGrid"
+             xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="{Binding MoviesOverTime.CurrentYear}" Font="Verdana,Large" />
+        
+        <ig:CrossGrid
+            RowHeight="100"
+            SectionHeaderHeight="40"
+        Grid.Row="1">
+
+            <ig:CrossGrid.Adapter>
+                <ig:ListAdapter AutoGenerateColumns="false" DataSource="{Binding AllEntries}" GroupingKey="Year">
+                    <ig:ListAdapter.ColumnDefinitions>
+                        <ig:TextColumnDefinition Key="Year" />
+                        <ig:TextColumnDefinition Key="Name" />
+
+                        <ig:TemplatedColumnDefinition Key="Share">
+                            <ig:TemplatedColumnDefinition.CellTemplate>
+                                <DataTemplate>
+                                    <ig:LinearGauge MinimumValue="0" MaximumValue="50" Value="{Binding}" Font="Verdana,10" 
+                                                    Interval="10" LabelInterval="10" />
+                                </DataTemplate>
+                            </ig:TemplatedColumnDefinition.CellTemplate>
+                        </ig:TemplatedColumnDefinition>
+                    </ig:ListAdapter.ColumnDefinitions>
+                </ig:ListAdapter>
+            </ig:CrossGrid.Adapter>
+
+        </ig:CrossGrid>
+    </Grid>
+</ContentPage>

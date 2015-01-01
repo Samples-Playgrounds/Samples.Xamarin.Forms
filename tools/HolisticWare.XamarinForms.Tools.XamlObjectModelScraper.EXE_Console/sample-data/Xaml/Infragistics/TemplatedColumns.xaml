@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="TestGridApp.TemplatedColumns"
+             xmlns:local="clr-namespace:TestGridApp;assembly=TestGridApp"
+             xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin"
+             BackgroundColor="White"
+             >
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <local:TestData x:Key="data" />
+            </ResourceDictionary>
+        </ContentPage.Resources>
+	    <ig:CrossGrid x:Name="grid" RowHeight="250" 
+                      SectionHeaderHeight="40">
+        
+            <ig:CrossGrid.Adapter>
+                <ig:ListAdapter AutoGenerateColumns="false" DataSource="{StaticResource data}"
+                                GroupingKey="Territory"
+                                >
+                    <ig:ListAdapter.ColumnDefinitions>
+                        <ig:TextColumnDefinition Key="FirstName" />
+                    <ig:TextColumnDefinition Key="Territory" />
+
+
+
+                    <ig:TemplatedColumnDefinition Key="YearToDateSales">
+                            <ig:TemplatedColumnDefinition.CellTemplate>
+                                <DataTemplate>
+                                    <ig:RadialGauge 
+                                        MinimumValue="0" 
+                                        MaximumValue="500" 
+                                        Value="{Binding}" 
+                                        RadiusMultiplier=".95" 
+                                        Font="Verdana,10" />
+                                    
+                                </DataTemplate>
+                            </ig:TemplatedColumnDefinition.CellTemplate>
+                        </ig:TemplatedColumnDefinition>
+                    </ig:ListAdapter.ColumnDefinitions>
+                </ig:ListAdapter>
+            </ig:CrossGrid.Adapter>
+        </ig:CrossGrid>
+</ContentPage>

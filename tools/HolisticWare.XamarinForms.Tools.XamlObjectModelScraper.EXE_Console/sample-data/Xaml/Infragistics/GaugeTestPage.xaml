@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="TestApp.GaugeTestPage"
+             xmlns:ig="clr-namespace:Infragistics.Xamarin.Controls;assembly=Infragistics.Xamarin"
+             >
+  <Grid HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+          
+        >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <ig:RadialGauge x:Name="gauge"
+            TransitionDuration="5000"
+            Value="70"
+            NeedleBrush="Blue">
+      <ig:RadialGauge.Ranges>
+        <ig:RadialGaugeRange Brush="Red" StartValue="0" EndValue="40" />
+        
+      </ig:RadialGauge.Ranges>
+    </ig:RadialGauge>
+      
+    <ig:LinearGauge x:Name="linearGague"
+            FontBrush="Black"
+            BackingBrush="#EBEDEF"
+            TransitionDuration="5000"
+            Value="50"
+            Grid.Row="1"
+            >
+            <ig:LinearGauge.Ranges>
+                <ig:LinearGraphRange Brush="Red" StartValue="0" EndValue="40" />
+            </ig:LinearGauge.Ranges>
+        </ig:LinearGauge>
+
+
+        
+    <ig:BulletGraph x:Name="bulletGraph"
+            TransitionDuration="5000"
+            FontBrush="Black"
+            BackingBrush="#EBEDEF"
+            MinimumValue="0"
+            MaximumValue="200"
+            TargetValue="160"
+            Value="180"
+            Interval="40"
+            TargetValueBrush="White"
+            Grid.Row="2">
+        <ig:BulletGraph.Ranges>
+            <ig:LinearGraphRange
+                x:Name="range1"
+                Brush="#C62D36"
+                StartValue="0"
+                EndValue="50" />
+            <ig:LinearGraphRange
+                x:Name="range2"
+                Brush="#FDBD48"
+                StartValue="50"
+                EndValue="150" />
+            <ig:LinearGraphRange
+                x:Name="range3"
+                Brush="#48892D"
+                StartValue="150"
+                EndValue="200" />
+            </ig:BulletGraph.Ranges>
+    </ig:BulletGraph>
+    <ig:Barcode128 Grid.Row="3" BarBrush="Yellow" Data="123456"/>
+  </Grid>
+</ContentPage>

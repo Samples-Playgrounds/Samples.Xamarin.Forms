@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ex="clr-namespace:Infragistics.Framework.Xamarin;assembly=Infragistics.Framework.Xamarin"  
+     x:Class="IgFinanceApp.Views.StocksSearchToggleView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+          
+            <DataTemplate x:Key="SearchSuggestionItemTemplate">
+                <ViewCell Height="60">
+                    <ViewCell.View>
+                    
+
+                        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#FF424142"   Spacing="0"  Padding="2" >
+                             
+                            <StackLayout Orientation="Horizontal"    Spacing="3" Padding="5,0,5,0" BackgroundColor="Black" 
+                                     VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                                <Label TextColor="White" Text="{Binding Symbol}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                                <Label TextColor="White" Text="{Binding Name}"   Font="{x:Static ex:AppFonts.Medium}"  VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+
+                                <!--<Label Text="+"  Font="{x:Static ex:AppFonts.LargeBold}"
+                                       TextColor="Lime" VerticalOptions="Center" HorizontalOptions="End"   />-->
+                                <ex:ImageButton Text="+" x:Name="AddButton" Font="{x:Static ex:AppFonts.VeryLargeBold}" 
+                                                TextColor="Lime" Padding="20,0,20,0" BackgroundTapColor="#FF424142"
+                                                Tag="{Binding Symbol}" VerticalOptions="FillAndExpand" HorizontalOptions="End" IsClickable="False" />
+                                <!--<ex:ImageButton Text="+" x:Name="AddButton" Font="{x:Static ex:AppFonts.VeryLargeBold}" 
+                                                TextColor="Lime" Padding="20,0,20,0" BackgroundTapColor="#FF424142"
+                                                VerticalOptions="FillAndExpand" HorizontalOptions="End" IsClickable="False" />-->
+
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="StocksSelectedListItemTemplate">
+                <ViewCell Height="60">
+                    <ViewCell.View>
+                        <StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#FF424142"   Spacing="0"  Padding="2" >
+                            <StackLayout Orientation="Horizontal"    Spacing="3" Padding="5,0,5,0" BackgroundColor="Black" 
+                                     VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                                <Label TextColor="White" Text="{Binding Symbol}" Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Label TextColor="White" Text="{Binding Name}"   Font="{x:Static ex:AppFonts.Medium}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+
+                                <!--<Label Text="-"  Font="{x:Static ex:AppFonts.LargeBold}"
+                                       TextColor="Red" VerticalOptions="FillAndExpand" HorizontalOptions="End"   />-->
+                                <ex:ImageButton Text="-" Font="{x:Static ex:AppFonts.VeryLargeBold}" 
+                                                TextColor="Red" x:Name="RemoveButton" BackgroundTapColor="#FF424142"
+                                                Clicked="OnItemRemoveButtonClicked"  Padding="20,0,20,0"    
+                                                VerticalOptions="FillAndExpand" HorizontalOptions="End"    />
+                            </StackLayout>
+                        </StackLayout>
+                   
+                       
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout x:Name="RootLayout"  Orientation="Vertical"  Padding="2" Spacing="0"
+                 HorizontalOptions="FillAndExpand" >
+
+        <!--<Label Text="SearchEntryView" VerticalOptions="Center" HorizontalOptions="Center" #FF424142/>-->
+
+        <Label Text="TYPE STOCK NAME OR SYMBOL TO GET STARTED" Font="{x:Static ex:AppFonts.Small}" 
+               VerticalOptions="Center" HorizontalOptions="Center" />
+        <ex:SearchEntry 
+            x:Name="StocksSearchEntry" SuggestionItemDataTemplate="{StaticResource SearchSuggestionItemTemplate}"
+            ShowSearch="False" SuggestionText="STOCK SUGGESTIONS"
+            SearchBackgroundColor="Black"  VerticalOptions="Center"
+            SuggestionsBackgroundColor="Black" 
+            SearchItemsMemberPath="Name|Symbol"
+				/>
+
+
+        <StackLayout x:Name="StocksSelectedLayout" VerticalOptions="Center" >
+            <Label Text="SELECTED STOCKS (MAX 5)" VerticalOptions="Center" HorizontalOptions="Center"
+               Font="{x:Static ex:AppFonts.Small}" />
+            <ListView x:Name="StocksSelectedList"  VerticalOptions="Center" 
+                  HasUnevenRows="True"    HorizontalOptions="FillAndExpand"
+                  ItemTemplate="{StaticResource StocksSelectedListItemTemplate}">
+
+            </ListView >
+        </StackLayout>
+      
+         
+    </StackLayout>
+
+</ContentPage>

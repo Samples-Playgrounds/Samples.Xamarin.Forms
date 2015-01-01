@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="XF.Labs.Sample.CameraPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<Button Text="Take Picture" Command="{Binding TakePictureCommand}"></Button>
+			<Button Text="Select Image from Picture Library" Command="{Binding SelectPictureCommand}"></Button>
+			<Button Text="Select Video from Picture Library " Command="{Binding SelectVideoCommand}"></Button>
+			<Image Source="{Binding ImageSource}" VerticalOptions="CenterAndExpand" />
+			<Entry Text="{Binding VideoInfo}" VerticalOptions="CenterAndExpand" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+
