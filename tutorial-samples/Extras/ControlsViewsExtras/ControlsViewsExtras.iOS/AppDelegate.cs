@@ -13,7 +13,10 @@ namespace ControlsViewsExtras.iOS
 	// User Interface of the application, as well as listening (and optionally responding) to 
 	// application events from iOS.
 	[Register("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate 
+		: 
+		// UIApplicationDelegate
+		global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 	{
 		// class-level declarations
 		UIWindow window;
@@ -27,17 +30,19 @@ namespace ControlsViewsExtras.iOS
 		//
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			OxyPlot.XamarinFormsIOS.Forms.Init();
+			global::OxyPlot.XamarinFormsIOS.Forms.Init();
 
-			Forms.Init();
+			global::Xamarin.Forms.Forms.Init ();
 
-			window = new UIWindow(UIScreen.MainScreen.Bounds);
+	        LoadApplication (new App ());  // method is new in 1.3
 
-			window.RootViewController = App.GetMainPage().CreateViewController();
+			return base.FinishedLaunching (app, options);
 
-			window.MakeKeyAndVisible();
+			//window = new UIWindow(UIScreen.MainScreen.Bounds);
+			//window.RootViewController = App.GetMainPage().CreateViewController();
+			//window.MakeKeyAndVisible();
 
-			return true;
+			// return true;
 		}
 	}
 }

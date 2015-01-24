@@ -12,17 +12,22 @@ using Xamarin.Forms.Platform.Android;
 namespace ControlsViewsExtras.Droid
 {
 	[Activity(Label = "ControlsViewsExtras", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity 
+			: 
+				// AndroidActivity
+				global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 
-			OxyPlot.XamarinFormsAndroid.Forms.Init();
+			global::OxyPlot.XamarinFormsAndroid.Forms.Init();
+			global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			Xamarin.Forms.Forms.Init(this, bundle);
+			// SetPage(App.GetMainPage());
+			LoadApplication (new App ()); // method is new in 1.3
 
-			SetPage(App.GetMainPage());
+			return;
 		}
 	}
 }
