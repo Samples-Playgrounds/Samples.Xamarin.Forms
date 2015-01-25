@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:charting="clr-namespace:Xamarin.Forms.Labs.Charting.Controls;assembly=Xamarin.Forms.Labs.Charting"
+             x:Class="Klaim.HomePage"
+             BackgroundColor="#ffffff"
+             Title="Accueil">
+
+             <ContentPage.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
+                            iOS="10, 20, 10, 10"
+                            Android="10, 10, 10, 10"
+                            WinPhone="10, 10, 10, 10" />
+            </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <StackLayout>
+        <Label Text="Accueil" />
+        <charting:Chart x:Name="CombinationChart" Color="Black" WidthRequest="450" HeightRequest="750" Spacing="10">
+
+          <charting:Chart.Series>
+            <charting:Series Type="Bar" Color="Red">
+
+              <charting:Series.Points>
+                <charting:DataPoint Label="Jan" Value="25"/>
+                <charting:DataPoint Label="Feb" Value="40"/>
+                <charting:DataPoint Label="March" Value="45"/>
+              </charting:Series.Points>
+
+            </charting:Series>
+            <charting:Series Type="Bar" Color="Blue">
+
+              <charting:Series.Points>
+                <charting:DataPoint Label="Jan" Value="30"/>
+                <charting:DataPoint Label="Feb" Value="35"/>
+                <charting:DataPoint Label="March" Value="40"/>
+              </charting:Series.Points>
+
+            </charting:Series>
+            <charting:Series Type="Line" Color="Green">
+
+              <charting:Series.Points>
+                <charting:DataPoint Label="Jan" Value="27.5"/>
+                <charting:DataPoint Label="Feb" Value="37.5"/>
+                <charting:DataPoint Label="March" Value="42.5"/>
+              </charting:Series.Points>
+
+            </charting:Series>
+          </charting:Chart.Series>
+
+        </charting:Chart>
+</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

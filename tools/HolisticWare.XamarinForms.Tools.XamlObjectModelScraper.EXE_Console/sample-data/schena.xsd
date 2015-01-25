@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xamarin.com/schemas/2014/forms" xmlns:forms="http://xamarin.com/schemas/2014/forms" xmlns:controls="clr-namespace:Xamarin.Forms.Labs.Controls;assembly=Xamarin.Forms.Labs" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+  <xs:import namespace="clr-namespace:Xamarin.Forms.Labs.Controls;assembly=Xamarin.Forms.Labs" schemaLocation="controls.xsd"/>
+  <xs:import namespace="http://schemas.microsoft.com/winfx/2009/xaml" schemaLocation="x.xsd"/>
+  <xs:element name="ContentPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="forms:StackLayout"/>
+      </xs:sequence>
+      <xs:attribute name="Title" use="required"/>
+      <xs:attribute ref="x:Class" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StackLayout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="controls:WebImage"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
