@@ -23,7 +23,6 @@ namespace PlatformSpecific.DependencyService.Droid
 		{
 			base.OnCreate(bundle);
 
-			global::OxyPlot.XamarinFormsAndroid.Forms.Init();
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
 			// SetPage(App.GetMainPage());

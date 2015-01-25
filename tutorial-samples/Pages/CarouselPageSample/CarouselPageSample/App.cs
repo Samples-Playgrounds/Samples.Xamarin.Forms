@@ -8,16 +8,33 @@ using Xamarin.Forms;
 namespace CarouselPageSample
 {
 	public class App
+		: Application // superclass new in 1.3
 	{
-		public static Page GetMainPage()
-		{
+	    public App ()
+	    {
 			CarouselPage cp =  new CarouselPage();
 
 			cp.Children.Add(new ContentPage() { Title = "ContentPage" });
 			cp.Children.Add(new ContentPage() { Title = "ContentPage" });
 			cp.Children.Add(new ContentPage() { Title = "ContentPage" });
-			
-			return cp;
-		}
+
+	        // The root page of your application
+	        MainPage = 	// property
+				cp
+				;
+				
+	        return;
+	    }
+
+		//public static Page GetMainPage()
+		//{
+		//	CarouselPage cp =  new CarouselPage();
+        //
+		//	cp.Children.Add(new ContentPage() { Title = "ContentPage" });
+		//	cp.Children.Add(new ContentPage() { Title = "ContentPage" });
+		//	cp.Children.Add(new ContentPage() { Title = "ContentPage" });
+		//	
+		//	return cp;
+		//}
 	}
 }

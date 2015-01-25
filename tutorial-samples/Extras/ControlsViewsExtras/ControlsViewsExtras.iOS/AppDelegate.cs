@@ -19,7 +19,7 @@ namespace ControlsViewsExtras.iOS
 		global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 	{
 		// class-level declarations
-		UIWindow window;
+		// UIWindow window;
 
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this 

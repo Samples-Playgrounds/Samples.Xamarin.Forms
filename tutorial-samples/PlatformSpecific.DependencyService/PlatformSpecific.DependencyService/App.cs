@@ -8,15 +8,26 @@ using Xamarin.Forms;
 namespace PlatformSpecific.DependencyService
 {
 	public class App
+		: Application // superclass new in 1.3
 	{
-		public static Page GetMainPage()
-		{
-			return 
-				new 
-					PageMain()
-					// PageBluetoothPrinter()
-					;
+	    public App ()
+	    {
+	        // The root page of your application
+	        MainPage =	// property 
+				new PageMain()
+				// PageBluetoothPrinter()
+				; 	
 
-		}
+	        return;
+	    }
+		//public static Page GetMainPage()
+		//{
+		//	return 
+		//		new 
+		//			PageMain()
+		//			// PageBluetoothPrinter()
+		//			;
+        //
+		//}
 	}
 }

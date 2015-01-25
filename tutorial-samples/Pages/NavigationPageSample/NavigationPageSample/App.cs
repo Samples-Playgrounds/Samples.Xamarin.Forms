@@ -8,12 +8,22 @@ using Xamarin.Forms;
 namespace NavigationPageSample
 {
 	public class App
+		: Application // superclass new in 1.3
 	{
-		public static Page GetMainPage()
-		{
-			return new NavigationPage
-			{
-			};
-		}
+	    public App ()
+	    {
+	        // The root page of your application
+	        MainPage = 	// property
+				new NavigationPage(); 	
+
+	        return;
+	    }
+		
+		//public static Page GetMainPage()
+		//{
+		//	return new NavigationPage
+		//	{
+		//	};
+		//}
 	}
 }

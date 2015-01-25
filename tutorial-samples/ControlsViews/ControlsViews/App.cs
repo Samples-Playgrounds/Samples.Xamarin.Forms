@@ -8,10 +8,20 @@ using Xamarin.Forms;
 namespace ControlsViews
 {
 	public class App
+		: Application // superclass new in 1.3
 	{
-		public static Page GetMainPage()
-		{
-			return new PageMain();
-		}
+	    public App ()
+	    {
+	        // The root page of your application
+	        MainPage = 	// property
+				new PageMain(); 	
+
+	        return;
+	    }
+
+		//public static Page GetMainPage()
+		//{
+		//	return new PageMain();
+		//}
 	}
 }

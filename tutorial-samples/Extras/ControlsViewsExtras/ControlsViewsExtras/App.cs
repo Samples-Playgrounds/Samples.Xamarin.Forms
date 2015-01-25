@@ -9,7 +9,8 @@ using OxyPlot.Series;
 
 namespace ControlsViewsExtras
 {
-	public class App : Application
+	public class App 
+		: Application
 	{
 		public App()
 		{

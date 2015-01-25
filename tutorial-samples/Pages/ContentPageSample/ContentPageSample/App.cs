@@ -8,18 +8,37 @@ using Xamarin.Forms;
 namespace ContentPageSample
 {
 	public class App
+		: Application // superclass new in 1.3
 	{
-		public static Page GetMainPage()
-		{
-			return new ContentPage
-			{
-				Content = new Label
+	    public App ()
+	    {
+	        // The root page of your application
+	        MainPage = 	// property
+				new ContentPage
 				{
-					Text = "Hello, Forms !",
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
-				},
-			};
-		}
+					Content = new Label
+					{
+						Text = "Hello, Forms !",
+						VerticalOptions = LayoutOptions.CenterAndExpand,
+						HorizontalOptions = LayoutOptions.CenterAndExpand,
+					},
+				};
+				
+	        return;
+	    }
+
+		//public static Page GetMainPage()
+		//{
+		//	return 
+		//		new ContentPage
+		//		{
+		//			Content = new Label
+		//			{
+		//				Text = "Hello, Forms !",
+		//				VerticalOptions = LayoutOptions.CenterAndExpand,
+		//				HorizontalOptions = LayoutOptions.CenterAndExpand,
+		//			},
+		//		};
+		//}
 	}
 }

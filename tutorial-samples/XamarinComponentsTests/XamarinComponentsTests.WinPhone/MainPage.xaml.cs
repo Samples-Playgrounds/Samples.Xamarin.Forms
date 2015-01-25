@@ -13,14 +13,26 @@ using Xamarin.Forms;
 
 namespace XamarinComponentsTests.WinPhone
 {
-	public partial class MainPage : PhoneApplicationPage
+	public partial class MainPage 
+		: 
+		//PhoneApplicationPage
+		global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
 	{
 		public MainPage()
 		{
 			InitializeComponent();
 
-			Forms.Init();
-			Content = XamarinComponentsTests.App.GetMainPage().ConvertPageToUIElement(this);
+			SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+
+			global::Xamarin.Forms.Forms.Init();
+			LoadApplication(new XamarinComponentsTests.App()); // new in 1.3
+
+			return;
+			
+			// Forms.Init();
+			// Content = XamarinComponentsTests.App.GetMainPage().ConvertPageToUIElement(this);
+			
+			// return;
 		}
 	}
 }
