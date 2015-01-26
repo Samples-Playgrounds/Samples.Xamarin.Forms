@@ -26,6 +26,7 @@ namespace ControlsViewsMap.WinPhone
 
 			global::Xamarin.Forms.Forms.Init();
 			global::Xamarin.FormsMaps.Init();
+
 			LoadApplication(new ControlsViewsMap.App()); // new in 1.3
 
 			return;

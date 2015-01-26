@@ -14,6 +14,29 @@ namespace ControlsViewsExtras
 	{
 		public App()
 		{
+			var model = new PlotModel { Title = "World population by continent" };
+
+	        var ps = new PieSeries
+	        {
+	            StrokeThickness = 2.0,
+	            InsideLabelPosition = 0.8,
+	            AngleSpan = 360,
+	            StartAngle = 0
+	        };
+
+	        // http://www.nationsonline.org/oneworld/world_population.htm
+	        // http://en.wikipedia.org/wiki/Continent
+	        ps.Slices.Add(new PieSlice("Africa", 1030) { IsExploded = true });
+	        ps.Slices.Add(new PieSlice("Americas", 929) { IsExploded = true });
+	        ps.Slices.Add(new PieSlice("Asia", 4157));
+	        ps.Slices.Add(new PieSlice("Europe", 739) { IsExploded = true });
+	        ps.Slices.Add(new PieSlice("Oceania", 35) { IsExploded = true });
+
+	        model.Series.Add(ps);
+
+
+
+
 			// https://github.com/conceptdev/xamarin-forms-samples/tree/master/OxyPlotDemo
 			var Points = new List<DataPoint>
 			{
@@ -39,7 +62,7 @@ namespace ControlsViewsExtras
         	MainPage = 
 				new ContentPage
 				{
-					Content = new global::OxyPlot.XamarinForms.PlotView
+					Content = new PlotView
 					{
 						Model = new global::OxyPlot.PlotModel 
 						{ 
@@ -68,5 +91,8 @@ namespace ControlsViewsExtras
 				};
 		}
 		*/
+
+
+
 	}
 }

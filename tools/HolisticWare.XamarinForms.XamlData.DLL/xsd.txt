@@ -1,0 +1,10 @@
+For .NET 1.1 we had:
+
+XSDObjectGen - Sample Code Generator 1.4.2.1
+
+http://www.microsoft.com/downloads/details.aspx?FamilyID=89E6B1E5-F66C-4A4D-933B-46222BB01EB0&displaylang=en
+
+XSD inference tool - generate a schema from Xml..
+
+http://download.microsoft.com/download/8/0/f/80fca9f1-292e-4b50-b512-ccf004d4b58e/xsdinference.exe
+

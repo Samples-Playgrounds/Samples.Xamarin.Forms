@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="clr-namespace:HeartRateMonitor;assembly=HeartRateMonitor" xmlns:forms="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:HeartRateMonitor;assembly=HeartRateMonitor" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+  <xs:import namespace="http://schemas.microsoft.com/winfx/2009/xaml" schemaLocation="x.xsd"/>
+  <xs:import namespace="http://xamarin.com/schemas/2014/forms" schemaLocation="demo.xsd"/>
+  <xs:element name="GuidConverter">
+    <xs:complexType>
+      <xs:attribute ref="x:Key" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmptyStringConverter">
+    <xs:complexType>
+      <xs:attribute ref="x:Key" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

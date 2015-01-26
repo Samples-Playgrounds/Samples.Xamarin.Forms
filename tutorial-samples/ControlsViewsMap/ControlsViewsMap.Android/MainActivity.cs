@@ -21,8 +21,8 @@ namespace ControlsViewsMap.Droid
 		{
 			base.OnCreate(bundle);
 
-			global::OxyPlot.XamarinFormsAndroid.Forms.Init();
 			global::Xamarin.Forms.Forms.Init(this, bundle);
+			global::Xamarin.FormsMaps.Init();
 
 			// SetPage(App.GetMainPage());
 			LoadApplication (new App ()); // method is new in 1.3
