@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="PlatformSpecific.DependencyService.iOS/PlatformSpecific.DependencyService.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.moljac’s iPhone 4s" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlatformSpecific.DependencyService.iOS/FeaturesCapabilities/TextToSpeech/TextToSpeechService.cs">
+    <Files>
+      <File FileName="PlatformSpecific.DependencyService.iOS/FeaturesCapabilities/TextToSpeech/TextToSpeechService.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/moljac/Projects/Samples/Samples.Xamarin.Forms/tutorial-samples/PlatformSpecific/DependencyService/Sample/PlatformSpecific.DependencyService.iOS/FeaturesCapabilities/GeoLocation/IGeoLocationService.cs" line="7" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
