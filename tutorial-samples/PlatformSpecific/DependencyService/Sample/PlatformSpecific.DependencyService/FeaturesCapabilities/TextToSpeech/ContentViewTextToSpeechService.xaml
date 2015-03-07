@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="HolisticWare.Mobile.TextToSpeech.ContentViewTextToSpeechService"
+	>
+
+	<ContentView.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="10*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition></ColumnDefinition>
+				<ColumnDefinition></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<Label
+				x:Name="labelTextToSpeak"
+				Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				>
+				<Label.Text>
+					Text to Speech
+				</Label.Text>
+				<Label.FontAttributes>
+					Bold
+				</Label.FontAttributes>
+				<Label.FontSize>
+					Large
+				</Label.FontSize>
+			</Label>
+			<Editor
+				x:Name="editorTextToSpeak"
+				Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+				>
+				<Editor.Text>
+					Speak loud!
+				</Editor.Text>
+			</Editor>
+			<Button
+				x:Name="buttonTextToSpeak"
+				Grid.Row="2" Grid.Column="1"
+				Text="Speak"
+				Clicked="buttonSpeak_Clicked"
+				>
+			</Button>
+		</Grid>
+		<!--
+		-->
+	</ContentView.Content>
+</ContentView>
