@@ -2,6 +2,16 @@
 
 video: Custom Renderers in Xamarin.Forms (Xamarin.University)
 
+Definition:
+
+Xamarin.Foroms cross platform component (mc++: framework) which enables defining UI c#
+and native classes which are natively rendered in Android, iOS and Windows Phone.
+
+Provides ability to write app code once w/o 
+
+
+
+
 ## Environment
 
 1.	Xamarin.Studio
@@ -11,7 +21,7 @@ video: Custom Renderers in Xamarin.Forms (Xamarin.University)
 ## Rendering Model
 
 *	2 parts
-	*	Control - Element
+	*	Control / View / Element
 		*	Describes visual elemement
 		*	platform agnostic (not tied to any platform)
 			* defined in portable/shared part
