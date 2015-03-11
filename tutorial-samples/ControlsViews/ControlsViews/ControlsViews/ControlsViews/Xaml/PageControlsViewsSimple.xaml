@@ -32,7 +32,6 @@
 
 
 
-
 			<Label
 				Grid.Row="1" Grid.Column="0"
 				Font="Large" 			
@@ -50,16 +49,12 @@
 				/>
 
 
-
-
 			<Editor
 				Grid.Row="2" Grid.Column="0"  
 				Grid.RowSpan = "2" Grid.ColumnSpan="3" 
-				Text="... multiline text ..."
 			>
-			</Editor>>
-
-
+			</Editor>
+		
 			<Stepper
 				Grid.Row="3" Grid.Column="0"
 				VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
@@ -68,6 +63,8 @@
 				Grid.Row="3" Grid.Column="1"
 				VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
 				/>
+<!---								
+
 			<ActivityIndicator
 				Grid.Row="3" Grid.Column="2"
 				IsRunning="true"
@@ -76,11 +73,6 @@
 				VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
 				>
 			</ActivityIndicator>
-
-
-
-
-				
 			<Picker 
 				Grid.Row="4" Grid.Column="0" 
 				>
@@ -90,8 +82,6 @@
 					<x:String>3</x:String>
 					<x:String>4</x:String>
 				</Picker.Items>
-				<!--
-				-->
 			</Picker> 
 
 			<DatePicker
@@ -103,9 +93,7 @@
 				Grid.Row="4" Grid.Column="2" 
 				>
 			</TimePicker>
-
-
-
+-->
 
 		    <BoxView 
 				Grid.Row="5" Grid.Column="0"
@@ -128,14 +116,12 @@
 			>
 			</Image>
 
-			<!--
 			<OpenGLView
 				HasRenderLoop = "true"
 				Grid.Row="5" Grid.Column="3" 
 				>
 			</OpenGLView>
-			-->
-			<!--
+<!---
 			<TableView>
 			    <TableView.Root>
 			        <TableSection Title="Login">        
@@ -145,14 +131,22 @@
 			        </TableSection>
 			    </TableView.Root>
 			</TableView>
-			-->
-   			<!--
-
-
-			-->	
-
+-->
 		
 	</Grid>
-
 	</ContentPage.Content>
+
+
+	<!--
+	HACK: mc++ OnPlatform - iOS specific Accomodate iPhone status bar.
+	Platform Specific uncomment this part to see the difference!
+	check cs sample PageControlsViewsInCode.cs
+  	-->
+
+	  <ContentPage.Padding>
+	    <OnPlatform x:TypeArguments="Thickness">
+	      <OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>
+	    </OnPlatform>
+	  </ContentPage.Padding>
+
 </ContentPage>
