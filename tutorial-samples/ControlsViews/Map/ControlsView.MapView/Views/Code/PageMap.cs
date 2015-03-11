@@ -18,8 +18,8 @@ namespace ControlsView.MapView.Views.Code
 				(
 				MapSpan.FromCenterAndRadius
 							(
-								// new Position(45.493743,15.554813),  // Karlovac
-								new Position(46.3899013,16.44409),	// Cakovec
+								new Position(45.493743,15.554813),  // Karlovac
+								//new Position(46.3899013,16.44409),	// Cakovec
 								Distance.FromMiles(0.5)
 							)
 				)
