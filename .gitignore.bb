@@ -108,6 +108,64 @@ Backup*/
 UpgradeLog*.XML
 
 
-# =====================================================================================
-# HolisticWare .gitingore
+#==============================================================================
+# HolisticWare
+
+# MacOSX
+**/*.DS_Store
 **/.DS_Store
+
+**/.svn*
+**/.git*
+**/.git.*
+**/.git.*/*
+
+**/Components/
+**/packages/
+
+#----------------------------------------------
+**/*.hidden.cs
+**/*.hidden.md
+**/*.hidden.sh
+**/*.hidden.bat
+**/*.hidden.cmd
+**/*.secure*.cs
+**/*.secure*.md
+**/*.secure*.sh
+**/*.secure*.bat
+**/*.secure*.cmd
+**/*.secret*.cs
+**/*.secret*.md
+**/*.secret*.sh
+**/*.secret*.bat
+*/*.secret*.cmd
+
+**/*.data.bat
+**/*.data.sh
+**/*.secure.data.md
+**/*.data.md
+**/*.secured.md
+**/*.secured.md
+**/*.secure*
+**/*.data.*
+
+# Xamarin Studio
+**/*.userprefs
+
+# Security (project id etc)
+#**/AndroidManifest.xml
+
+docs/workspace/sharpen/**
+
+src/samples/Components/**
+**/UpgradeLog.htm
+
+/docs/ubertesters.sdk.ios %
+
+
+#------------------------------------------
+# iOS build files
+**DerivedData**
+**build**
+lib/**
+#------------------------------------------
