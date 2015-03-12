@@ -114,6 +114,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Music\ACDC_-_Back_In_Black-sample.ogg" />
+    <Content Include="Music\HelmsDeepSound.ogg" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -121,6 +123,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Music\chewy_roar.wav" />
+    <Content Include="Music\disturbence.wav" />
+    <Content Include="Music\Fight-Club-rules.mp3" />
+    <Content Include="Music\HAL-I-m-sorry-Dave.mp3" />
+    <Content Include="Music\jabbalaughing.wav" />
+    <Content Include="Music\Pulp Fiction- Jimmy%27s Coffee.mp3" />
+    <Content Include="Music\Song of the Dwarves from The Hobbit.mp3" />
+    <Content Include="Music\swvader02.wav" />
+    <Content Include="Music\swvader03.wav" />
+    <Content Include="Music\the-hobbit-trailer-music.mp3" />
     <Content Include="README_FIRST.txt" />
     <Content Include="SplashScreenImage.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
