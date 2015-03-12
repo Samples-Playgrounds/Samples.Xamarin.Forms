@@ -8,7 +8,6 @@
 		<StackLayout>
 			<Picker 
 				x:Name="pickerSongs"
-				BindingContext="{Songs}"
 				>
 			</Picker>
 			<Button

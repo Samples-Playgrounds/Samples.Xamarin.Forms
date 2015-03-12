@@ -18,6 +18,11 @@ namespace HolisticWare.XamarinForms.Mobile.Audio.AudioPlayer
 				"sdada"
 			};
 
+			this.pickerSongs.Items.Clear();
+            foreach (var color in Songs)
+            {
+                pickerSongs.Items.Add(color);
+            }
 			return;
 		}
 	}
