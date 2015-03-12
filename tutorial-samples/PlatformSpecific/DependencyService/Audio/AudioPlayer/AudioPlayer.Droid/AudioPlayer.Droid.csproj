@@ -73,6 +73,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Music\ACDC_-_Back_In_Black-sample.ogg" />
+    <Content Include="Music\HelmsDeepSound.ogg" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
@@ -84,6 +86,16 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Music\chewy_roar.wav" />
+    <Content Include="Music\disturbence.wav" />
+    <Content Include="Music\Fight-Club-rules.mp3" />
+    <Content Include="Music\HAL-I-m-sorry-Dave.mp3" />
+    <Content Include="Music\jabbalaughing.wav" />
+    <Content Include="Music\Pulp Fiction- Jimmy%27s Coffee.mp3" />
+    <Content Include="Music\Song of the Dwarves from The Hobbit.mp3" />
+    <Content Include="Music\swvader02.wav" />
+    <Content Include="Music\swvader03.wav" />
+    <Content Include="Music\the-hobbit-trailer-music.mp3" />
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

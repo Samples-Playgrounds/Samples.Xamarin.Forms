@@ -9,6 +9,7 @@
     <RootNamespace>AudioPlayer</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <NuGetPackageImportStamp>de8eecef</NuGetPackageImportStamp>
+    <AssemblyName>AudioPlayerIOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,7 +27,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchI18n>
     </MtouchI18n>
-    <AssemblyName>AudioPlayer.IOS</AssemblyName>
+    <AssemblyName>AudioPlayerIOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -38,7 +39,7 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <AssemblyName>AudioPlayer.IOS</AssemblyName>
+    <AssemblyName>AudioPlayerIOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,8 +105,9 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
-    <None Include="Music\ACDC_-_Back_In_Black-sample.ogg" />
+    <Content Include="Music\ACDC_-_Back_In_Black-sample.ogg" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
+    <Content Include="Music\HelmsDeepSound.ogg" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

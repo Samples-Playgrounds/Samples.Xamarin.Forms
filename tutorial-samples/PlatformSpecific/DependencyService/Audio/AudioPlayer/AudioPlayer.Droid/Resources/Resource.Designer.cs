@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("AudioPlay.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("AudioPlayer.Resource", IsApplication=true)]
 
-namespace AudioPlay.Droid
+namespace AudioPlayer
 {
 	
 	
