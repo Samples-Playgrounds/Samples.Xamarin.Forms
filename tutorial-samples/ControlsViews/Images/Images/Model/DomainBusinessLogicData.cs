@@ -42,13 +42,13 @@ namespace Images
 				
 				new ImageWrapper()
 				{
-					ImageUrl="icon-xamarin-studio-not-included-in-project.png",
-					Filename="icon-xamarin-studio-not-included-in-project.png",
+					ImageUrl="icon_xamarin_studio_not_included_in_project.png",
+					Filename="icon_xamarin_studio_not_included_in_project.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./Xamarin-logo-hexagon-blue-200x200.png",
-					Filename="./Xamarin-logo-hexagon-blue-200x200.png",
+					ImageUrl="./Xamarin_logo_hexagon_blue_200x200.png",
+					Filename="./Xamarin_logo_hexagon_blue_200x200.png",
 				},
 				new ImageWrapper()
 				{
@@ -57,8 +57,8 @@ namespace Images
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./icon-xamarin-studio.png",
-					Filename="./icon-xamarin-studio.png",
+					ImageUrl="./icon_xamarin_studio.png",
+					Filename="./icon_xamarin_studio.png",
 				},
 				new ImageWrapper()
 				{
@@ -67,68 +67,68 @@ namespace Images
 				},
 				new ImageWrapper()
 				{	
-					ImageUrl="./mono-logo.png",
-					Filename="./mono-logo.png",
+					ImageUrl="./mono_logo.png",
+					Filename="./mono_logo.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin copy.jpg",
-					Filename="./xamarin copy.jpg",
+					ImageUrl="./xamarin_copy.jpg",
+					Filename="./xamarin_copy.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-authorized-partner@2x.png",
-					Filename="./xamarin-authorized-partner@2x.png",
+					ImageUrl="./xamarin_authorized_partner_2x.png",
+					Filename="./xamarin_authorized_partner_2x.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-hexagon.gif",
-					Filename="./xamarin-hexagon.gif",
+					ImageUrl="./xamarin_hexagon_gif.gif",
+					Filename="./xamarin_hexagon_gif.gif",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-hexagon.jpg",
-					Filename="./xamarin-hexagon.jpg",
+					ImageUrl="./xamarin_hexagon.jpg.jpg",
+					Filename="./xamarin_hexagon.jpg.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-hexagon.png",
-					Filename="./xamarin-hexagon.png",
+					ImageUrl="./xamarin_hexagon_png.png",
+					Filename="./xamarin_hexagon_png.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-logo copy.jpg",
-					Filename="./xamarin-logo copy.jpg",
+					ImageUrl="./xamarin_logo_copy.jpg",
+					Filename="./xamarin_logo_copy.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-logo.jpg",
-					Filename="./xamarin-logo.jpg",
+					ImageUrl="./xamarin_logo.jpg",
+					Filename="./xamarin_logo.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-premier-partner@2x.png",
-					Filename="./xamarin-premier-partner@2x.png",
+					ImageUrl="./xamarin_premier_partner_2x.png",
+					Filename="./xamarin_premier_partner_2x.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin-studio.jpeg",
-					Filename="./xamarin-studio.jpeg",
+					ImageUrl="./xamarin_studio.jpeg",
+					Filename="./xamarin_studio.jpeg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin.jpg",
-					Filename="./xamarin.jpg",
+					ImageUrl="./xamarin_jpg.jpg",
+					Filename="./xamarin_jpg.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin.tiff",
-					Filename="./xamarin.tiff",
+					ImageUrl="./xamarin_tiff.tiff",
+					Filename="./xamarin_tiff.tiff",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/Xamarin-logo-hexagon-blue-200x200.png",
-					Filename="./subfolder/Xamarin-logo-hexagon-blue-200x200.png",
+					ImageUrl="./subfolder/Xamarin_logo_hexagon_blue_200x200.png",
+					Filename="./subfolder/Xamarin_logo_hexagon_blue_200x200.png",
 				},
 				new ImageWrapper()
 				{
@@ -137,13 +137,13 @@ namespace Images
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/icon-xamarin-studio.png",
-					Filename="./subfolder/icon-xamarin-studio.png",
+					ImageUrl="./subfolder/icon_xamarin_studio.png",
+					Filename="./subfolder/icon_xamarin_studio.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/ide-xamarin-studio.png",
-					Filename="./subfolder/ide-xamarin-studio.png",
+					ImageUrl="./subfolder/ide_xamarin_studio.png",
+					Filename="./subfolder/ide_xamarin_studio.png",
 				},
 				new ImageWrapper()
 				{
@@ -152,63 +152,63 @@ namespace Images
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/mono-logo.png",
-					Filename="./subfolder/mono-logo.png",
+					ImageUrl="./subfolder/mono_logo.png",
+					Filename="./subfolder/mono_logo.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin copy.jpg",
-					Filename="./subfolder/xamarin copy.jpg",
+					ImageUrl="./subfolder/xamarin_copy.jpg",
+					Filename="./subfolder/xamarin_copy.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-authorized-partner@2x.png",
-					Filename="./subfolder/xamarin-authorized-partner@2x.png",
+					ImageUrl="./subfolder/xamarin_authorized_partner_2x.png",
+					Filename="./subfolder/xamarin_authorized_partner_2x.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-hexagon.gif",
-					Filename="./subfolder/xamarin-hexagon.gif",
+					ImageUrl="./subfolder/xamarin_hexagon_gif.gif",
+					Filename="./subfolder/xamarin_hexagon_gif.gif",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-hexagon.jpg",
-					Filename="./subfolder/xamarin-hexagon.jpg",
+					ImageUrl="./subfolder/xamarin_hexagon.jpg.jpg",
+					Filename="./subfolder/xamarin_hexagon.jpg.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-hexagon.png",
-					Filename="./subfolder/xamarin-hexagon.png",
+					ImageUrl="./subfolder/xamarin_hexagon_png.png",
+					Filename="./subfolder/xamarin_hexagon_png.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-logo copy.jpg",
-					Filename="./subfolder/xamarin-logo copy.jpg",
+					ImageUrl="./subfolder/xamarin_logo_copy.jpg",
+					Filename="./subfolder/xamarin_logo_copy.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-logo.jpg",
-					Filename="./subfolder/xamarin-logo.jpg",
+					ImageUrl="./subfolder/xamarin_logo.jpg",
+					Filename="./subfolder/xamarin_logo.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-premier-partner@2x.png",
-					Filename="./subfolder/xamarin-premier-partner@2x.png",
+					ImageUrl="./subfolder/xamarin_premier_partner_2x.png",
+					Filename="./subfolder/xamarin_premier_partner_2x.png",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin-studio.jpeg",
-					Filename="./subfolder/xamarin-studio.jpeg",
+					ImageUrl="./subfolder/xamarin_studio.jpeg",
+					Filename="./subfolder/xamarin_studio.jpeg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin.jpg",
-					Filename="./subfolder/xamarin.jpg",
+					ImageUrl="./subfolder/xamarin_jpg.jpg",
+					Filename="./subfolder/xamarin_jpg.jpg",
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./subfolder/xamarin.tiff",
-					Filename="./subfolder/xamarin.tiff",
+					ImageUrl="./subfolder/xamarin_tiff.tiff",
+					Filename="./subfolder/xamarin_tiff.tiff",
 				},
 			};
 
@@ -225,11 +225,11 @@ namespace Images
 		{
 			{ 
 				"Loading Formats from file sample", 
-				"Images.Views.Xaml.ImagesFormatLoadTest"
+				"Images.Views.Xaml.PageImagesFormatLoadTest"
 			},
 			{ 
 				"Images as Embedded Resources in Portable Class", 
-				"Images.Views.Xaml.ImagesEmbeddedResources"
+				"Images.Views.Xaml.PageImagesEmbeddedResources"
 			},
 		};
 
