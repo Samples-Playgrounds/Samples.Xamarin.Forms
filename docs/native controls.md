@@ -11,9 +11,11 @@ http://stackoverflow.com/questions/25685014/how-to-use-xamarin-form-controls-and
 
 http://www.arturdr.ru/android/xamarin-forms-i-slozhnosti-integratsii-v-android-prilozheniya/
 
-
+http://magenic.com/Blog/PostId/31/xamarin-xamarinforms-renderer-reference
 https://github.com/rzee7/ExtraRenderer/tree/master
 
 http://arteksoftware.com/gesture-recognizers-with-xamarin-forms/
 
 http://gotocon.com/dl/goto-aar-2014/slides/JamesMontemagno_XamarinFormsNativeIOSAndroidAndWindowsPhoneAppsFromONECCodebase.pdf
+
+https://www.syntaxismyui.com/
