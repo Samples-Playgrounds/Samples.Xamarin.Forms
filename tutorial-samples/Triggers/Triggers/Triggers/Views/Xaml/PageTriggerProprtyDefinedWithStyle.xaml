@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Triggers.Views.Xaml.PageTriggerProprtyDefinedWithStyle"
+	>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="Entry">
+				<Style.Triggers>
+					<Trigger 
+						TargetType="Entry"
+						Property="IsFocused" Value="True"
+						>
+						<Setter 
+							Property="BackgroundColor" Value="Yellow" 
+							/>
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+	<ContentPage.Content>
+		<StackLayout
+			>
+			<Entry Placeholder="Entry 1"></Entry>
+			<Entry Placeholder="Entry 2"></Entry>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
