@@ -10,8 +10,14 @@ namespace CustomRenderers
 
 		protected Dictionary<string,string> samples = new Dictionary<string,string>()
 		{
-			{ "BoxView with Rounded Corners", "CustomRenderers.BoxViewCustomizations.PageBoxViewRoundedCorners"},
-			{ "ImageView Drawable", "PageBoxView"},
+			{ 
+				"BoxView with Rounded Corners", 
+				"CustomRenderers.BoxViewCustomizations.PageBoxViewRoundedCorners"
+			},
+			{ 
+				"ImageView Drawable", 
+				"PageBoxView"
+			},
 		};
 
 		protected Dictionary<string,string> Samples
