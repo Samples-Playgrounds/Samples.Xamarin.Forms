@@ -7,6 +7,7 @@
 	<ContentPage.Content>
 		<StackLayout
 			>
+
 			<Entry Placeholder="enter name">
 				<Entry.Triggers>
 					<Trigger 
@@ -19,6 +20,7 @@
 					</Trigger>
 				</Entry.Triggers>
 			</Entry>
+
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
