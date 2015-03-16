@@ -3,14 +3,62 @@
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	x:Class="Images.Views.Xaml.PageImagesEmbeddedResources"
+    xmlns:images="clr-namespace:Images;assembly=Images"
 	>
-	<!--
-	<Image
-		HeightRequest="62"
-		HorizontalOptions="Start"
-		Source="{images:ImageResource WinDays15App.Images.logo_windays.png}"
+
+
+	<StackLayout
+		Orientation="Vertical"
 		>
-	</Image>
+
+
+		<Image
+			x:Name="imageEmbeddedResource"
+			HeightRequest="62"
+			HorizontalOptions="Start"
+			>
+		</Image>
+
+
+	</StackLayout>
+
+	<!--
+		<Image
+			HeightRequest="62"
+			HorizontalOptions="Start"
+			Source="{images:ImageResource Images.Images.ide-xamarin-studio.png}"
+			>
+		</Image>
+
+
+		<ListView
+			x:Name="listViewImages"
+			ItemsSource="{x:Static local:DomainBusinessLogicData.Images}"
+				>
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout
+								Orientation="Horizontal"
+									>
+								<Image
+									Source="{Binding ImageUrl}"
+									WidthRequest="80"
+									HeightRequest="80"
+										/>
+
+								<Label
+									Text="{Binding Filename}"
+									HorizontalOptions="FillAndExpand"
+										/>
+
+							</StackLayout>
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
 	-->
 
 </ContentPage>

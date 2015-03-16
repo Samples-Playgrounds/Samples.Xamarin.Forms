@@ -231,6 +231,10 @@ namespace Images
 				"Images as Embedded Resources in Portable Class", 
 				"Images.Views.Xaml.PageImagesEmbeddedResources"
 			},
+			{ 
+				"Image defined in Xaml with OnDevice statements", 
+				"Images.Views.Xaml.PageImageOnDevice"
+			},
 		};
 
 		public static Dictionary<string,string> Samples
