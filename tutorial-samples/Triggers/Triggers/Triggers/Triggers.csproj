@@ -52,11 +52,19 @@
     <Compile Include="Views\Xaml\PageTriggerEvent.xaml.cs">
       <DependentUpon>PageTriggerEvent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Triggers\NumericValidationTriggerAction.cs" />
     <Compile Include="Views\Xaml\PageTriggerMulti.xaml.cs">
       <DependentUpon>PageTriggerMulti.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Triggers\TriggerConjunctionMutliConditionConverter.cs" />
+    <Compile Include="Views\Xaml\PageTriggerInStyle.xaml.cs">
+      <DependentUpon>PageTriggerInStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TriggersAndTriggerActions\NumericValidationTriggerAction.cs" />
+    <Compile Include="TriggersAndTriggerActions\TriggerConjunctionMutliConditionConverter.cs" />
+    <Compile Include="TriggersAndTriggerActions\TriggerActionForScaling.cs" />
+    <Compile Include="Views\Xaml\PageTriggerActionsEntryActionAndExitAction.xaml.cs">
+      <DependentUpon>PageTriggerActionsEntryActionAndExitAction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TriggersAndTriggerActions\TriggerActionFading.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -72,7 +80,7 @@
     <Folder Include="Models\" />
     <Folder Include="Views\Xaml\" />
     <Folder Include="Views\Code\" />
-    <Folder Include="Triggers\" />
+    <Folder Include="TriggersAndTriggerActions\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PageMain.xaml">
@@ -91,6 +99,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Xaml\PageTriggerMulti.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Xaml\PageTriggerInStyle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Xaml\PageTriggerActionsEntryActionAndExitAction.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

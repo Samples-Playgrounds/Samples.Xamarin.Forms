@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Triggers.Views.Xaml.PageTriggerActionsEntryActionAndExitAction"
+	xmlns:local="clr-namespace:Triggers;assembly=Triggers"
+	>
+	<ContentPage.Content>
+		<Entry Placeholder="enter job title">
+			<Entry.Triggers>
+				<Trigger 
+					TargetType="Entry"
+					Property="Entry.IsFocused" 
+					Value="True"
+					>
+					<Trigger.EnterActions>
+						<local:TriggerActionFading StartsFrom="0" />
+					</Trigger.EnterActions>
+
+					<Trigger.ExitActions>
+						<local:TriggerActionFading StartsFrom="1" />
+					</Trigger.ExitActions>
+					<!-- You can use both Enter/Exit and Setter together if required -->
+					<Setter 
+						Property="BackgroundColor" Value="Green" 
+						/>
+
+				</Trigger>
+			</Entry.Triggers>
+		</Entry>
+	</ContentPage.Content>
+</ContentPage>

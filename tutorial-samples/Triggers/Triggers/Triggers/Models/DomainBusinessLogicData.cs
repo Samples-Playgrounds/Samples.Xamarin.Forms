@@ -34,7 +34,16 @@ namespace Triggers
 				"Trigger Event Multi", 
 				"Triggers.Views.Xaml.PageTriggerMulti"
 			},
+			{ 
+				"Trigger in Style Multi", 
+				"Triggers.Views.Xaml.PageTriggerInStyle"
+			},
+			{ 
+				"Trigger Actions Enter and Exit", 
+				"Triggers.Views.Xaml.PageTriggerActionsEntryActionAndExitAction"
+			},
 		};
+
 
 		public static Dictionary<string,string> Samples
 		{
