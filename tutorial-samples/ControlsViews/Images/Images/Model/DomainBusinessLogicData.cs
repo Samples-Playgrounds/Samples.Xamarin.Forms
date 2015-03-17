@@ -87,8 +87,8 @@ namespace Images
 				},
 				new ImageWrapper()
 				{
-					ImageUrl="./xamarin_hexagon.jpg.jpg",
-					Filename="./xamarin_hexagon.jpg.jpg",
+					ImageUrl="./xamarin_hexagon_jpg.jpg",
+					Filename="./xamarin_hexagon_jpg.jpg",
 				},
 				new ImageWrapper()
 				{

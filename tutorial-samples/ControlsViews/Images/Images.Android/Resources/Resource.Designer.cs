@@ -66,10 +66,10 @@ namespace Images.Droid
 			public const int xamarin_copy = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int xamarin_hexagon = 2130837511;
+			public const int xamarin_hexagon_gif = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int xamarin_hexagon_gif = 2130837512;
+			public const int xamarin_hexagon_jpg = 2130837512;
 			
 			// aapt resource value: 0x7f020009
 			public const int xamarin_hexagon_png = 2130837513;

@@ -112,7 +112,7 @@
     <AndroidResource Include="Resources\Drawable\xamarin_jpg.jpg" />
     <AndroidResource Include="Resources\Drawable\xamarin_tiff.tiff" />
     <AndroidResource Include="Resources\Drawable\subfolder\xamarin_jpg.jpg" />
-    <AndroidResource Include="Resources\Drawable\xamarin_hexagon.jpg.jpg" />
+    <AndroidResource Include="Resources\Drawable\xamarin_hexagon_jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
