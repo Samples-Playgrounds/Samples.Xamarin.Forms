@@ -18,6 +18,10 @@ namespace CustomRenderers
 				"ImageView Drawable", 
 				"PageBoxView"
 			},
+			{ 
+				"PickerBindable", 
+				"CustomRenderers.Views.Xaml.PagePickerBindable"
+			},
 		};
 
 		protected Dictionary<string,string> Samples

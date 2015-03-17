@@ -29,5 +29,15 @@ namespace CustomRenderers
 		{
 			// Handle when your app resumes
 		}
+
+
+		public static List<string> Data = new List<string>()
+		{
+			"A",
+			"B",
+			"C",
+			"D",
+		};
+
 	}
 }
