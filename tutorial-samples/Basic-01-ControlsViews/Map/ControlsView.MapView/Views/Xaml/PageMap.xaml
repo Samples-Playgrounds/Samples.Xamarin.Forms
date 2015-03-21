@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
+<TabbedPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:local="clr-namespace:ControlsView.MapView.Views.XAML;assembly=ControlsView.MapView.Views.XAML"
 	x:Class="ControlsView.MapView.Views.XAML.PageMap"
 	>
-	<ContentPage.Content>
+	<TabbedPage.Content>
 	<!--
 	http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/maps/
 	http://stackoverflow.com/questions/28098020/bind-to-xamarin-forms-maps-map-from-viewmodel
@@ -18,7 +19,14 @@
 	https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs
 
 	-->
-	<maps:Map x:Name="Map">
-	</maps:Map>
-	</ContentPage.Content>
-</ContentPage>
+   <TabbedPage.Children>
+
+        <local:PageMapSimple>
+        </local:PageMapSimple>
+        <local:PageMapSimple>
+        </local:PageMapSimple>
+
+
+    </TabbedPage.Children>
+	</TabbedPage.Content>
+</TabbedPage>
