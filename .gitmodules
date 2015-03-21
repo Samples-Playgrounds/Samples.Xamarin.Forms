@@ -22,3 +22,9 @@
 [submodule "submodulez/Xamarin-Forms-Labs-Samples"]
 	path = submodulez/Xamarin-Forms-Labs-Samples
 	url = https://github.com/XLabs/Xamarin-Forms-Labs-Samples.git
+[submodule "submodulez/jamesmontemagno-Hanselman.Forms"]
+	path = submodulez/jamesmontemagno-Hanselman.Forms
+	url = https://github.com/jamesmontemagno/Hanselman.Forms.git
+[submodule "submodulez/jamesmontemagno-Xamarin.Plugins"]
+	path = submodulez/jamesmontemagno-Xamarin.Plugins
+	url = https://github.com/jamesmontemagno/Xamarin.Plugins.git

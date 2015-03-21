@@ -12,7 +12,7 @@ namespace ControlsView.MapView
 		public App()
 		{
 			// The root page of your application
-			MainPage = new ControlsView.MapView.Views.Code.PageMap();
+			MainPage = new NavigationPage(new ControlsView.MapView.Views.PageMain());
 
 			return;
 		}
