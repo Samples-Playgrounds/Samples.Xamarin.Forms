@@ -270,5 +270,22 @@ Xamarin Froms - cross platform mobile development platform:
 			Widget/View (Android) UIView (iOS), Control (WindowsPhone)
 			
 			
+
+			
+## Book Errata
+
+*	ch=3 (Building and App: Infrastructure
+	usbch=Version 5. DataBinding
+	pp=134
+	is:	OnwWayTo Source - source updates target
+	shouldn't it be: target updates source 
+	otherwise OneWayToSource and OneWay are the same
+*	async/await
+	ch=3 (Building and App: Infrastructure
+	usbch=Version 6. Awaiting result
+	pp=138
+	is: everything to the left of the await operator and everything below....
+	shouldn't it be: everything to the RIGHT of the await operator and everything below....
+			
 			
 			

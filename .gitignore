@@ -204,7 +204,17 @@ FakesAssemblies/
 **/*.secret*.md
 **/*.secret*.sh
 **/*.secret*.bat
-*/*.secret*.cmd
+**/*.secret*.cmd
+**/*.sensitive.cs
+**/*.sensitive.md
+**/*.sensitive.sh
+**/*.sensitive.bat
+**/*.sensitive.cmd
+**/*.private.cs
+**/*.private.md
+**/*.private.sh
+**/*.private.bat
+**/*.private.cmd
 
 **/*.data.bat
 **/*.data.sh

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsView.MapView", "ControlsView.MapView\ControlsView.MapView.csproj", "{E944F17B-954E-4AD7-951A-383897BFC0A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapView", "MapView\MapView.csproj", "{E944F17B-954E-4AD7-951A-383897BFC0A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsView.MapView.iOS", "ControlsView.MapView.iOS\ControlsView.MapView.iOS.csproj", "{9DE3EBFC-24B4-48E8-A739-A9A2F2AD5656}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapView.iOS", "MapView.iOS\MapView.iOS.csproj", "{9DE3EBFC-24B4-48E8-A739-A9A2F2AD5656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsView.MapView.Droid", "ControlsView.MapView.Droid\ControlsView.MapView.Droid.csproj", "{5E09810D-21A4-40E9-B22E-0AF3589DD652}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapView.Droid", "MapView.Droid\MapView.Droid.csproj", "{5E09810D-21A4-40E9-B22E-0AF3589DD652}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsView.MapView.WinPhone", "ControlsView.MapView.WinPhone\ControlsView.MapView.WinPhone.csproj", "{B0F5A6A2-881C-4B37-A28F-A8A653D9447A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapView.WinPhone", "MapView.WinPhone\MapView.WinPhone.csproj", "{B0F5A6A2-881C-4B37-A28F-A8A653D9447A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
