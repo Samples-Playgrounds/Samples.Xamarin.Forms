@@ -4,9 +4,9 @@ namespace Authentication.Views
 {
 	public partial class PageMain
 	{
-		partial void SetSensitiveDataFacebookOAuth2()
+		partial void SetPublicDemoDataFacebookOAuth2()
 		{
-			HolisticWare.Auth.OAuth2 oauth2 = new HolisticWare.Auth.OAuth2()
+			oauth2 = new HolisticWare.Auth.OAuth2()
 			{
 				/*
 				Vecernji List OK!!!
@@ -16,7 +16,7 @@ namespace Authentication.Views
 				OAuth_UriAuthorization = new Uri("https://m.facebook.com/dialog/oauth/"), 
 				OAuth_UriCallbackAKARedirect = new Uri("http://www.vecernji.hr"),
 				*/
-				OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer = "655409847920181",
+				OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer = "",
 				OAuth2_Scope = "", // "", "basic", "email",
 				OAuth_UriAuthorization = new Uri("https://m.facebook.com/dialog/oauth/"), 
 				OAuth_UriCallbackAKARedirect = new Uri("http://xamarin.com"),

@@ -26,6 +26,10 @@ namespace Authentication.Models
 		public static Dictionary<string,string> samples = new Dictionary<string,string>()
 		{
 			{ 
+				"Login with Google OAuth2", 
+				"Google OAuth2"
+			},
+			{ 
 				"Login with Facebook OAuth2", 
 				"Facebook OAuth2"
 			},
@@ -36,6 +40,10 @@ namespace Authentication.Models
 			{ 
 				"Login with Twitter OAuth2", 
 				"Twitter OAuth2"
+			},
+			{ 
+				"Login with Microsoft Live OAuth2", 
+				"Microsoft Live OAuth2"
 			},
 			{ 
 				"Login with LinkedIn OAuth1", 
