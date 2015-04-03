@@ -26,20 +26,24 @@ namespace Authentication.Models
 		public static Dictionary<string,string> samples = new Dictionary<string,string>()
 		{
 			{ 
-				"Login with Facebook", 
-				"Facebook"
+				"Login with Facebook OAuth2", 
+				"Facebook OAuth2"
 			},
 			{ 
-				"Login with Twitter", 
-				"Twitter"
+				"Login with Twitter OAuth1", 
+				"Twitter OAuth1"
+			},
+			{ 
+				"Login with Twitter OAuth2", 
+				"Twitter OAuth2"
 			},
 			{ 
 				"Login with LinkedIn OAuth1", 
-				"Authentication.Models.Twitter"
+				"LinkedIn OAuth1"
 			},
 			{ 
 				"Login with LinkedIn OAuth2", 
-				"ControlsView.MapView.Views.Code.PageMap"
+				"LinkedIn OAuth2"
 			},
 		};
 

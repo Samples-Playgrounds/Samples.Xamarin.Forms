@@ -12,11 +12,7 @@ namespace Authentication.Views
 			InitializeComponent ();
 		}
 
-
-		string application_id_aka_client_id = "655409847920181";
-		string scope = "";
-		Uri uri_authorize = null;
-		Uri uri_callback = null;
+		HolisticWare.Auth.OAuth oauth = null;
 
 		//---------------------------------------------------------------------------------
 		// methods implemented in other file which is included in project through wildcard
@@ -32,11 +28,14 @@ namespace Authentication.Views
     	//		<Compile Include="SecureSensitivePrivateData/*.sensitive.cs" />
 		//
 		// csproj include
-		partial void SetSensitiveDataFacebook();
-		partial void SetSensitiveDataTwitter();
+		partial void SetSensitiveDataFacebookOAuth2();
+		partial void SetSensitiveDataTwitterOAuth1();
+		partial void SetSensitiveDataTwitterOAuth2();
+		partial void SetSensitiveDataLinkedInOAuth1();
 		partial void SetSensitiveDataLinkedInOAuth2();
 		//---------------------------------------------------------------------------------
 
+		Page page = null;
 
 		public void OnItemSelected (object sender, ItemTappedEventArgs args_tapped)
 		{
@@ -50,11 +49,17 @@ namespace Authentication.Views
 
 			switch (authentication_provider)
 			{
-				case "Facebook":
-					SetSensitiveDataFacebook();
+				case "Facebook OAuth2":
+					SetSensitiveDataFacebookOAuth2();
 					break;
-				case "Twitter":
-					SetSensitiveDataTwitter();
+				case "Twitter OAuth1":
+					SetSensitiveDataTwitterOAuth1();
+					break;
+				case "Twitter OAuth2":
+					SetSensitiveDataTwitterOAuth2();
+					break;
+				case "LinkedIn OAuth1":
+					SetSensitiveDataLinkedInOAuth1();
 					break;
 				case "LinkedIn OAuth2":
 					SetSensitiveDataLinkedInOAuth2();
@@ -63,16 +68,6 @@ namespace Authentication.Views
 					string msg = "Unknown Authentication Provider: " + authentication_provider;
 					throw new NotImplementedException(msg);
 			}
-
-
-			Page page = 
-				new HolisticWare.XamarinForms.Authentication.PageLogin
-							(
-							application_id_aka_client_id,
-							scope,
-							uri_authorize,
-							uri_callback
-							);
 
 			this.Navigation.PushAsync(page);
 
