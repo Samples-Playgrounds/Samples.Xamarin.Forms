@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Authentication.Models
+namespace Authentication
 {
 	/// <summary>
 	/// Navigation.
@@ -38,12 +38,12 @@ namespace Authentication.Models
 				"Twitter OAuth1"
 			},
 			{ 
-				"Login with Twitter OAuth2", 
-				"Twitter OAuth2"
-			},
-			{ 
 				"Login with Microsoft Live OAuth2", 
 				"Microsoft Live OAuth2"
+			},
+			{ 
+				"Login with Instagram OAuth2", 
+				"Instagram OAuth2"
 			},
 			{ 
 				"Login with LinkedIn OAuth1", 

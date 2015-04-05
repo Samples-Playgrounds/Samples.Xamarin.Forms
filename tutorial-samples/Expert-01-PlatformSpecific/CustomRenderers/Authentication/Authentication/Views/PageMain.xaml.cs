@@ -33,8 +33,8 @@ namespace Authentication.Views
 		partial void SetPublicDemoDataGoogleOAuth2();
 		partial void SetPublicDemoDataFacebookOAuth2();
 		partial void SetPublicDemoDataTwitterOAuth1();
-		partial void SetPublicDemoDataTwitterOAuth2();
 		partial void SetPublicDemoDataMicrosoftLiveOAuth2();
+		partial void SetPublicDemoDataInstagramOAuth2();
 		partial void SetPublicDemoDataLinkedInOAuth1();
 		partial void SetPublicDemoDataLinkedInOAuth2();
 
@@ -45,8 +45,8 @@ namespace Authentication.Views
 		partial void SetSensitiveDataGoogleOAuth2();
 		partial void SetSensitiveDataFacebookOAuth2();
 		partial void SetSensitiveDataTwitterOAuth1();
-		partial void SetSensitiveDataTwitterOAuth2();
 		partial void SetSensitiveDataMicrosoftLiveOAuth2();
+		partial void SetSensitiveDataInstagramOAuth2();
 		partial void SetSensitiveDataLinkedInOAuth1();
 		partial void SetSensitiveDataLinkedInOAuth2();
 		//---------------------------------------------------------------------------------
@@ -90,16 +90,16 @@ namespace Authentication.Views
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth1);
 
 					break;
-				case "Twitter OAuth2":
-					SetPublicDemoDataTwitterOAuth2();
-					SetSensitiveDataTwitterOAuth2();
+				case "Microsoft Live OAuth2":
+					SetPublicDemoDataMicrosoftLiveOAuth2();
+					SetSensitiveDataMicrosoftLiveOAuth2();
 
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
 
 					break;
-				case "Microsoft Live OAuth2":
-					SetPublicDemoDataMicrosoftLiveOAuth2();
-					SetSensitiveDataMicrosoftLiveOAuth2();
+				case "Instagram OAuth2":
+					SetPublicDemoDataInstagramOAuth2();
+					SetSensitiveDataInstagramOAuth2();
 
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
 

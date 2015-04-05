@@ -7,15 +7,20 @@ namespace HolisticWare.XamarinForms.Authentication
 {
 	/// <summary>
 	/// Page login.
+	///		Google:		OAuth2
 	///		Facebook:	OAuth2
 	///					https://developers.facebook.com/apps/
 	///					https://developers.facebook.com/
 	///		Twitter:	OAuth1
 	///					https://apps.twitter.com/apps
 	///					https://dev.twitter.com/
+	///					https://dev.twitter.com/oauth
 	///		LinkedIn:	OAuth1
 	///					https://www.linkedin.com/secure/developer
 	///					https://developer.linkedin.com/
+	///		Instagram:	OAuth2
+	///					https://instagram.com/developer/
+	///					http://instagram.com/developer/authentication/
 	/// </summary>
 	/// <see cref="http://forums.xamarin.com/discussion/36687/how-to-pass-paramaters-to-custom-renderers"/>
 	/// <see cref="https://hedgehogjim.wordpress.com/2015/01/29/simplify-using-xamarin-auth-with-async-tasks-a-twitter-example/"/>
@@ -23,6 +28,8 @@ namespace HolisticWare.XamarinForms.Authentication
 	/// <see cref="http://chrisrisner.com/Authentication-with-Windows-Azure-Mobile-Services"/>
 	/// <see cref="http://alejandroruizvarela.blogspot.com/2014/03/xamarinauth-custom-accounts.html"/>
 	/// <see cref="http://blog.falafel.com/using-xamarin-forms-dependencyservice-and-azure-mobile-services-to-add-authentication-to-cross-platform-apps/"/>
+	/// <see cref="https://github.com/jsauve/OAuthTwoDemo.XForms"/>
+	///
 	public partial class PageLogin : ContentPage
 	{
 		public HolisticWare.Auth.OAuth OAuth
@@ -38,6 +45,7 @@ namespace HolisticWare.XamarinForms.Authentication
 					Uri uri_authorization, 
 					Uri uri_callback_redirect
 					)
+				: this()
 		{
 			this.OAuth = new HolisticWare.Auth.OAuth2()
 			{
@@ -62,7 +70,12 @@ namespace HolisticWare.XamarinForms.Authentication
 			return;
 		}
 
+		protected PageLogin ()
+		{
+			DefineUserInterface();
 
+			return;
+		}
 
 		public PageLogin 
 					(
@@ -73,6 +86,7 @@ namespace HolisticWare.XamarinForms.Authentication
 					Uri uri_access_token, 
 					Uri uri_callback_redirect
 					)
+				: this()
 		{
 			this.OAuth =  new HolisticWare.Auth.OAuth1()
 			{
@@ -102,6 +116,52 @@ namespace HolisticWare.XamarinForms.Authentication
 		}
 
 
+		private void DefineUserInterface ()
+		{
+			if 
+				(
+				null == this.OAuth
+				||
+				null == this.OAuth.AccountProperties
+				)
+			{
+				return;
+			}
+
+			TableView table_view = new TableView
+			{
+				Intent = TableIntent.Form,
+			};
+
+			TableRoot root = new TableRoot ("Xamarin.Auth Authenticated")
+			{
+			};
+
+			TableSection section = new TableSection ("Account Properties")
+			{
+			};
+
+			List<TextCell> cells_account_properties = new List<TextCell>();
+
+			foreach (var p in this.OAuth.AccountProperties)
+			{
+				TextCell tc =  new TextCell()
+				{
+					Text = p.Key,
+					Detail = p.Value
+				};
+
+				cells_account_properties.Add(tc);
+			}
+
+			section.Add(cells_account_properties);
+			root.Add(section);
+			table_view.Root = root;
+
+			this.Content = table_view;
+
+			return;
+		}
 	}
 }
 

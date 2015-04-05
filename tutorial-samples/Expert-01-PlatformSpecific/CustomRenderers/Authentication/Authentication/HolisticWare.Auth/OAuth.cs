@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HolisticWare.Auth
 {
@@ -68,7 +69,11 @@ namespace HolisticWare.Auth
 			set;
 		}
 
-		public abstract void Login();
+		public Dictionary<string, string> AccountProperties
+		{
+			get;
+			set;
+		}
 	}
 }
 

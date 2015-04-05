@@ -34,7 +34,7 @@ namespace HolisticWare.Auth
 		}
 
 
-		public override void Login ()
+		public virtual void Login ()
 		{			
 		}
 
