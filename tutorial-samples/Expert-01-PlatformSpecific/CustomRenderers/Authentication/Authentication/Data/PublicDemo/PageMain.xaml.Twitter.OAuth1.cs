@@ -6,7 +6,7 @@ namespace Authentication.Views
 	{
 		partial void SetPublicDemoDataTwitterOAuth1()
 		{
-			HolisticWare.Auth.OAuth1 oauth1 = new HolisticWare.Auth.OAuth1()
+			oauth1 = new HolisticWare.Auth.OAuth1()
 			{
 				OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer = "",
 				OAuth1_SecretKey_ConsumerSecret_APISecret = "",
@@ -15,8 +15,6 @@ namespace Authentication.Views
 				OAuth_UriCallbackAKARedirect = new Uri("http://xamarin.com"),
 				OAuth1_UriAccessToken = new Uri("https://api.twitter.com/oauth/access_token"),
 			};
-
-			page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth1);
 
 			return;
 		}
