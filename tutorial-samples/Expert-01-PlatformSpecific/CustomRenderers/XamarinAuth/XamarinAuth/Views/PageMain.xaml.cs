@@ -32,6 +32,7 @@ namespace XamarinAuth.Views
 		// samples for docs
 		partial void SetPublicDemoDataGoogleOAuth2();
 		partial void SetPublicDemoDataFacebookOAuth2();
+		partial void SetPublicDemoDataGithubOAuth2();
 		partial void SetPublicDemoDataTwitterOAuth1();
 		partial void SetPublicDemoDataMicrosoftLiveOAuth2();
 		partial void SetPublicDemoDataInstagramOAuth2();
@@ -44,6 +45,7 @@ namespace XamarinAuth.Views
 		// data set in PublicDemo is overriden in those methods
 		partial void SetSensitiveDataGoogleOAuth2();
 		partial void SetSensitiveDataFacebookOAuth2();
+		partial void SetSensitiveDataGithubOAuth2();
 		partial void SetSensitiveDataTwitterOAuth1();
 		partial void SetSensitiveDataMicrosoftLiveOAuth2();
 		partial void SetSensitiveDataInstagramOAuth2();
@@ -114,6 +116,13 @@ namespace XamarinAuth.Views
 				case "LinkedIn OAuth2":
 					SetPublicDemoDataLinkedInOAuth2();
 					SetSensitiveDataLinkedInOAuth2();
+
+					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
+
+					break;
+				case "Github OAuth2":
+					SetPublicDemoDataGithubOAuth2();
+					SetSensitiveDataGithubOAuth2();
 
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
 

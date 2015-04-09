@@ -15,6 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>1007a981</NuGetPackageImportStamp>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,13 +44,8 @@
     <Compile Include="Data\PublicDemo\PageMain.xaml.LinkedIn.OAuth2.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.MicrosoftLive.OAuth2.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.Twitter.OAuth1.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.Facebook.OAuth2.sensitive.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.Google.OAuth2.sensitive.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.Instagram.OAuth2.sensitive.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.LinkedIn.OAuth1.sensitive.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.LinkedIn.OAuth2.sensitive.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.MicrosoftLive.OAuth2.sensitive.cs" />
-    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.Twitter.OAuth1.sensitive.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.Github.OAuth2.cs" />
+    <Compile Include="Data\SecurePrivateSecretHidden\*.sensitive.cs" />
     <Compile Include="HolisticWare.Auth\OAuth.cs" />
     <Compile Include="HolisticWare.Auth\OAuth1.cs" />
     <Compile Include="HolisticWare.Auth\OAuth2.cs" />
@@ -97,4 +94,11 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
 </Project>

@@ -53,6 +53,10 @@ namespace XamarinAuth.Views
 				"Login with LinkedIn OAuth2", 
 				"LinkedIn OAuth2"
 			},
+			{ 
+				"Login with Github OAuth2", 
+				"Github OAuth2"
+			},
 		};
 
 
