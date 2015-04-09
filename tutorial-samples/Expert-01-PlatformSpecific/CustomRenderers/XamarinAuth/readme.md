@@ -9,15 +9,25 @@ Prerequisites:
 	Get-Project XamarinAuth.iOS			| Install-Package HolisticWare.Auth		-Pre
 	Get-Project XamarinAuth.WinPhone	| Install-Package HolisticWare.Auth		-Pre
 
-	Get-Project XamarinAuth				| unInstall-Package HolisticWare.Auth		-Pre
-	Get-Project XamarinAuth.Droid		| unInstall-Package HolisticWare.Auth		-Pre
-	Get-Project XamarinAuth.iOS			| unInstall-Package HolisticWare.Auth		-Pre
-	Get-Project XamarinAuth.WinPhone	| unInstall-Package HolisticWare.Auth		-Pre
+	Get-Project XamarinAuth				| unInstall-Package HolisticWare.Auth
+	Get-Project XamarinAuth.Droid		| unInstall-Package HolisticWare.Auth
+	Get-Project XamarinAuth.iOS			| unInstall-Package HolisticWare.Auth
+	Get-Project XamarinAuth.WinPhone	| unInstall-Package HolisticWare.Auth
+	
+	Get-Project XamarinAuth				| unInstall-Package HolisticWare.Core.Json
+	Get-Project XamarinAuth.*			| unInstall-Package HolisticWare.Core.Json
+	Get-Project XamarinAuth				| unInstall-Package HolisticWare.Core.Reflection
+	Get-Project XamarinAuth.*			| unInstall-Package HolisticWare.Core.Reflection
+	Get-Project XamarinAuth				| unInstall-Package HolisticWare.Core
+	Get-Project XamarinAuth.*			| unInstall-Package HolisticWare.Core
 
-	Get-Project XamarinAuth				| unInstall-Package Xamarin.Auth		-Pre
-	Get-Project XamarinAuth.Droid		| unInstall-Package Xamarin.Auth		-Pre
-	Get-Project XamarinAuth.iOS			| unInstall-Package Xamarin.Auth		-Pre
-	Get-Project XamarinAuth.WinPhone	| unInstall-Package Xamarin.Auth		-Pre
+	
+	
+	
+	Get-Project XamarinAuth				| Install-Package Xamarin.Auth		-Pre
+	Get-Project XamarinAuth.Droid		| Install-Package Xamarin.Auth		-Pre
+	Get-Project XamarinAuth.iOS			| Install-Package Xamarin.Auth		-Pre
+	Get-Project XamarinAuth.WinPhone	| Install-Package Xamarin.Auth		-Pre
 	
 	
 ## Xamarin.Auth
