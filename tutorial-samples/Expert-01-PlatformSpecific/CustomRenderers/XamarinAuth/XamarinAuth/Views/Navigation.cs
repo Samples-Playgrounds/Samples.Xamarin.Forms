@@ -57,6 +57,10 @@ namespace XamarinAuth.Views
 				"Login with Github OAuth2", 
 				"Github OAuth2"
 			},
+			{ 
+				"Login with Youtube OAuth2", 
+				"Youtube OAuth2"
+			},
 		};
 
 
