@@ -127,6 +127,13 @@ namespace XamarinAuth.Views
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
 
 					break;
+				case "Youtube OAuth2":
+					SetPublicDemoDataGithubOAuth2();
+					SetSensitiveDataGithubOAuth2();
+
+					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
+
+					break;
 				default:
 					string msg = "Unknown Authentication Provider: " + authentication_provider;
 					throw new NotImplementedException(msg);

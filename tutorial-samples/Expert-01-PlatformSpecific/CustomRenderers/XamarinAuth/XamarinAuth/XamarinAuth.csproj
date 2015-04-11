@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.Facebook.OAuth2.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.Youtube.OAuth2.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.Google.OAuth2.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.Instagram.OAuth2.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.LinkedIn.OAuth1.cs" />
@@ -46,6 +47,7 @@
     <Compile Include="Data\PublicDemo\PageMain.xaml.Twitter.OAuth1.cs" />
     <Compile Include="Data\PublicDemo\PageMain.xaml.Github.OAuth2.cs" />
     <Compile Include="Data\SecurePrivateSecretHidden\*.sensitive.cs" />
+    <Compile Include="Data\SecurePrivateSecretHidden\PageMain.xaml.Youtube.OAuth2.sensitive.cs" />
     <Compile Include="HolisticWare.Auth\OAuth.cs" />
     <Compile Include="HolisticWare.Auth\OAuth1.cs" />
     <Compile Include="HolisticWare.Auth\OAuth2.cs" />
