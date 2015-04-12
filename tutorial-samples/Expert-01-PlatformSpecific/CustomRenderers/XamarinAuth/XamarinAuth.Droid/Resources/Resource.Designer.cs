@@ -26,9 +26,6 @@ namespace XamarinAuth.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Auth.Resource.String.ApplicationName = global::XamarinAuth.Droid.Resource.String.ApplicationName;
-			global::Xamarin.Auth.Resource.String.Hello = global::XamarinAuth.Droid.Resource.String.Hello;
-			global::Xamarin.Auth.Resource.String.library_name = global::XamarinAuth.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -56,25 +53,6 @@ namespace XamarinAuth.Droid
 			}
 			
 			private Drawable()
-			{
-			}
-		}
-		
-		public partial class String
-		{
-			
-			// aapt resource value: 0x7f030001
-			public const int ApplicationName = 2130903041;
-			
-			// aapt resource value: 0x7f030000
-			public const int Hello = 2130903040;
-			
-			static String()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private String()
 			{
 			}
 		}

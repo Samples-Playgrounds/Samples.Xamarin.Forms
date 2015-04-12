@@ -111,6 +111,7 @@ namespace HolisticWare.XamarinForms.Authentication.XamarinAndroid
 						redirectUrl: oauth2.OAuth_UriCallbackAKARedirect,
 						getUsernameAsync: null
 					);
+					auth.Error += Auth_Error;
 				}
 				catch (System.Exception exc)
 				{
@@ -119,24 +120,42 @@ namespace HolisticWare.XamarinForms.Authentication.XamarinAndroid
 			}
 			else
 			{
-				auth = 
-					new global::Xamarin.Auth.OAuth2Authenticator 
-						(
-						clientId: oauth2.OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer, 
-						clientSecret: oauth2.OAuth1_SecretKey_ConsumerSecret_APISecret,
-						scope: oauth2.OAuth2_Scope,
-						authorizeUrl: oauth2.OAuth_UriAuthorization,
-						redirectUrl: oauth2.OAuth_UriCallbackAKARedirect,
-						accessTokenUrl: oauth2.OAuth1_UriAccessToken,
-						getUsernameAsync: null
-						);
-
+				try
+				{
+					auth = 
+						new global::Xamarin.Auth.OAuth2Authenticator 
+							(
+							clientId: oauth2.OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer, 
+							clientSecret: oauth2.OAuth1_SecretKey_ConsumerSecret_APISecret,
+							scope: oauth2.OAuth2_Scope,
+							authorizeUrl: oauth2.OAuth_UriAuthorization,
+							redirectUrl: oauth2.OAuth_UriCallbackAKARedirect,
+							accessTokenUrl: oauth2.OAuth1_UriAccessToken,
+							getUsernameAsync: null
+							);
+				}
+				catch (System.Exception exc)
+				{
+					throw exc;
+				}
 			}
 			auth.Completed += auth_Completed;
 
 			activity.StartActivity (auth.GetUI(activity));
 
 			return;
+		}
+
+		protected void Auth_Error (object sender, Xamarin.Auth.AuthenticatorErrorEventArgs e)
+		{
+			string msg = 
+					"Xamarin.Auth Error: "
+					;
+			Android.Widget.Toast.MakeText(activity, msg, Android.Widget.ToastLength.Short);
+
+			throw new ArgumentException("mc++");
+
+			return;			
 		}
 
 		private void auth_Completed(object sender, global::Xamarin.Auth.AuthenticatorCompletedEventArgs e)

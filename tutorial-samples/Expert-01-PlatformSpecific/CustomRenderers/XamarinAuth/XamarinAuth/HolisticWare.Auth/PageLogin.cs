@@ -165,6 +165,7 @@ namespace HolisticWare.XamarinForms.Authentication
 		protected PageLogin ()
 		{
 			this.OAuthChanged += PageLogin_OAuthChanged;
+
 			DefineUserInterface();
 
 			return;
@@ -220,9 +221,9 @@ namespace HolisticWare.XamarinForms.Authentication
 		{
 			if 
 				(
-				null == this.OAuth
+				null == this.OAuth						// data for request
 				||
-				null == this.OAuth.AccountProperties
+				null == this.OAuth.AccountProperties	// data from request
 				)
 			{
 				return;

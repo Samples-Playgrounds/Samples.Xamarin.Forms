@@ -128,7 +128,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Auth">
-      <HintPath>..\..\packages\Xamarin.Auth.0.0.1-alpha\lib\Xamarin.iOS10\Xamarin.Auth.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Auth.0.0.2-alpha\lib\Xamarin.iOS10\Xamarin.Auth.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Xamarin.Forms.Platform.iOS">

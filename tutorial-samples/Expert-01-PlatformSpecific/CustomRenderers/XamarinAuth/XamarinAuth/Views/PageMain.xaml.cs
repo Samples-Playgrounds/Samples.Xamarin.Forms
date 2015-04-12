@@ -38,6 +38,7 @@ namespace XamarinAuth.Views
 		partial void SetPublicDemoDataInstagramOAuth2();
 		partial void SetPublicDemoDataLinkedInOAuth1();
 		partial void SetPublicDemoDataLinkedInOAuth2();
+		partial void SetPublicDemoDataYoutubeOAuth2();
 
 		// real data (presonal, hidden, secret, sensitive)
 		// in csproj included as wildcard:
@@ -51,6 +52,7 @@ namespace XamarinAuth.Views
 		partial void SetSensitiveDataInstagramOAuth2();
 		partial void SetSensitiveDataLinkedInOAuth1();
 		partial void SetSensitiveDataLinkedInOAuth2();
+		partial void SetSensitiveDataYoutubeOAuth2();
 		//---------------------------------------------------------------------------------
 
 		Page page = null;
@@ -106,6 +108,7 @@ namespace XamarinAuth.Views
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
 
 					break;
+					/*
 				case "LinkedIn OAuth1":
 					SetPublicDemoDataLinkedInOAuth1();
 					SetSensitiveDataLinkedInOAuth1();
@@ -113,6 +116,7 @@ namespace XamarinAuth.Views
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth1);
 
 					break;
+					*/
 				case "LinkedIn OAuth2":
 					SetPublicDemoDataLinkedInOAuth2();
 					SetSensitiveDataLinkedInOAuth2();
@@ -128,8 +132,8 @@ namespace XamarinAuth.Views
 
 					break;
 				case "Youtube OAuth2":
-					SetPublicDemoDataGithubOAuth2();
-					SetSensitiveDataGithubOAuth2();
+					SetPublicDemoDataYoutubeOAuth2();
+					SetSensitiveDataYoutubeOAuth2();
 
 					page = new HolisticWare.XamarinForms.Authentication.PageLogin(oauth2);
 

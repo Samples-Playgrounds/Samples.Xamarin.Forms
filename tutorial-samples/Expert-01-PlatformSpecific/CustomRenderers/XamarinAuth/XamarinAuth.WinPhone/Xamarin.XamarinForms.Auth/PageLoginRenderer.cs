@@ -88,7 +88,7 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 
 			auth.Completed += auth_Completed;
 
-			//PresentViewController (auth.GetUI (), true, null);
+			auth.GetUI ();
 
 			return;
 		}
@@ -104,8 +104,7 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 				try
 				{
 					auth = 
-						new global::Xamarin.Auth.OAuth2Authenticator 
-						(
+						new global::Xamarin.Auth.OAuth2Authenticator (
 						clientId: oauth2.OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer,
 						scope: oauth2.OAuth2_Scope,
 						authorizeUrl: oauth2.OAuth_UriAuthorization,
@@ -120,7 +119,9 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 			}
 			else
 			{
-				auth = 
+				try
+				{
+					auth = 
 					new global::Xamarin.Auth.OAuth2Authenticator 
 						(
 						clientId: oauth2.OAuth_IdApplication_IdAPI_KeyAPI_IdClient_IdCustomer, 
@@ -131,11 +132,15 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 						accessTokenUrl: oauth2.OAuth1_UriAccessToken,
 						getUsernameAsync: null
 						);
-
+				}
+				catch (System.Exception exc)
+				{
+					throw exc;
+				}
 			}
 			auth.Completed += auth_Completed;
 
-			//PresentViewController (auth.GetUI (), true, null);
+			auth.GetUI ();
 
 			return;
 		}
@@ -154,6 +159,7 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 			else
 			{
 				// The user cancelled
+
 			}
 
 			// dismiss UI on iOS, because it was manually created

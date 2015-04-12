@@ -28,7 +28,14 @@ Prerequisites:
 	Get-Project XamarinAuth.Droid		| Install-Package Xamarin.Auth		-Pre
 	Get-Project XamarinAuth.iOS			| Install-Package Xamarin.Auth		-Pre
 	Get-Project XamarinAuth.WinPhone	| Install-Package Xamarin.Auth		-Pre
+
+
+
 	
+	Get-Project XamarinAuth				| update-Package Xamarin.Auth		-Pre
+	Get-Project XamarinAuth.Droid		| update-Package Xamarin.Auth		-Pre
+	Get-Project XamarinAuth.iOS			| update-Package Xamarin.Auth		-Pre
+	Get-Project XamarinAuth.WinPhone	| update-Package Xamarin.Auth		-Pre
 	
 ## Xamarin.Auth
 
