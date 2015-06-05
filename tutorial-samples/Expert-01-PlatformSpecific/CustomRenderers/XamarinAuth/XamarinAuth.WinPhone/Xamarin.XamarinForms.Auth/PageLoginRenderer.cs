@@ -88,7 +88,12 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 
 			auth.Completed += auth_Completed;
 
-			auth.GetUI ();
+			Uri uri = auth.GetUI();
+			var rv = System.Windows.Application.Current.RootVisual;
+			Microsoft.Phone.Controls.PhoneApplicationFrame paf = null;
+			
+			paf = rv as Microsoft.Phone.Controls.PhoneApplicationFrame;
+			paf.Navigate(uri);
 
 			return;
 		}
@@ -140,7 +145,13 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 			}
 			auth.Completed += auth_Completed;
 
-			auth.GetUI ();
+
+			Uri uri = auth.GetUI();
+			var rv = System.Windows.Application.Current.RootVisual;
+			Microsoft.Phone.Controls.PhoneApplicationFrame paf = null;
+			
+			paf = rv as Microsoft.Phone.Controls.PhoneApplicationFrame;
+			paf.Navigate(uri);
 
 			return;
 		}
@@ -167,6 +178,13 @@ namespace HolisticWare.XamarinForms.Authentication.WindowsPhone
 
 			// possibly do something to dismiss THIS viewcontroller, 
 			// or else login screen does not disappear             
+
+			Uri uri = auth.GetUI();
+			var rv = System.Windows.Application.Current.RootVisual;
+			Microsoft.Phone.Controls.PhoneApplicationFrame paf = null;
+			
+			paf = rv as Microsoft.Phone.Controls.PhoneApplicationFrame;
+			paf.Navigate(uri);
 
 			return;
 		}
