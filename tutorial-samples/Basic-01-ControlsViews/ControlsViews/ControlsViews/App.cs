@@ -14,7 +14,7 @@ namespace ControlsViews
 	    {
 	        // The root page of your application
 	        MainPage = 	// property
-				new PageMain(); 	
+				new NavigationPage(new PageMain()); 	
 
 	        return;
 	    }

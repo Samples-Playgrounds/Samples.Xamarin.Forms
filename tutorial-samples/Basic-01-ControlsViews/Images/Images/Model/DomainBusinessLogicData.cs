@@ -9,8 +9,6 @@ namespace Images
 		{
 		}
 
-
-
 		//-------------------------------------------------------
 		// testing binding to a Field vs Property
 

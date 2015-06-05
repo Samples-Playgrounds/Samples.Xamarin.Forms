@@ -34,7 +34,6 @@ namespace Images.Views.Xaml
 			this.Navigation.PushAsync(page);
 
 			return;
-
 		}
 	}
 }

@@ -9,6 +9,7 @@
 				<TableSection Title="Title Table 1">
 					<EntryCell Label="EntryCell"></EntryCell>
 					<TextCell Text="Test"></TextCell>
+					<ImageCell ></ImageCell>
 				</TableSection>
 			</TableRoot>
 		</TableView>

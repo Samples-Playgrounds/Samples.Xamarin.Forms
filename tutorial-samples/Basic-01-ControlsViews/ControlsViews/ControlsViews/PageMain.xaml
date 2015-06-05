@@ -4,19 +4,38 @@
 					   x:Class="ControlsViews.PageMain">
 
 	<StackLayout>
+		<Editor
+		>
+			This is multiline editor.
+			Xamarin.Forms Controls / Views.
+			Android 		- View / Widget
+			iOS				- View (UIView)
+			WindowsPhone	- UserControl
+		</Editor>
 		<Button
-			x:Name="buttonSamplesInXaml"
-			Clicked="buttonSamplesInXaml_Clicked"
-			Text="Samples In XAML"
+			x:Name="buttonSamplesInXamlPushModal"
+			Clicked="buttonSamplesInXamlPushModal_Clicked"
+			Text="Samples In XAML - Push Modal"
 			>
 
 		</Button>
 		<Button
-			x:Name="buttonSamplesInCode"
-			Clicked="buttonSamplesInCode_Clicked"
-			Text="Samples In Code"
+			x:Name="buttonSamplesInCodePushModal"
+			Clicked="buttonSamplesInCodePushModal_Clicked"
+			Text="Samples In Code - Push Modal"
 			>
-
+		</Button>
+		<Button
+			x:Name="buttonSamplesInXamlPush"
+			Clicked="buttonSamplesInXamlPush_Clicked"
+			Text="Samples In Xaml - Push"
+			>
+		</Button>
+		<Button
+			x:Name="buttonSamplesInCodePush"
+			Clicked="buttonSamplesInCodePush_Clicked"
+			Text="Samples In Code - Push"
+			>
 		</Button>
 	</StackLayout>
 

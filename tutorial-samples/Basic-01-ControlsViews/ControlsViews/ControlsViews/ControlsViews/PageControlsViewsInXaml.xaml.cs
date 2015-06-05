@@ -42,14 +42,14 @@ namespace ControlsViews.Pages
 
 		private void buttonListViewCellsCustom_Clicked(object sender, EventArgs e)
 		{
-			this.Navigation.PushModalAsync(new Xaml.PageListViewCells());
+			this.Navigation.PushModalAsync(new Xaml.PageListViewCellsCustom());
 		
 			return;
 		}
 
 		private void buttonTableView_Clicked(object sender, EventArgs e)
 		{
-			this.Navigation.PushModalAsync(new Xaml.PageListViewCellsCustom());
+			this.Navigation.PushModalAsync(new Xaml.PageTableView());
 		
 			return;
 		}

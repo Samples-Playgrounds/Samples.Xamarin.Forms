@@ -25,16 +25,30 @@ namespace ControlsViews
 			return;
 		}
 
-		private void buttonSamplesInXaml_Clicked(object sender, EventArgs e)
+		private void buttonSamplesInXamlPushModal_Clicked(object sender, EventArgs e)
 		{
 			this.Navigation.PushModalAsync(new PageControlsViewsInXaml());
 		
 			return;
 		}
 
-		private void buttonSamplesInCode_Clicked(object sender, EventArgs e)
+		private void buttonSamplesInCodePushModal_Clicked(object sender, EventArgs e)
 		{
 			this.Navigation.PushModalAsync(new PageControlsViewsInCode());
+		
+			return;
+		}
+
+		private void buttonSamplesInXamlPush_Clicked(object sender, EventArgs e)
+		{
+			this.Navigation.PushAsync(new PageControlsViewsInXaml());
+		
+			return;
+		}
+
+		private void buttonSamplesInCodePush_Clicked(object sender, EventArgs e)
+		{
+			this.Navigation.PushAsync(new PageControlsViewsInCode());
 		
 			return;
 		}
