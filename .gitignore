@@ -220,7 +220,7 @@ FakesAssemblies/
 **/*.data.sh
 **/*.secure.data.md
 **/*.data.md
-**/*.secured.md
+**/*.secured.cs
 **/*.secured.md
 **/*.secure*
 **/*.data.*
