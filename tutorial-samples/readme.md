@@ -118,7 +118,7 @@ In Xamarin.Forms all Views/Controls derive from Xamarin.Forms.View.
 	[http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/#Using_XAML_to_Create_and_Customize_A_List](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/#Using_XAML_to_Create_and_Customize_A_List)
 *	Xamarin Forms Labs			
 	[https://github.com/XForms/Xamarin-Forms-Labs](https://github.com/XForms/Xamarin-Forms-Labs)
-*	[*	[http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/](http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/)](*	[http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/](http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/))
+*	[http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/](http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/)](*	[http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/](http://blog.xamarin.com/build-your-own-snapchat-clone-with-xamarin.forms-and-azure/)
 
 
 ## Some tricks
