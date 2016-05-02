@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA7301E1-0B8D-4F46-9234-B00D336DDDC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XamarinAuth</RootNamespace>
+    <AssemblyName>XamarinAuth</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\PageMain.xaml.cs">
+      <DependentUpon>PageMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\plugin\PageLogin.cs" />
+    <Compile Include="SecureSensitivePrivateData\*.secure.cs" />
+    <Compile Include="SecureSensitivePrivateData\*.secret.cs" />
+    <Compile Include="SecureSensitivePrivateData\*.sensitive.cs" />
+    <Compile Include="HolisticWare.Auth\OAuth.cs" />
+    <Compile Include="HolisticWare.Auth\OAuth1.cs" />
+    <Compile Include="HolisticWare.Auth\OAuth2.cs" />
+    <Compile Include="Data\SecurePrivateSecretHidden\*.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.Facebook.OAuth2.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.Google.OAuth2.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.LinkedIn.OAuth1.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.LinkedIn.OAuth2.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.MicrosoftLive.OAuth2.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.Twitter.OAuth1.cs" />
+    <Compile Include="Navigation.cs" />
+    <Compile Include="Data\PublicDemo\PageMain.xaml.Instagram.OAuth2.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.4.1.6349\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.1.6349\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PageMain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HolisticWare.Core">
+      <HintPath>..\packages\HolisticWare.Core.1.0.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\HolisticWare.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="HolisticWare.Core.Json">
+      <HintPath>..\packages\HolisticWare.Core.Json.1.0.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\HolisticWare.Core.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="HolisticWare.Core.Reflection">
+      <HintPath>..\packages\HolisticWare.Core.Reflection.1.0.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\HolisticWare.Core.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth">
+      <HintPath>..\packages\HolisticWare.Auth.0.0.1-alpha-20150331-1528\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+XamarinIOS10\Xamarin.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.4.1.6349\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.4.1.6349\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Data\SecurePrivateSecretHidden\.gitignore" />
+    <None Include="Data\SecurePrivateSecretHidden\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HolisticWare.Auth\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\SecurePrivateSecretHidden\" />
+    <Folder Include="Data\PublicDemo\" />
+  </ItemGroup>
+</Project>
