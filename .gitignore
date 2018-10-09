@@ -474,3 +474,4 @@ output/**
 #==============================================================================
 df-post.txt
 df-pre.txt
+/components-external/Components-Private

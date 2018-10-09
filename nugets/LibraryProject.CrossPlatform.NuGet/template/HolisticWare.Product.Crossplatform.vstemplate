@@ -1,0 +1,29 @@
+<VSTemplate Type="ProjectGroup">
+  <TemplateData>
+    <Name>WCF REST Service</Name>
+    <Description>REST Service Template by Tony Sneed</Description>
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>WCF</TemplateGroupID>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Client">
+        Client\Client.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Entities">
+        Entities\Entities.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Service">
+        Service\Service.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Web">
+        Web\Web.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>RestTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9a76f51a8a9555f</Assembly>
+    <FullClassName>RestTemplateWizard.RootWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
