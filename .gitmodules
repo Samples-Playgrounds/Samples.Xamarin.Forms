@@ -28,3 +28,6 @@
 [submodule "submodulez/jamesmontemagno-Xamarin.Plugins"]
 	path = submodulez/jamesmontemagno-Xamarin.Plugins
 	url = https://github.com/jamesmontemagno/Xamarin.Plugins.git
+[submodule "submodulez/ChatUIXForms"]
+	path = submodulez/ChatUIXForms
+	url = https://github.com/rdelrosario/ChatUIXForms
