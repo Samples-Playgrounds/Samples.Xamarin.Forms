@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="ServerMonitor.Views.LiveView">
+	<ScrollView>
+	<StackLayout >		
+	   <StackLayout x:Name="StatusLayout" Orientation="Horizontal"   BackgroundColor="Green" HeightRequest="60">
+			<Label x:Name="Status" Text="CURRENT STATUS : " TextColor="White" VerticalOptions="Center"></Label> <Label x:Name="StatusValue" TextColor="White" Text="UP" VerticalOptions="Center"></Label>
+		</StackLayout>
+		<StackLayout  Orientation="Horizontal" HeightRequest="50" >
+		</StackLayout>
+		<StackLayout  Orientation="Horizontal" >
+      <StackLayout HeightRequest="60"/>
+		<StackLayout x:Name="LiveCPULayout">
+			<StackLayout x:Name="CPULayout" Orientation="Vertical"  >
+				<Label x:Name="CPU" Text="CPU Performance: "></Label>
+				<Label x:Name="Performace" Text="50%"></Label>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout x:Name="LiveMemoryLayout">
+			<StackLayout x:Name="MemoryLayout" Orientation="Vertical"  >
+				<Label x:Name="Memory" Text="Memory Usage: "></Label>
+				<Label x:Name="Usage" Text="40%"></Label>
+			</StackLayout>
+		</StackLayout>
+			</StackLayout>
+   <StackLayout  Orientation="Horizontal" HeightRequest="15" >
+		</StackLayout>
+		<StackLayout  Orientation="Horizontal" >
+      <StackLayout HeightRequest="60"/>
+		<StackLayout x:Name="LiveDiskLayout">
+			<StackLayout x:Name="DiskLayout" Orientation="Vertical"  >
+				<Label x:Name="Disk" Text="Disk Utilization : "></Label>
+				<Label x:Name="Used" Text="45%"></Label>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout x:Name="LiveDataLayout">
+			<StackLayout x:Name="DataLayout" Orientation="Vertical"  >
+				<Label x:Name="Data" Text="Download Rate: "></Label>
+				<StackLayout  Orientation="Horizontal" >
+				<Label x:Name="Download" Text="8.0"></Label>
+					<Label x:Name="Kbps" Text="Kbps" HeightRequest="100"></Label>
+				</StackLayout>
+			</StackLayout>
+		</StackLayout>
+		</StackLayout>
+		<StackLayout HeightRequest="50" WidthRequest="50"></StackLayout>
+	</StackLayout>
+	</ScrollView>
+</ContentPage>

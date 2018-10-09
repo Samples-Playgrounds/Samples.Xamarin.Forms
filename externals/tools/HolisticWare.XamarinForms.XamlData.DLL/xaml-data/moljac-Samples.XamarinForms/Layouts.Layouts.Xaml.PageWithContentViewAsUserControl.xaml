@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Layouts.Pages.PageWithContentViewAsUserControl"
+	xmlns:CustomControl="clr-namespace:Layouts.Pages;assembly=Layouts"
+	>
+
+	<StackLayout>
+		
+		<Label>
+			<Label.Text>
+			1. Import namespace:  xmlns:CustomControl="clr-namespace:Layouts.Pages;assembly=Layouts"
+			</Label.Text>
+		</Label>
+
+		<Label>
+			<Label.Text>
+			2. Use control with prefix: CustomControl:ContentViewAsReusableUserControl
+			</Label.Text>
+		</Label>
+			
+		<BoxView>
+		</BoxView>
+
+		<CustomControl:ContentViewAsReusableUserControl>
+		</CustomControl:ContentViewAsReusableUserControl>
+		
+	</StackLayout>
+
+	
+
+</ContentPage>

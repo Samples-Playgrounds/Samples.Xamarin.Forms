@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="XamarinIOInvoice.Invoice">
+
+  <Grid x:Name="LayoutRoot" BackgroundColor="Transparent">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+
+    <StackLayout Grid.Row="0"   BackgroundColor="#087196">
+
+      <Label Text="Invoice"  Font="70">
+        <Label.Font>
+          <OnPlatform x:TypeArguments="Font"
+             iOS="20"
+             Android="50"
+             WinPhone="80"/>
+        </Label.Font>
+      </Label>
+    </StackLayout>
+
+    <Grid x:Name="ContentPanel" Grid.Row="1"  >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+
+        <RowDefinition />
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0"  Text="Essential Studio" Font="30" TextColor="#087196" HeightRequest="40" />
+
+
+
+      <Grid Grid.Row="1" x:Name="InvoiceGridHeader">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="320"/>
+          <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.3*"/>
+            <ColumnDefinition Width="1.5*"/>
+          </Grid.ColumnDefinitions>
+
+          <Grid Grid.Column="0">
+            <StackLayout Orientation="Vertical">
+              <Label Text="Name"   HorizontalOptions="Start" Font="20"  TextColor="Green"  />
+              <ListView  x:Name="listView" WidthRequest="100">
+              </ListView>
+            </StackLayout>
+          </Grid>
+          <Grid Grid.Column="1">
+            <StackLayout Orientation="Vertical">
+              <Label x:Name="Nos"  Text="QTY"   HorizontalOptions="Start" Font="20" TextColor="Green"  VerticalOptions="Center"/>
+              <ListView  x:Name="numbersView" WidthRequest="100">
+              </ListView>
+            </StackLayout>
+          </Grid>
+          <Grid Grid.Column="2">
+            <StackLayout Orientation="Vertical">
+              <Label x:Name="Rate" Text="Rate"   HorizontalOptions="Start" Font="20" TextColor="Green"  VerticalOptions="Center"/>
+              <ListView  x:Name="RateView" WidthRequest="100">
+              </ListView>
+            </StackLayout>
+          </Grid>
+          <Grid Grid.Column="3">
+            <StackLayout Orientation="Vertical">
+              <Label x:Name="Taxes" Text="Taxes"  HorizontalOptions="Start" Font="20" TextColor="Green" VerticalOptions="Center"/>
+              <ListView  x:Name="TaxView" WidthRequest="100">
+              </ListView>
+            </StackLayout>
+          </Grid>
+          <Grid Grid.Column="4">
+            <StackLayout Orientation="Vertical">
+              <Label x:Name="Amount" Text="Amount"  HorizontalOptions="Start" Font="20" VerticalOptions="Center"  TextColor="Green"/>
+              <ListView  x:Name="AmountView" WidthRequest="100">
+              </ListView>
+            </StackLayout>
+          </Grid>
+        </Grid>
+        <Grid Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+          <Button x:Name="btn1" Grid.Column="0" Text="PDF" Clicked="Pdf_Clicked"/>
+          <Button Grid.Column="1" Text="Word" Clicked="Word_Clicked"/>
+          <Button Grid.Column="2" Text="Excel" Clicked="Excel_Clicked"/>
+        </Grid>
+      </Grid>
+
+
+    </Grid>
+  </Grid>
+
+
+</ContentPage>
