@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:HeartRateMonitor;assembly=HeartRateMonitor" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-  <xs:import namespace="clr-namespace:HeartRateMonitor;assembly=HeartRateMonitor" schemaLocation="local.xsd"/>
-  <xs:import namespace="http://xamarin.com/schemas/2014/forms" schemaLocation="demo.xsd"/>
-  <xs:attribute name="Class" type="xs:NCName"/>
-  <xs:attribute name="Key" type="xs:NCName"/>
-  <xs:attribute name="Name" type="xs:NCName"/>
-</xs:schema>
