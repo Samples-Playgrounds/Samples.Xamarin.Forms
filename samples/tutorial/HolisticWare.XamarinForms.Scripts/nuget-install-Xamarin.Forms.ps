@@ -1,0 +1,56 @@
+﻿
+
+#
+unInstall-Package Xamarin.Forms.Maps	-Project ControlsViewsMap.Android
+unInstall-Package Xamarin.Forms 		-Project ControlsViewsMap.Android
+
+unInstall-Package `
+	Xamarin.Android.Support.v4 `
+	-Project ControlsViewsMap.Android
+unInstall-Package `
+	Xamarin.Android.Support.v7.AppCompat `
+	-Project ControlsViewsMap.Android
+unInstall-Package `
+	Xamarin.Android.Support.v7.MediaRouter `
+	-Project ControlsViewsMap.Android
+unInstall-Package `
+	Xamarin.GooglePlayServices `
+	-Project ControlsViewsMap.Android
+
+Install-Package Xamarin.Forms -Project ControlsViewsMap.Android
+Install-Package Xamarin.Forms.Maps -Project ControlsViewsMap.Android
+
+
+Get-Project -All | Install-Package SomePackage
+
+That will install "SomePackage" into all of your projects. You can use wildcards to narrow down which projects:
+
+Get-Project Mvc* | Install-Package SomePackage
+That will use wildcard semantics (in this case, find all projects that start with mvc).
+
+Get-Project SomeProject | Install-Package SomePackage
+
+Install-Package Xamarin.Forms -Version 1.3.1.6296un
+
+
+
+Get-Project -All | Update-Package -reinstall Xamarin.Forms
+Get-Project -All | Update-Package -reinstall Xamarin.Forms.Maps
+
+<#
+Command	Description
+Update-Package	Updates all packages in all projects.
+Update-Package –Project ProjectName	Updates all packages in the specified project
+Update-Package PackageId	Breaking Change: Updates the specified package in all projects rather than just the current project
+Update-Package PackageKid –Project ProjectName	No change: Updates the specified package in the specfied project only as before.
+Update-Package –Safe 	New –Safe flag only updates packages to the next “safe” version, which is the latest version with the same major and minor version number as the current package.
+
+#>
+
+
+
+
+Install-Package OxyPlot.XamarinForms -Pre -Project ControlsViewsExtras
+Install-Package OxyPlot.XamarinForms -Pre -Project ControlsViewsExtras.Android
+Install-Package OxyPlot.XamarinForms -Pre -Project ControlsViewsExtras.iOS
+Install-Package OxyPlot.XamarinForms -Pre -Project ControlsViewsExtras.WinPhone

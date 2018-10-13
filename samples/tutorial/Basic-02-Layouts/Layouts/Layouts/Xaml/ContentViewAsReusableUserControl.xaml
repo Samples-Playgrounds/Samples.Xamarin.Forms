@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="Layouts.Pages.ContentViewAsReusableUserControl">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+
+
+
+
+
+			<Label
+				Grid.Row="0" Grid.Column="0"
+				Font="Large" 			
+				Text="Data:"
+				HorizontalOptions="Center"
+				VerticalOptions="CenterAndExpand"
+				/>
+			<Entry
+				Grid.Row="0" Grid.Column="1"
+				Text="..."
+				/>
+			<Button
+				Grid.Row="0" Grid.Column="2"
+				Text="Send"
+				/>
+
+
+
+		    <BoxView 
+				Grid.Row="1" Grid.Column="0"
+		    	Color="Yellow"
+		    	VerticalOptions="FillAndExpand" 
+		    	>
+		    </BoxView>
+			<!--
+			http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/images/
+			-->
+			<Image
+				Source="http://xamarin.com/content/images/pages/index/xamarin-studio-icon@2x.png" 
+				Grid.Row="1" Grid.Column="1" 
+			>
+			</Image>
+			<Image
+				Source="logo.png" 
+				BackgroundColor="White"
+				Grid.Row="1" Grid.Column="2" 
+			>
+			</Image>
+
+	</Grid>	
+</ContentView>

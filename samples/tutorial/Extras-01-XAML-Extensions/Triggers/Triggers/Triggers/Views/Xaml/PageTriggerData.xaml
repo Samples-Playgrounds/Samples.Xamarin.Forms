@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Triggers.Views.Xaml.PageTriggerData"
+	>
+	<ContentPage.Content>
+
+		<StackLayout
+			>
+
+			<!-- the x:Name is referenced below in DataTrigger-->
+			<!-- tip: make sure to set the Text="" (or some other default) -->
+			<Entry 
+				x:Name="entry"
+				Text=""
+				Placeholder="required field" 
+				/>
+
+			<Button 
+				x:Name="button" Text="Save"
+				FontSize="Large" HorizontalOptions="Center"
+				>
+				<Button.Triggers>
+					<DataTrigger 
+						TargetType="Button"
+						Binding="{Binding Source={x:Reference entry}, Path=Text.Length}"
+						Value="0"
+						>
+						<Setter Property="IsEnabled" Value="False" />
+					</DataTrigger>
+				</Button.Triggers>
+			</Button>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>
