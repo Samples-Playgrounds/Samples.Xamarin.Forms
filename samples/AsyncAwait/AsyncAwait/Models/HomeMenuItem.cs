@@ -7,6 +7,7 @@ namespace AsyncAwait.Models
     public enum MenuItemType
     {
         Browse,
+        Calculator,
         About
     }
     public class HomeMenuItem

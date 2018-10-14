@@ -21,6 +21,8 @@ namespace AsyncAwait.ViewModels
             set { SetProperty(ref isBusy, value); }
         }
 
+        public bool IsNotBusy => !IsBusy;
+
         string title = string.Empty;
         public string Title
         {
