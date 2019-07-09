@@ -11,7 +11,7 @@ namespace AsyncAwait.ViewModels
         public CalculatorViewModel()
         {
             Title = "Calculator";
-            Number = "1000000";
+            Number = "1000000000";
 
             CalculateSynchronousCommand = new Command(CalculateSynchronousCommandHandleAction);
             CalculateAsynchronousTaskRunCommand = new Command(CalculateAsynchronousTaskRunCommandHandleAction);
@@ -87,6 +87,31 @@ namespace AsyncAwait.ViewModels
 
         void CalculateAsynchronousTaskRunCommandHandleAction(object obj)
         {
+            if (IsBusy)
+            {
+                return;
+            }
+
+            Result = double.NaN;
+            IsBusy = true;
+
+            try
+            {
+                long n = long.Parse(number);
+                Models.Calculator c = new Models.Calculator();
+                Result = await c.CalculateAsync(n);
+            }
+            catch (Exception e)
+            {
+                Status = $"Calculator failed {e.Message}";
+                System.Diagnostics.Debug.WriteLine(status);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
+            return;
         }
 
         void CalculateAsynchronousReturnTaskWithoutTaskRunCommandHandleAction(object obj)

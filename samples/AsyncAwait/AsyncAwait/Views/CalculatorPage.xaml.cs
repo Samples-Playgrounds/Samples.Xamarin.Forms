@@ -11,5 +11,7 @@ namespace AsyncAwait.Views
         {
             InitializeComponent();
         }
+
+        partial void buttonCalculateSynchronous_Clicked(object sender, EventArgs args);
     }
 }

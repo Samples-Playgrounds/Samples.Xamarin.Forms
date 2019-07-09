@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using AsyncAwait.Models;
 using AsyncAwait.Services;
+using System.Threading.Tasks;
 
 namespace AsyncAwait.ViewModels
 {
@@ -15,10 +16,11 @@ namespace AsyncAwait.ViewModels
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
 
         bool isBusy = false;
+
         public bool IsBusy
         {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
+            get => isBusy;
+            set => SetProperty(ref isBusy, value, onChanged: () => OnPropertyChanged(nameof(IsNotBusy)));
         }
 
         public bool IsNotBusy => !IsBusy;
@@ -30,9 +32,28 @@ namespace AsyncAwait.ViewModels
             set { SetProperty(ref title, value); }
         }
 
-        protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName]string propertyName = "",
-            Action onChanged = null)
+        public virtual void OnAppearing()
+        {
+        }
+
+        public virtual void OnDisappearing()
+        {
+        }
+
+        internal event Func<string, Task> DoDisplayAlert;
+
+        public Task DisplayAlertAsync(string message)
+        {
+            return DoDisplayAlert?.Invoke(message) ?? Task.CompletedTask;
+        }
+
+        protected bool SetProperty<T>
+            (
+                ref T backingStore, 
+                T value,
+                [CallerMemberName]string propertyName = "",
+                Action onChanged = null
+            )
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))
                 return false;

@@ -30,21 +30,24 @@
                 Command="{Binding CalculateSynchronousCommand}"
                 BackgroundColor="{StaticResource Primary}"
                 TextColor="White" 
-                IsEnabled="{Binding IsNotBusy}"
+                IsEnabled="{Binding IsNotBusy, Mode=TwoWay}"
+                x:Name="buttonCalculateSynchronous"
             />
             <Button 
                 Margin="0,10,0,0" Text="Calculate Asynchronous (Task.Run())"
                 Command="{Binding CalculateAsynchronousTaskRunCommand}"
                 BackgroundColor="{StaticResource Primary}"
                 TextColor="White" 
-                IsEnabled="{Binding IsNotBusy}"
+                IsEnabled="{Binding IsNotBusy, Mode=TwoWay}"
+                x:Name="buttonCalculateAsynchronousTaskRun"
             />
             <Button 
                 Margin="0,10,0,0" Text="Calculate Asynchronous (Retrun Task w/o Task.Run())"
                 Command="{Binding CalculateAsynchronousReturnTaskWithoutTaskRunCommand}"
                 BackgroundColor="{StaticResource Primary}"
                 TextColor="White" 
-                IsEnabled="{Binding IsNotBusy}"
+                IsEnabled="{Binding IsNotBusy, Mode=TwoWay}"
+                x:Name="buttonCalculateAsynchronousReturnTaskWithoutTaskRun"
             />
             <Label
                 Text="{Binding Result}" 
