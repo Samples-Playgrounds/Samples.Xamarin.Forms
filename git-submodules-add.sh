@@ -1,3 +1,5 @@
+https://github.com/davidortinau/Xappy
+
 #!/bin/bash
 
 git submodule add \
@@ -29,9 +31,4 @@ git submodule add \
 
 
 git submodule init
-git submodule update	
-
-
-
-	
-	
+git submodule update
