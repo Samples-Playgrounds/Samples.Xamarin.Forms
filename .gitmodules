@@ -1,3 +1,18 @@
 [submodule "submodulez/HolisticWare.Core.Data.Xml"]
 	path = submodulez/HolisticWare.Core.Data.Xml
 	url = https://github.com/moljac/HolisticWare.Core.Data.Xml.git
+[submodule "externals/Xamarin.Forms"]
+	path = externals/Xamarin.Forms
+	url = https://github.com/xamarin/Xamarin.Forms.git
+[submodule "externals/Essentials"]
+	path = externals/Essentials
+	url = https://github.com/xamarin/Essentials.git
+[submodule "externals/MAUI"]
+	path = externals/MAUI
+	url = https://github.com/dotnet/maui.git
+[submodule "externals/XamarinCommunityToolkit"]
+	path = externals/XamarinCommunityToolkit
+	url = https://github.com/xamarin/XamarinCommunityToolkit.git
+[submodule "externals/shiny"]
+	path = externals/shiny
+	url = https://github.com/shinyorg/shiny.git
