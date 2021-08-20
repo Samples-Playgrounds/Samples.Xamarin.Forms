@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\business-domain-logic\HolisticWare.DomainBusinessLogic\HolisticWare.DomainBusinessLogic.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.5.794" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="6.0.100-preview.5.794" />
+    <PackageReference Include="Microsoft.Maui.Controls.Build.Tasks" Version="6.0.100-preview.5.794" />
+
+    <!--
+    XamlCompilation
+    -->
+    <PackageReference Include="Microsoft.Maui.Controls.Xaml" Version="6.0.100-preview.5.794" />
+
+    <!--
+    The name 'InitializeComponent' does not exist in the current context.
+    -->
+
+    <!--
+    DynamicResource
+    -->
+  </ItemGroup>
+  <ItemGroup>
+    <MauiXaml Include="Pages\BodyCompositionFatSkinFoldSites3.xaml" />
+  </ItemGroup>
+</Project>
