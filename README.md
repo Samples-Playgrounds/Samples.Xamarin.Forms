@@ -3,6 +3,19 @@ quickui-beta
 
 QuickUI Beta User Demo Apps
 
+## Dependencies/Submodules
+
+*	https://github.com/xamarin/Xamarin.Forms.git
+
+*	https://github.com/xamarin/Essentials.git
+
+*	https://github.com/dotnet/maui.git
+
+*	https://github.com/xamarin/XamarinCommunityToolkit.git
+
+*	https://github.com/shinyorg/shiny.git
+
+
 ## Issues
 
 ### Windows Phone
